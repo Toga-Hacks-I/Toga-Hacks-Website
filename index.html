@@ -1,157 +1,184 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    />
+    <script
+      src="//code.jquery.com/jquery-2.2.3.min.js"
+      integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"
+      integrity="sha384-qcW5WaJ2LxU+EnijI93Po9K/D4whC1d/ZzKEXY8KJXRhT5qHdOQR/2AffpOrxFT3"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="script.js"></script>
+    <meta charset="utf-8" />
+    <title>TogaHacks I</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta property="og:title" content="TogaHacks I" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.togahacks.com/" />
+    <meta
+      property="og:description"
+      content="24-hour high school hackathon held in Silicon Valley, CA."
+    />
+  </head>
 
-<head>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-	<script src="//code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js" integrity="sha384-qcW5WaJ2LxU+EnijI93Po9K/D4whC1d/ZzKEXY8KJXRhT5qHdOQR/2AffpOrxFT3" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="script.js"></script>
-	<meta charset="utf-8">
-	<title>TogaHacks I</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta property="og:title" content="TogaHacks I">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://www.togahacks.com/">
-	<meta property="og:description" content="24-hour high school hackathon held in Silicon Valley, CA.">
-</head>
+  <body>
+    //MLH trust badge needs to go here
+    <section id="intro" class="colored text-center">
+      <header>
+        <nav
+          id="nav"
+          class="navbar navbar-default navbar-fixed-top"
+          role="navigation"
+          style="background-color: transparent;"
+        >
+          <div class="container bcg-container">
+            <div class="row">
+              <div id="main-nav" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav links">
+                  <a id="intro-btn" href="#intro"><li>Home</li></a>
+                  <a id="schedule-btn" href="#schedule"><li>Schedule</li></a>
+                  <a id="faq-btn" href="#faq"><li>FAQ</li></a>
+                  <a id="supporters-btn" href="#supporters"
+                    ><li>Supporters</li></a
+                  >
+                  <a id="team-btn" href="#team"><li>Team</li></a>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="container">
+        <div class="intro-well">
+          <div class="row">
+            <div class="col-lg-12 col-sm-12">
+              // logo goes here
+              <img id="logo" src="togahackslogo.png" alt="TogaHacks Logo" />
+              <div class="col-lg-12">
+                <h3>Venue Location and Address</h3>
+                <h3>
+                  // address
+                  <a
+                    href="https://www.google.com/maps/place/42+Silicon+Valley/@37.5520084,-122.0944437,12.96z/data=!4m5!3m4!1s0x808fbe68119cbd01:0xa8b8e707b7dcfc6e!8m2!3d37.548741!4d-122.059247"
+                    >6600 Dumbarton Cir, Fremont, CA 94555</a
+                  >
+                </h3>
+                <h3>April 2020</h3>
+              </div>
+              // hardware button goes here
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<body>
-	//MLH trust badge needs to go here
-	<section id="intro" class="colored text-center">
-		<header>
-			<nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: transparent;">
-				<div class="container bcg-container">
-					<div class="row">
-						<div id="main-nav" class="navbar-collapse collapse">
-							<ul class="nav navbar-nav links">
-								<a id="intro-btn" href="#intro"><li>Home</li></a>
-								<a id="schedule-btn" href="#schedule"><li>Schedule</li></a>
-								<a id="faq-btn" href="#faq"><li>FAQ</li></a>
-								<a id="supporters-btn" href="#supporters"><li>Supporters</li></a>
-								<a id="team-btn" href="#team"><li>Team</li></a>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</header>
-		<div class="container">
-			<div class="intro-well">
-				<div class="row">
-					<div class="col-lg-12 col-sm-12">
-// logo goes here
-						<div class="col-lg-12">
-							<h3>Venue Location and Address</h3>
-							<h3>
-// address						<a href="https://www.google.com/maps/place/42+Silicon+Valley/@37.5520084,-122.0944437,12.96z/data=!4m5!3m4!1s0x808fbe68119cbd01:0xa8b8e707b7dcfc6e!8m2!3d37.548741!4d-122.059247">6600 Dumbarton Cir, Fremont, CA 94555</a>
-							</h3>
-							<h3>April 2020</h3>
-						</div>
-// hardware button goes here
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="schedule" class="text-center semi-white">
-		<div class="container">
-			<h2>Schedule</h2>
-			<div class="row">
-				<div class="col-xs-12">
-					<h3>Saturday, April 4th</h3>
-					<table class="table centered-table">
-						<thead>
-							<tr>
-								<th>Time</th>
-								<th>Event</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>9:00 AM</td>
-								<td>Hacker Check In Begins</td>
-							</tr>
-							<tr>
-								<td>10:00 AM</td>
-								<td>Opening Ceremony</td>
-							</tr>
-							<tr>
-								<td>10:20 AM</td>
-								<td>Team Formation</td>
-							</tr>
-							<tr>
-								<td>10:30 PM</td>
-								<td>Hacking Begins</td>
-							</tr>
-							<tr>
-								<td>12:00 PM</td>
-								<td>Lunch</td>
-							</tr>
-							<tr>
-								<td>2:00 PM</td>
-								<td>Workshop 1</td>
-							</tr>
-							<tr>
-								<td>3:30 PM</td>
-								<td>Snacks</td>
-							</tr>
-							<tr>
-								<td>4:30 PM</td>
-								<td>Workshop 2</td>
-							</tr>
-							<tr>
-								<td>6:30 PM</td>
-								<td>Dinner</td>
-							</tr>
-							<tr>
-								<td>9:00 PM</td>
-								<td>Cup Stacking MLH</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="col-xs-12">
-					<h3>Sunday, April 5th</h3>
-					<table class="table centered-table">
-						<thead>
-							<tr>
-								<th>Time</th>
-								<th>Event</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>12:00 AM</td>
-								<td>Midnight Snack</td>
-							</tr>
-							<tr>
-								<td>7:00 AM</td>
-								<td>Breakfast</td>
-							</tr>
-							<tr>
-								<td>9:30 AM</td>
-								<td>Final Submissions to Devpost</td>
-							</tr>
-							<tr>
-								<td>10:00 AM</td>
-								<td>Presentations and Judging</td>
-							</tr>
-							<tr>
-								<td>11:30 PM</td>
-								<td>Prizes and Closing Ceremony</td>
-							</tr>
-							<tr>
-								<td>12:00 PM</td>
-								<td>Event End</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</section>
-</body>
-
+    <section id="schedule" class="text-center semi-white">
+      <div class="container">
+        <h2>Schedule</h2>
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>Saturday, April 4th</h3>
+            <table class="table centered-table">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Event</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>9:00 AM</td>
+                  <td>Hacker Check In Begins</td>
+                </tr>
+                <tr>
+                  <td>10:00 AM</td>
+                  <td>Opening Ceremony</td>
+                </tr>
+                <tr>
+                  <td>10:20 AM</td>
+                  <td>Team Formation</td>
+                </tr>
+                <tr>
+                  <td>10:30 PM</td>
+                  <td>Hacking Begins</td>
+                </tr>
+                <tr>
+                  <td>12:00 PM</td>
+                  <td>Lunch</td>
+                </tr>
+                <tr>
+                  <td>2:00 PM</td>
+                  <td>Workshop 1</td>
+                </tr>
+                <tr>
+                  <td>3:30 PM</td>
+                  <td>Snacks</td>
+                </tr>
+                <tr>
+                  <td>4:30 PM</td>
+                  <td>Workshop 2</td>
+                </tr>
+                <tr>
+                  <td>6:30 PM</td>
+                  <td>Dinner</td>
+                </tr>
+                <tr>
+                  <td>9:00 PM</td>
+                  <td>Cup Stacking MLH</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-xs-12">
+            <h3>Sunday, April 5th</h3>
+            <table class="table centered-table">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Event</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12:00 AM</td>
+                  <td>Midnight Snack</td>
+                </tr>
+                <tr>
+                  <td>7:00 AM</td>
+                  <td>Breakfast</td>
+                </tr>
+                <tr>
+                  <td>9:30 AM</td>
+                  <td>Final Submissions to Devpost</td>
+                </tr>
+                <tr>
+                  <td>10:00 AM</td>
+                  <td>Presentations and Judging</td>
+                </tr>
+                <tr>
+                  <td>11:30 PM</td>
+                  <td>Prizes and Closing Ceremony</td>
+                </tr>
+                <tr>
+                  <td>12:00 PM</td>
+                  <td>Event End</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
