@@ -1,6 +1,28 @@
+/* Togahacks logo format */
 .centered-items {
   width: 60%;
   margin: 0 auto;
   text-align: center;
   font-size: 3em;
+}
+
+/* text format */
+h1{
+    font-family: arial;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    letter-spacing: 2px;
+}
+
+/* paragraph format */
+p {
+    font-size: 16px;
+    line-height: 20px;
+}
+/* get rid of underlines for links */
+a {
+    text-decoration: none;
 }
