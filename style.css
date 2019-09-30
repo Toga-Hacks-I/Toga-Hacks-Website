@@ -1,5 +1,6 @@
-#logo {
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+.centered-items {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 3em;
 }
