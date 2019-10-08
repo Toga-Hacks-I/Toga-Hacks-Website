@@ -477,7 +477,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro:before {
   content: '';
-  background: rgba(6, 12, 34, 0.8);
+  background: rgb(0, 8, 40, 0.6);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -511,9 +511,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro h1 {
   color: #fff;
   font-family: 'Raleway', sans-serif;
-  font-size: 56px;
+  font-size: 120px;
   font-weight: 600;
   text-transform: uppercase;
+  padding: 0px;
 }
 
 #intro h1 span {
@@ -1167,7 +1168,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #subscribe:before {
   content: '';
-  background: rgba(6, 12, 34, 0.6);
+  background: rgba(6, 12, 34, 0.8);
   position: absolute;
   bottom: 0;
   top: 0;
