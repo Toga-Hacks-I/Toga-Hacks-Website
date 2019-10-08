@@ -514,7 +514,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 120px;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 0px;
 }
 
 #intro h1 span {
@@ -1513,7 +1512,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-newsletter input[type='submit'] {
-  background: #c72027;
+  background: #101522;
   border: 0;
   width: 35%;
   padding: 6px 0;
@@ -1524,7 +1523,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-newsletter input[type='submit']:hover {
-  background: #e0072f;
+  background: #101522;
 }
 
 #footer .copyright {
@@ -1532,10 +1531,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-top: 30px;
 }
 
+#footer .credits a {
+  text-align: center;
+  font-size: 13px;
+  color: #101522;
+}
 #footer .credits {
   text-align: center;
   font-size: 13px;
-  color: #ddd;
+  color: #101522;
 }
 
 /*--------------------------------------------------------------
