@@ -1,818 +1,898 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-149590316-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149590316-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      gtag("config", "UA-149590316-1");
+    </script>
 
-  gtag('config', 'UA-149590316-1');
-</script>
+    <meta charset="utf-8" />
+    <title>Toga Hacks I</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
-  <meta charset="utf-8">
-  <title>Toga Hacks I</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+    <!-- Favicons -->
+    <link href="img/logo.png" rel="icon" />
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="img/logo.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/venobox/venobox.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/venobox/venobox.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-
-</head>
-
-<body>
-
-  <!--==========================
+  <body>
+    <!--==========================
     Header
   ============================-->
-  <header id="header">
-    <div class="container">
+    <header id="header">
+      <div class="container">
+        <div id="logo" class="pull-left">
+          <!-- Uncomment below if you prefer to use a text logo -->
+          <h1>
+            <a href="javascript:window.location.href=window.location.href"
+              >T<span>H </span></a
+            >
+          </h1>
+        </div>
 
-      <div id="logo" class="pull-left">
-        <!-- Uncomment below if you prefer to use a text logo -->
-        <h1><a href="#main">T<span>H </span><a href="#intro" class="scrollto"></a></h1>
-        
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <li class="menu-active"><a href="#intro">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#speakers">Team</a></li>
+            <li><a href="#supporters">Sponsors</a></li>
+            <li class="buy-tickets"><a href="#buy-tickets">Sign Up</a></li>
+          </ul>
+        </nav>
+        <!-- #nav-menu-container -->
       </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#speakers">Team</a></li>
-          <li><a href="#supporters">Sponsors</a></li>
-          <li class="buy-tickets"><a href="#buy-tickets">Sign Up</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
-
-  <!--==========================
-    Intro Section
-  ============================-->
-  <section id="intro">
-    <div class="intro-container wow fadeIn">
-      
-      <h1 class="mb-4 pb-0">Toga<span> Hacks</span> I </h1>
-      <p class="mb-4 pb-0">Silicon Valley, California</p>
-      <p class="mb-4 pb-0">April 2020</p>
-      <a href="#about" class="about-btn scrollto">Learn More</a>
-    </div>
-  </section>
-
-  <main id="main">
+    </header>
+    <!-- #header -->
 
     <!--==========================
-      About Section
-    ============================-->
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2>About The Event</h2>
-            <p>TogaHacks I is a 24 hour programming event where high school
-                students all over Silicon Valley come together to develop
-                a software or hardware project</p>
-          </div>
-          <div class="col-lg-3">
-            <h3>Where</h3>
-            <p>Silicon Valley, California</p>
-          </div>
-          <div class="col-lg-3">
-            <h3>When</h3>
-            <p>Saturday & Sunday<br>April 2020</p>
-          </div>
-        </div>
+    Intro Section
+  ============================-->
+    <section id="intro">
+      <div class="intro-container wow fadeIn">
+        <h1 class="mb-4 pb-0">Toga<span> Hacks</span> I</h1>
+        <p class="mb-4 pb-0">Silicon Valley, California</p>
+        <p class="mb-4 pb-0">April 2020</p>
+        <a href="#about" class="about-btn scrollto">Learn More</a>
       </div>
     </section>
 
-    <!--==========================
+    <main id="main">
+      <!--==========================
+      About Section
+    ============================-->
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <h2>About The Event</h2>
+              <p>
+                TogaHacks I is a 24 hour programming event where high school
+                students all over Silicon Valley come together to develop a
+                software or hardware project
+              </p>
+            </div>
+            <div class="col-lg-3">
+              <h3>Where</h3>
+              <p>Silicon Valley, California</p>
+            </div>
+            <div class="col-lg-3">
+              <h3>When</h3>
+              <p>Saturday & Sunday<br />April 2020</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==========================
       Schedule Section
     ============================-->
-    <section id="schedule" class="section-with-bg">
-      <div class="container wow fadeInUp">
-        <div class="section-header">
-          <h2>Event Schedule</h2>
-          <p>Here is our event schedule</p>
-        </div>
+      <section id="schedule" class="section-with-bg">
+        <div class="container wow fadeInUp">
+          <div class="section-header">
+            <h2>Event Schedule</h2>
+            <p>Here is our event schedule</p>
+          </div>
 
-        <ul class="nav nav-tabs" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Day 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Day 2</a>
-          </li>
-          
-        </ul>
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="#day-1"
+                role="tab"
+                data-toggle="tab"
+                >Day 1</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#day-2" role="tab" data-toggle="tab"
+                >Day 2</a
+              >
+            </li>
+          </ul>
 
-
-        <div class="tab-content row justify-content-center">
-
-          <!-- Schdule Day 1 -->
-          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>09:00 AM</time></div>
-              <div class="col-md-10">
-                <h4>Hacker Check In Begins</h4>
+          <div class="tab-content row justify-content-center">
+            <!-- Schdule Day 1 -->
+            <div
+              role="tabpanel"
+              class="col-lg-9 tab-pane fade show active"
+              id="day-1"
+            >
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>09:00 AM</time></div>
+                <div class="col-md-10">
+                  <h4>Hacker Check In Begins</h4>
+                </div>
               </div>
-            </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
-              <div class="col-md-10">
-                
-                <h4>Opening Ceremony</h4>
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>10:00 AM</time></div>
+                <div class="col-md-10">
+                  <h4>Opening Ceremony</h4>
+                </div>
               </div>
-            </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>10:20 AM</time></div>
-              <div class="col-md-10">
-                
-                <h4>Team Formation</h4>
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>10:20 AM</time></div>
+                <div class="col-md-10">
+                  <h4>Team Formation</h4>
+                </div>
               </div>
-            </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 AM</time></div>
-              <div class="col-md-10">
-                
-                <h4>Lunch</h4>
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>12:00 AM</time></div>
+                <div class="col-md-10">
+                  <h4>Lunch</h4>
+                </div>
               </div>
-            </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
-              <div class="col-md-10">
-
-              
-                <h4>Workshop 1</h4>
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>02:00 PM</time></div>
+                <div class="col-md-10">
+                  <h4>Workshop 1</h4>
+                </div>
               </div>
-            </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>03:30 PM</time></div>
-              <div class="col-md-10">
-                
-                <h4>Snacks</h4>
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>03:30 PM</time></div>
+                <div class="col-md-10">
+                  <h4>Snacks</h4>
+                </div>
               </div>
-            </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:30 PM</time></div>
-              <div class="col-md-10">
-
-             
-                <h4>Workshop 2</h4>
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>04:30 PM</time></div>
+                <div class="col-md-10">
+                  <h4>Workshop 2</h4>
+                </div>
               </div>
-            </div>
-            <div class="row schedule-item">
+              <div class="row schedule-item">
                 <div class="col-md-2"><time>06:30 PM</time></div>
                 <div class="col-md-10">
-
-               
                   <h4>Dinner</h4>
                 </div>
               </div>
-                <div class="row schedule-item">
-                    <div class="col-md-2"><time>09:30 PM</time></div>
-                    <div class="col-md-10">
-    
-                   
-                      <h4>Cup Stacking</h4>
-                    </div>
-                    <div class="row schedule-item">
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>09:30 PM</time></div>
+                <div class="col-md-10">
+                  <h4>Cup Stacking</h4>
+                </div>
+                <div class="row schedule-item"></div>
+              </div>
+            </div>
+            <!-- End Schdule Day 1 -->
 
-              
+            <!-- Schdule Day 2 -->
+            <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>12:00 AM</time></div>
+                <div class="col-md-10">
+                  <h4>Midnight Snack</h4>
                 </div>
               </div>
-
-          </div>
-          <!-- End Schdule Day 1 -->
-
-          <!-- Schdule Day 2 -->
-          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
 
               <div class="row schedule-item">
-                  <div class="col-md-2"><time>12:00 AM</time></div>
-                  <div class="col-md-10">
-                    <h4>Midnight Snack</h4>
-                  </div>
+                <div class="col-md-2"><time>07:00 AM</time></div>
+                <div class="col-md-10">
+                  <h4>Breakfast</h4>
                 </div>
-    
-                <div class="row schedule-item">
-                  <div class="col-md-2"><time>07:00 AM</time></div>
-                  <div class="col-md-10">
-                    
-                    <h4>Breakfast</h4>
-                  </div>
-                </div>
-    
-                <div class="row schedule-item">
-                  <div class="col-md-2"><time>09:30 AM</time></div>
-                  <div class="col-md-10">
-                    
-                    <h4>Submissions to Devpost</h4>
-                  </div>
-                </div>
-    
-                <div class="row schedule-item">
-                  <div class="col-md-2"><time>10:00 AM</time></div>
-                  <div class="col-md-10">
-                    
-                    <h4>Presentations and Judging</h4>
-                  </div>
-                </div>
-    
-                <div class="row schedule-item">
-                  <div class="col-md-2"><time>11:30 AM</time></div>
-                  <div class="col-md-10">
-    
-                  
-                    <h4>Prizes and Closing Ceremony</h4>
-                  </div>
-                </div>
-    
-                <div class="row schedule-item">
-                  <div class="col-md-2"><time>12:00 PM</time></div>
-                  <div class="col-md-10">
-                    
-                    <h4>Event End</h4>
-                  </div>
-                </div>
-    
-                
-            </div>
+              </div>
 
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>09:30 AM</time></div>
+                <div class="col-md-10">
+                  <h4>Submissions to Devpost</h4>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>10:00 AM</time></div>
+                <div class="col-md-10">
+                  <h4>Presentations and Judging</h4>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>11:30 AM</time></div>
+                <div class="col-md-10">
+                  <h4>Prizes and Closing Ceremony</h4>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>12:00 PM</time></div>
+                <div class="col-md-10">
+                  <h4>Event End</h4>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- End Schdule Day 2 -->
-
-          
-
         </div>
+      </section>
 
-      </div>
-
-    </section>
-
-    <!--==========================
+      <!--==========================
       Venue Section
     ============================-->
-    <section id="venue" class="wow fadeInUp">
-
-      <div class="container-fluid">
-
-        <div class="section-header">
-          <h2>Event Venue</h2>
-          <p>Event venue location info and gallery</p>
-        </div>
-
-        <div class="row no-gutters">
-          <div class="col-lg-6 venue-map">
-            <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=silicon%20valley&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      <section id="venue" class="wow fadeInUp">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h2>Event Venue</h2>
+            <p>Event venue location info and gallery</p>
           </div>
 
-          <div class="col-lg-6 venue-info">
-            <div class="row justify-content-center">
-              <div class="col-11 col-lg-8">
-                <h3>TBD , California</h3>
-                <p>We are currently searching for a venue</p>
+          <div class="row no-gutters">
+            <div class="col-lg-6 venue-map">
+              <iframe
+                width="600"
+                height="500"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=silicon%20valley&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe>
+            </div>
+
+            <div class="col-lg-6 venue-info">
+              <div class="row justify-content-center">
+                <div class="col-11 col-lg-8">
+                  <h3>TBD , California</h3>
+                  <p>We are currently searching for a venue</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-      </div>
-
-
-        </div>
-      </div>
-
-    </section>
-
-        <!--==========================
+      <!--==========================
           Speakers Section
         ============================-->
-        <section id="speakers" class="wow fadeInUp">
-          <div class="container">
-            <div class="section-header">
-              <h2>Team</h2>
-              
-            </div>
+      <section id="speakers" class="wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Team</h2>
+          </div>
 
-            <div class="row">
-              <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                  <img src="img/speakers/Arman_Rafati.png" alt="Speaker 1" class="img-fluid">
-                  <div class="details">
-                    <h3>Arman Rafati</h3>
-                    <p>Executive Director </p>
-                    <div class="social">
-                      <a href="https://github.com/code-arman"><i class="fa fa-github"></i></a>
-                    </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="img/speakers/Arman_Rafati.png"
+                  alt="Speaker 1"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3>Arman Rafati</h3>
+                  <p>Executive Director</p>
+                  <div class="social">
+                    <a href="https://github.com/code-arman"
+                      ><i class="fa fa-github"></i
+                    ></a>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                  <img src="img/speakers/blank_team.png" alt="Speaker 2" class="img-fluid">
-                  <div class="details">
-                    <h3>Tony Jiang</h3>
-                    <p>Executive Director</p>
-                    <div class="social">
-                      <a href=""><i class="fa fa-github"></i></a>
-                    </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="img/speakers/blank_team.png"
+                  alt="Speaker 2"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3>Tony Jiang</h3>
+                  <p>Executive Director</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-github"></i></a>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                  <img src="img/speakers/blank_team.png" alt="Speaker 3" class="img-fluid">
-                  <div class="details">
-                    <h3>Howard Huang</h3>
-                    <p>Operations Director</p>
-                    <div class="social">
-                      <a href=""><i class="fa fa-github"></i></a>
-                    </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="img/speakers/blank_team.png"
+                  alt="Speaker 3"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3>Howard Huang</h3>
+                  <p>Operations Director</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-github"></i></a>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                  <img src="img/speakers/blank_team.png" alt="Speaker 4" class="img-fluid">
-                  <div class="details">
-                    <h3>Mathew Wang</a></h3>
-                    <p>Operations</p>
-                    <div class="social">
-                      <a href=""><i class="fa fa-github"></i></a>
-                    </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="img/speakers/blank_team.png"
+                  alt="Speaker 4"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3>Mathew Wang</h3>
+                  <p>Operations</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-github"></i></a>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                  <img src="img/speakers/blank_team.png" alt="Speaker 5" class="img-fluid">
-                  <div class="details">
-                    <h3>Nidhi Mathihalli</a></h3>
-                    <p>Finance Director</p>
-                    <div class="social">
-                      <a href=""><i class="fa fa-github"></i></a>
-                    </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="img/speakers/blank_team.png"
+                  alt="Speaker 5"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3>Nidhi Mathihalli</h3>
+                  <p>Finance Director</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-github"></i></a>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                  <img src="img/speakers/blank_team.png" alt="Speaker 6" class="img-fluid">
-                  <div class="details">
-                    <h3>Mathew Luo</a></h3>
-                    <p>Finance</p>
-                    <div class="social">
-                      <a href=""><i class="fa fa-github"></i></a>
-                    </div>
-                  </div>
-                </div>
-              
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                  <img src="img/speakers/Shayan_Sarnevesht.png" alt="Speaker 6" class="img-fluid">
-                  <div class="details">
-                    <h3>Shayan Sarnevesht</a></h3>
-                    <p>Outreach Director</p>
-                    <div class="social">
-                      <a href="https://github.com/shayans66"><i class="fa fa-github"></i></a>
-                    </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="img/speakers/blank_team.png"
+                  alt="Speaker 6"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3>Mathew Luo</h3>
+                  <p>Finance</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-github"></i></a>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                  <img src="img/speakers/blank_team.png" alt="Speaker 6" class="img-fluid">
-                  <div class="details">
-                    <h3>Mathew Luo</a></h3>
-                    <p>Finance</p>
-                    <div class="social">
-                      <a href=""><i class="fa fa-github"></i></a>
-                    </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="img/speakers/Shayan_Sarnevesht.png"
+                  alt="Speaker 6"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3>Shayan Sarnevesht</h3>
+                  <p>Outreach Director</p>
+                  <div class="social">
+                    <a href="https://github.com/shayans66"
+                      ><i class="fa fa-github"></i
+                    ></a>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                  <img src="img/speakers/blank_team.png" alt="Speaker 6" class="img-fluid">
-                  <div class="details">
-                    <h3>Mathew Luo</a></h3>
-                    <p>Finance</p>
-                    <div class="social">
-                      <a href=""><i class="fa fa-github"></i></a>
-                    </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="img/speakers/blank_team.png"
+                  alt="Speaker 6"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3>Mathew Luo</h3>
+                  <p>Finance</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-github"></i></a>
                   </div>
                 </div>
-              
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="img/speakers/blank_team.png"
+                  alt="Speaker 6"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3>Mathew Luo</h3>
+                  <p>Finance</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-github"></i></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-        </section>
-
-    
-    <!--==========================
+      <!--==========================
       Sponsors Section
     ============================-->
-    <section id="supporters" class="section-with-bg wow fadeInUp">
+      <section id="supporters" class="section-with-bg wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Sponsors</h2>
+            <p>
+              <strong
+                >Want to sponsor Toga Hacks? Email helloemail@gmail.com
+              </strong>
+            </p>
+          </div>
 
-      <div class="container">
-        <div class="section-header">
-          <h2>Sponsors</h2>
-          <p><strong>Want to sponsor Toga Hacks? Email helloemail@gmail.com </strong></p>
+          <div class="row no-gutters supporters-wrap clearfix">
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo">
+                <img src="img/logo.png" width="500px" />
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo"></div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="row no-gutters supporters-wrap clearfix">
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-                <img src="img/logo.png" width="500px"></img>
-
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              
-            </div>
-          </div>
-          
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!--==========================
+      <!--==========================
       F.A.Q Section
     ============================-->
-    <section id="faq" class="wow fadeInUp">
+      <section id="faq" class="wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>F.A.Q</h2>
+          </div>
 
-      <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <ul id="faq-list">
+                <li>
+                  <a data-toggle="collapse" class="collapsed" href="#faq1"
+                    >Does this event cost money?
+                    <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq1" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Nope! It is free, thanks to the generous donations by our
+                      sponsors
+                    </p>
+                  </div>
+                </li>
 
-        <div class="section-header">
-          <h2>F.A.Q </h2>
-        </div>
+                <li>
+                  <a data-toggle="collapse" class="collapsed" href="#faq2"
+                    >What is a Hackathon? <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq2" class="collapse" data-parent="#faq-list">
+                    <p>
+                      A Hackathon is a 24 hour programming event where students
+                      work together to develop a software or hardware project
+                    </p>
+                  </div>
+                </li>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <ul id="faq-list">
+                <li>
+                  <a data-toggle="collapse" href="#faq3" class="collapsed"
+                    >Who can participate? <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq3" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Any high school student can participate
+                    </p>
+                  </div>
+                </li>
 
-              <li>
-                
-                <a data-toggle="collapse" class="collapsed" href="#faq1">What is a Hackathon? <i class="fa fa-minus-circle"></i></a>
-                <div id="faq1" class="collapse" data-parent="#faq-list">
-                  <p>
-                   
-                      A Hackathon is a 24 hour programming event
-                      where students work together to develop a
-                      software or hardware project
-                  </p>
-                </div>
-              </li>
+                <li>
+                  <a data-toggle="collapse" href="#faq4" class="collapsed"
+                    >What if I don't know how to code?
+                    <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq4" class="collapse" data-parent="#faq-list">
+                    <p>
+                      No problem! We will be hosting several workshops
+                      throughout the event intended to help you learn to code
+                    </p>
+                  </div>
+                </li>
 
-              <li>
-                
-                <a data-toggle="collapse" href="#faq2" class="collapsed">Who can participate? <i class="fa fa-minus-circle"></i></a>
-                <div id="faq2" class="collapse" data-parent="#faq-list">
-                  <p>
-                    
-                    Any High School student can particpate!
-                  </p>
-                </div>
-              </li>
+                <li>
+                  <a data-toggle="collapse" href="#faq5" class="collapsed"
+                    >What should I bring? <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq5" class="collapse" data-parent="#faq-list">
+                    <p>
+                      A laptop and a charger is all that you need. A sleeping
+                      bag is recommended (if you plan to sleep 😉)
+                    </p>
+                  </div>
+                </li>
 
-              <li>
-                
-                <a data-toggle="collapse" href="#faq3" class="collapsed">What if I don't know how to code? <i class="fa fa-minus-circle"></i></a>
-                <div id="faq3" class="collapse" data-parent="#faq-list">
-                  <p>
-                    
-                      We will be hosting several workshops throughout the event
-                      intended to help you with your projects!
-                  </p>
-                </div>
-              </li>
+                <li>
+                  <a data-toggle="collapse" href="#faq6" class="collapsed"
+                    >How do I form a team? <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq6" class="collapse" data-parent="#faq-list">
+                    <p>
+                      If you do not have a team already, there will be team
+                      formation at the beginning of the hackathon. This is an
+                      opportunity for you to meet new people and form teams.
+                      Each team should have a maximum of four people
+                    </p>
+                  </div>
+                </li>
 
-              <li>
-                
-                <a data-toggle="collapse" href="#faq4" class="collapsed">What should I bring? <i class="fa fa-minus-circle"></i></a>
-                <div id="faq4" class="collapse" data-parent="#faq-list">
-                  <p>
-                    
-                    Laptop, charger, powerstrip, and sleeping bag are highly recommended
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                
-                <a data-toggle="collapse" href="#faq5" class="collapsed">How much does it cost to participate? <i class="fa fa-minus-circle"></i></a>
-                <div id="faq5" class="collapse" data-parent="#faq-list">
-                  <p>
-                    
-                    Thanks to our sponsors, this event is completely free!
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <a data-toggle="collapse" href="#faq6" class="collapsed">How do I form a team? <i class="fa fa-minus-circle"></i></a>
-                <div id="faq6" class="collapse" data-parent="#faq-list">
-                  <p>
-                      If you do not have a team already, there will be
-                      team formation at the beginning of the hackathon.
-                      This is an opportunity for you to meet new people
-                      and form teams. Each team should have a maximum of
-                      four people
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                
-                <a data-toggle="collapse" href="#faq6" class="collapsed">Will there be a theme? <i class="fa fa-minus-circle"></i></a>
-                <div id="faq6" class="collapse" data-parent="#faq-list">
-                  <p>
-                    
-                      TBD
-                  </p>
-                </div>
-              </li>
-
+                <li>
+                  <a data-toggle="collapse" href="#faq7" class="collapsed"
+                    >What is the theme? <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq7" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Build an app or website with a novel approach of using AI
+                      & machine learning for social good
+                    </p>
+                  </div>
+                </li>
               </ul>
+            </div>
           </div>
         </div>
+      </section>
 
-      </div>
-
-    </section>
-
-    <!--==========================
+      <!--==========================
       Buy Ticket Section
     ============================-->
-    <section id="buy-tickets" class="section-with-bg wow fadeInUp">
-      <div class="container">
+      <section id="buy-tickets" class="section-with-bg wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Sponsor Us</h2>
+          </div>
 
-        <div class="section-header">
-          <h2>Sponsor Us</h2>
-          <p>Velit consequatur consequatur inventore iste fugit unde omnis eum aut.</p>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">
+                    Bronze Sponsor Tier
+                  </h5>
+                  <h6 class="card-price text-center">$500</h6>
+                  <hr />
+                  <ul class="fa-ul">
+                    <li>
+                      <span class="fa-li"><i class="fa fa-check"></i></span>Logo
+                      on Website
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fa fa-check"></i></span>Logo
+                      on T-Shirt
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fa fa-check"></i></span>Send
+                      Recruiter
+                    </li>
+                    <li class="text-muted">
+                      <span class="fa-li"><i class="fa fa-times"></i></span
+                      >Award API & Themed Prizes
+                    </li>
+                    <li class="text-muted">
+                      <span class="fa-li"><i class="fa fa-times"></i></span
+                      >Mailing List
+                    </li>
+                    <li class="text-muted">
+                      <span class="fa-li"><i class="fa fa-times"></i></span
+                      >Presentation at Opening/Closing Ceremony
+                    </li>
+                  </ul>
+                  <hr />
+                  <div class="text-center">
+                    <button
+                      type="button"
+                      class="btn"
+                      data-toggle="modal"
+                      data-target="#buy-ticket-modal"
+                      data-ticket-type="standard-access"
+                    >
+                      Sponsor Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">
+                    Silver Sponsor Tier
+                  </h5>
+                  <h6 class="card-price text-center">$1000</h6>
+                  <hr />
+                  <ul class="fa-ul">
+                    <li>
+                      <span class="fa-li"><i class="fa fa-check"></i></span>Logo
+                      on Website
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fa fa-check"></i></span>Logo
+                      on T-Shirt
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fa fa-check"></i></span>Send
+                      Recruiter
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fa fa-check"></i></span
+                      >Award API & Themed Prizes
+                    </li>
+                    <li class="text-muted">
+                      <span class="fa-li"><i class="fa fa-times"></i></span
+                      >Mailing List
+                    </li>
+                    <li class="text-muted">
+                      <span class="fa-li"><i class="fa fa-times"></i></span
+                      >Presentation at Opening/Closing Ceremony
+                    </li>
+                  </ul>
+                  <hr />
+                  <div class="text-center">
+                    <button
+                      type="button"
+                      class="btn"
+                      data-toggle="modal"
+                      data-target="#buy-ticket-modal"
+                      data-ticket-type="pro-access"
+                    >
+                      Sponsor Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Pro Tier -->
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">
+                    Gold Tier Sponsor
+                  </h5>
+                  <h6 class="card-price text-center">$3000</h6>
+                  <hr />
+                  <ul class="fa-ul">
+                    <li>
+                      <span class="fa-li"><i class="fa fa-check"></i></span>Logo
+                      on Website
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fa fa-check"></i></span>Logo
+                      on T-Shirt
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fa fa-check"></i></span>Send
+                      Recruiter
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fa fa-check"></i></span
+                      >Award API & Themed Prizes
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fa fa-check"></i></span
+                      >Mailing List
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fa fa-check"></i></span
+                      >Presentation at Opening/Closing Ceremony
+                    </li>
+                  </ul>
+                  <hr />
+                  <div class="text-center">
+                    <button
+                      type="button"
+                      class="btn"
+                      data-toggle="modal"
+                      data-target="#buy-ticket-modal"
+                      data-ticket-type="premium-access"
+                    >
+                      Sponsor Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Bronze Sponsor Tier</h5>
-                <h6 class="card-price text-center">$500</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Logo on Website</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Logo on T-Shirt</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Send Recruiter</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Award API & Themed Prizes</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Mailing List</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Presentation at Opening/Closing Ceremony</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">Sponsor Now</button>
-                </div>
+        <!-- Modal Order Form -->
+        <div id="buy-ticket-modal" class="modal fade">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Buy Tickets</h4>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form method="POST" action="#">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="your-name"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="your-email"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <select
+                      id="ticket-type"
+                      name="ticket-type"
+                      class="form-control"
+                    >
+                      <option value="">-- Select Your Ticket Type --</option>
+                      <option value="standard-access">Standard Access</option>
+                      <option value="pro-access">Pro Access</option>
+                      <option value="premium-access">Premium Access</option>
+                    </select>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn">Buy Now</button>
+                  </div>
+                </form>
               </div>
             </div>
+            <!-- /.modal-content -->
           </div>
-          <div class="col-lg-4">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Silver Sponsor Tier</h5>
-                <h6 class="card-price text-center">$1000</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Logo on Website</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Logo on T-Shirt</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Send Recruiter</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Award API & Themed Prizes</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Mailing List</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Presentation at Opening/Closing Ceremony</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="pro-access">Sponsor Now</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Pro Tier -->
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Gold Tier Sponsor</h5>
-                <h6 class="card-price text-center">$3000</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Logo on Website</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Logo on T-Shirt</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Send Recruiter</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Award API & Themed Prizes</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Mailing List</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Presentation at Opening/Closing Ceremony</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="premium-access">Sponsor Now</button>
-                </div>
-
-              </div>
-            </div>
-          </div>
+          <!-- /.modal-dialog -->
         </div>
+        <!-- /.modal -->
+      </section>
+    </main>
 
-      </div>
-
-      <!-- Modal Order Form -->
-      <div id="buy-ticket-modal" class="modal fade">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Buy Tickets</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form method="POST" action="#">
-                <div class="form-group">
-                  <input type="text" class="form-control" name="your-name" placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="your-email" placeholder="Your Email">
-                </div>
-                <div class="form-group">
-                  <select id="ticket-type" name="ticket-type" class="form-control" >
-                    <option value="">-- Select Your Ticket Type --</option>
-                    <option value="standard-access">Standard Access</option>
-                    <option value="pro-access">Pro Access</option>
-                    <option value="premium-access">Premium Access</option>
-                  </select>
-                </div>
-                <div class="text-center">
-                  <button type="submit" class="btn">Buy Now</button>
-                </div>
-              </form>
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-
-    </section>
-
-    
-
-  </main>
-
-
-  <!--==========================
+    <!--==========================
     Footer
   ============================-->
-  <footer id="footer">
-    
-      
-
-         
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Toga Hacks</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong>Toga Hacks</strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!--
           All the links in the footer should remain intact.
           You can delete the links only if you purchased the pro version.
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
         -->
-        <span>Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></span>
+          <span
+            >Designed by
+            <a href="https://bootstrapmade.com/">BootstrapMade</a></span
+          >
+        </div>
       </div>
-    </div>
-  </footer><!-- #footer -->
+    </footer>
+    <!-- #footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/venobox/venobox.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/venobox/venobox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
 
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-</body>
-
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
