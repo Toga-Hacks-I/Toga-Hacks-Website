@@ -737,6 +737,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 30px;
 }
 
+#speakers .speaker .details a:not(:last-child) {
+  margin-right: .6rem;
+}
+
 #speakers .speaker .details a {
   color: #fff;
 }
