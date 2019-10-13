@@ -466,6 +466,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 # Intro Section
 --------------------------------------------------------------*/
 
+#main-logo {
+  height: 40vh;
+}
+
 #intro {
   width: 100%;
   height: 100vh;
@@ -1394,6 +1398,29 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
+#license {
+    text-decoration: none;
+    position: relative;
+    color: white;
+}
+
+#license:hover {
+  color: #c72027;
+}
+
+#license:after {
+    content: '';
+    color: #c72027;
+
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+
+    border-width: 0 0 1px;
+    border-style: solid;
+}
 
 #footer {
   background: #101522;

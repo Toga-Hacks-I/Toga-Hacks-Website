@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-149590316-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'UA-149590316-1');
-    </script>
-
     <meta charset="utf-8" />
     <title>Toga Hacks I</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -90,10 +75,10 @@
     <section id="intro">
       <div class="intro-container wow fadeIn">
         <img
+          id="main-logo"
           src="img/logo_white.png"
           alt="TogaHacks logo"
-          width="500"
-          height="500"
+          class="img-fluid"
         />
         <h1 class="mb-4 pb-0"><span>Toga </span>Hacks<span> I</span></h1>
         <p class="mb-4 pb-0">Silicon Valley, CA</p>
@@ -412,8 +397,9 @@
                   <h3>Nidhi Mathihalli</h3>
                   <p>Finance Director</p>
                   <div class="social">
-                    <a href=""><i class="fa fa-github"></i></a>
-                    <!--TODO: add link to GitHub-->
+                    <a href="https://github.com/nidhimath"
+                      ><i class="fa fa-github"></i
+                    ></a>
                   </div>
                 </div>
               </div>
@@ -425,12 +411,11 @@
                   alt="Speaker 6"
                   class="img-fluid"
                 />
-                <!--TODO: add picture-->
                 <div class="details">
                   <h3>Mathew Luo</h3>
                   <p>Finance</p>
                   <div class="social">
-                    <a href=""><i class="fa fa-github"></i></a>
+                    <a href="https://github.com/mluo2002"><i class="fa fa-github"></i></a>
                   </div>
                 </div>
               </div>
@@ -457,15 +442,14 @@
             </div>
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
-                <!--TODO: remove redundant speaker-->
                 <img
-                  src="img/speakers/blank_team.png"
+                  src="img/team/Ujjwal_Krishnamurthi.jpg"
                   alt="Speaker 6"
                   class="img-fluid"
                 />
                 <div class="details">
-                  <h3>Mathew Luo</h3>
-                  <p>Finance</p>
+                  <h3>Ujjwal Krishnamurthi</h3>
+                  <p>Outreach</p>
                   <div class="social">
                     <a href=""><i class="fa fa-github"></i></a>
                   </div>
@@ -505,12 +489,12 @@
           <div class="row no-gutters supporters-wrap clearfix">
             <div class="col-lg-3 col-md-4 col-xs-6">
               <div class="supporter-logo">
-                <a href= "http://www.18techventures.com/">
-                <img
-                  src="img/supporters/18Tech Ventures Logo Light Theme.png" 
-                  width="250px"
-                />
-              </a>
+                <a href="http://www.18techventures.com/">
+                  <img
+                    src="img/supporters/18Tech Ventures Logo Light Theme.png"
+                    width="250px"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -852,7 +836,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">Buy Tickets</h4>
+                <h4 class="modal-title">Get Access</h4>
                 <button
                   type="button"
                   class="close"
@@ -886,7 +870,7 @@
                       name="ticket-type"
                       class="form-control"
                     >
-                      <option value="">-- Select Your Ticket Type --</option>
+                      <option value="">-- Select Your Sponsor Type --</option>
                       <option value="standard-access">Standard Access</option>
                       <option value="pro-access">Pro Access</option>
                       <option value="premium-access">Premium Access</option>
@@ -912,7 +896,12 @@
     <footer id="footer">
       <div class="container">
         <div class="copyright">
-          &copy; Copyright <strong>Toga Hacks</strong>. All Rights Reserved
+          &copy; 2019 <strong>Toga Hacks</strong>. Licensed under
+          <strong
+            ><a href="https://tldrlegal.com/license/mit-license" id="license"
+              >MIT license</a
+            ></strong
+          >
         </div>
         <div class="credits">
           <!--
@@ -948,5 +937,20 @@
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-149590316-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-149590316-1");
+    </script>
   </body>
 </html>
