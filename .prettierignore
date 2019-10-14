@@ -1,0 +1,5 @@
+# Don't format libs
+libs/*
+
+# Don't format minified files
+*.min.*

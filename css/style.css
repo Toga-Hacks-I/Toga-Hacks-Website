@@ -5,14 +5,21 @@
   License: https://bootstrapmade.com/license/
 */
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # General
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 body {
   background: #fff;
   color: #2f3138;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  a {
+    color: #c72027;
+    transition: none;
+  }
 }
 
 a {
@@ -39,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
@@ -64,10 +71,27 @@ h6 {
   width: 100%;
   height: 100%;
   overflow: visible;
-  background: #fff url('../img/preloader.svg') no-repeat center center;
+
+  /* background: #fff url("../img/preloader.svg") no-repeat center center; */
 }
 
 /* Back to top button */
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .back-to-top {
+    position: fixed;
+    display: none;
+    background: #c72027;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50px;
+    right: 15px;
+    bottom: 15px;
+    transition: none;
+  }
+}
 
 .back-to-top {
   position: fixed;
@@ -100,7 +124,7 @@ h6 {
 }
 
 /* Sections Header
---------------------------------*/
+-------------------------------- */
 
 .section-header {
   margin-bottom: 60px;
@@ -109,7 +133,7 @@ h6 {
 }
 
 .section-header::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 60px;
@@ -140,9 +164,22 @@ h6 {
   background-color: #f6f7fd;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Header
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #header {
+    height: 90px;
+    padding: 25px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: none;
+    z-index: 997;
+  }
+}
 
 #header {
   height: 90px;
@@ -153,6 +190,36 @@ h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: rgba(6, 12, 34, 0.98);
+    height: 70px;
+    padding: 15px 0;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: rgba(6, 12, 34, 0.98);
+    height: 70px;
+    padding: 15px 0;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+#header.header-scrolled,
+#header.header-fixed {
+  background: rgba(6, 12, 34, 0.98);
+  height: 70px;
+  padding: 15px 0;
+  transition: none;
+}
 }
 
 #header.header-scrolled,
@@ -168,7 +235,7 @@ h6 {
   margin: 0;
   padding: 6px 0;
   line-height: 1;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -179,7 +246,9 @@ h6 {
 }
 
 #header #logo h1 a,
-#header #logo h1 a:hover {
+#header #logo h1 a:hover,
+#header #logo h1 a,
+#header #logo h1 a:focus {
   color: #fff;
 }
 
@@ -189,9 +258,9 @@ h6 {
   max-height: 40px;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Navigation Menu
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 /* Nav Menu Essentials */
 
@@ -220,6 +289,8 @@ h6 {
 }
 
 .nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul,
+.nav-menu li:focus > ul,
 .nav-menu li.sfHover > ul {
   display: block;
 }
@@ -239,8 +310,8 @@ h6 {
   padding-right: 30px;
 }
 
-.sf-arrows .sf-with-ul:after {
-  content: '\f107';
+.sf-arrows .sf-with-ul::after {
+  content: "\f107";
   position: absolute;
   right: 15px;
   font-family: FontAwesome;
@@ -248,8 +319,8 @@ h6 {
   font-weight: normal;
 }
 
-.sf-arrows ul .sf-with-ul:after {
-  content: '\f105';
+.sf-arrows ul .sf-with-ul::after {
+  content: "\f105";
 }
 
 /* Nav Meu Container */
@@ -266,14 +337,16 @@ h6 {
   text-decoration: none;
   display: inline-block;
   color: rgba(202, 206, 221, 0.8);
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 14px;
   outline: none;
 }
 
 .nav-menu .menu-active a,
-.nav-menu a:hover {
+.nav-menu a:hover,
+.nav-menu .menu-active a,
+.nav-menu a:focus {
   color: #fff;
 }
 
@@ -281,8 +354,22 @@ h6 {
   margin-left: 8px;
 }
 
-.nav-menu > li > a:before {
-  content: '';
+@media screen and (prefers-reduced-motion: reduce) {
+  .nav-menu > li > a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #c72027;
+    visibility: hidden;
+    transition: none;
+  }
+}
+
+.nav-menu > li > a::before {
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -293,11 +380,30 @@ h6 {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.nav-menu a:hover:before,
-.nav-menu li:hover > a:before,
-.nav-menu .menu-active > a:before {
+.nav-menu a:hover::before,
+.nav-menu li:hover > a::before,
+.nav-menu .menu-active > a::before,
+.nav-menu a:focus::before,
+.nav-menu li:focus > a::before,
+.nav-menu .menu-active > a::before {
   visibility: visible;
   width: 100%;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .nav-menu li.buy-tickets a {
+    color: #fff;
+    background: #c72027;
+    padding: 7px 22px;
+    border-radius: 50px;
+    border: 2px solid #c72027;
+    transition: none;
+    font-weight: 500;
+    margin-left: 8px;
+    margin-top: 2px;
+    line-height: 1;
+    font-size: 13px;
+  }
 }
 
 .nav-menu li.buy-tickets a {
@@ -314,25 +420,46 @@ h6 {
   font-size: 13px;
 }
 
-.nav-menu li.buy-tickets a:hover {
+.nav-menu li.buy-tickets a:hover,
+.nav-menu li.buy-tickets a:focus {
   background: none;
 }
 
-.nav-menu li.buy-tickets:hover a:before,
-.nav-menu li.buy-tickets.menu-active a:before {
+.nav-menu li.buy-tickets:hover a::before,
+.nav-menu li.buy-tickets.menu-active a::before,
+.nav-menu li.buy-tickets:focus a::before,
+.nav-menu li.buy-tickets.menu-active a::before {
   visibility: hidden;
 }
 
 .nav-menu ul {
   margin: 4px 0 0 0;
   padding: 10px;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  box-shadow: 0 0 30px rgba(127, 137, 161, 0.25);
   background: #fff;
   border-radius: 3px;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  .nav-menu ul li {
+    transition: none;
+  }
+}
+
 .nav-menu ul li {
   transition: 0.3s;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .nav-menu ul li a {
+    padding: 10px;
+    color: #060c22;
+    transition: none;
+    display: block;
+    font-size: 13px;
+    text-transform: none;
+    border-radius: 3px;
+  }
 }
 
 .nav-menu ul li a {
@@ -345,7 +472,8 @@ h6 {
   border-radius: 3px;
 }
 
-.nav-menu ul li:hover > a {
+.nav-menu ul li:hover > a,
+.nav-menu ul li:focus > a {
   background: #c72027;
   color: #fff;
 }
@@ -355,6 +483,23 @@ h6 {
 }
 
 /* Mobile Nav Toggle */
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #mobile-nav-toggle {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    margin: 15px 15px 0 0;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    display: none;
+    transition: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
 
 #mobile-nav-toggle {
   position: fixed;
@@ -376,6 +521,21 @@ h6 {
 }
 
 /* Mobile Nav Styling */
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #mobile-nav {
+    position: fixed;
+    top: 0;
+    padding-top: 18px;
+    bottom: 0;
+    z-index: 998;
+    background: rgba(6, 12, 34, 0.9);
+    left: -260px;
+    width: 260px;
+    overflow-y: auto;
+    transition: none;
+  }
+}
 
 #mobile-nav {
   position: fixed;
@@ -412,7 +572,8 @@ h6 {
   outline: none;
 }
 
-#mobile-nav ul li a:hover {
+#mobile-nav ul li a:hover,
+#mobile-nav ul li a:focus {
   color: #c72027;
 }
 
@@ -462,9 +623,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Intro Section
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 #main-logo {
   height: 40vh;
@@ -479,8 +640,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
 }
 
-#intro:before {
-  content: '';
+#intro::before {
+  content: "";
   background: rgb(0, 8, 40, 0.6);
   position: absolute;
   bottom: 0;
@@ -514,7 +675,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro h1 {
   color: #fff;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 120px;
   font-weight: 600;
   text-transform: uppercase;
@@ -540,8 +701,26 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  #intro .play-btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-40%) translateY(-50%);
+    transform: translateX(-40%) translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #fff;
+    z-index: 100;
+    transition: none;
+  }
+}
+
 #intro .play-btn::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 50%;
@@ -556,8 +735,33 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-#intro .play-btn:before {
-  content: '';
+@media screen and (prefers-reduced-motion: reduce) {
+  #intro .play-btn::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation: pulsate-btn 2s;
+    animation: none;
+    -webkit-animation-direction: forwards;
+    animation-direction: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: steps;
+    animation-timing-function: steps;
+    opacity: 1;
+    border-radius: 50%;
+    border: 2px solid rgba(163, 163, 163, 0.4);
+    top: -15%;
+    left: -15%;
+    background: rgba(198, 16, 0, 0);
+  }
+}
+
+#intro .play-btn::before {
+  content: "";
   position: absolute;
   width: 120px;
   height: 120px;
@@ -579,14 +783,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: rgba(198, 16, 0, 0);
 }
 
-#intro .play-btn:hover::after {
+#intro .play-btn:hover::after,
+#intro .play-btn:focus::after {
   border-left: 15px solid #c72027;
   -webkit-transform: scale(20);
   transform: scale(20);
 }
 
-#intro .play-btn:hover::before {
-  content: '';
+#intro .play-btn:hover::before,
+#intro .play-btn:focus::before {
+  content: "";
   position: absolute;
   left: 50%;
   top: 50%;
@@ -604,8 +810,27 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 0;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  #intro .about-btn {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    transition: none;
+    line-height: 1;
+    margin: 10px;
+    color: #fff;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    border: 2px solid #c72027;
+  }
+}
+
 #intro .about-btn {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -621,7 +846,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: 2px solid #c72027;
 }
 
-#intro .about-btn:hover {
+#intro .about-btn:hover,
+#intro .about-btn:focus {
   background: #c72027;
   color: #fff;
 }
@@ -654,12 +880,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # About Section
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 #about {
-  background: url('../img/about-bg.jpg');
+  background: url("../img/about-bg.jpg");
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -667,8 +893,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 60px 0 40px 0;
 }
 
-#about:before {
-  content: '';
+#about::before {
+  content: "";
   background: rgba(13, 20, 41, 0.8);
   position: absolute;
   bottom: 0;
@@ -698,9 +924,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Speakers Section
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 #speakers {
   padding: 60px 0 30px 0;
@@ -710,6 +936,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #speakers .speaker .details {
+    background: rgba(6, 12, 34, 0.76);
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+    right: 0;
+    text-align: center;
+    padding-top: 10px;
+    transition: none;
+  }
 }
 
 #speakers .speaker .details {
@@ -742,18 +981,20 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #speakers .speaker .details a:not(:last-child) {
-  margin-right: .6rem;
+  margin-right: 0.6rem;
 }
 
 #speakers .speaker .details a {
   color: #fff;
 }
 
-#speakers .speaker .details a:hover {
+#speakers .speaker .details a:hover,
+#speakers .speaker .details a:focus {
   color: #c72027;
 }
 
-#speakers .speaker:hover .details {
+#speakers .speaker:hover .details,
+#speakers .speaker:focus .details {
   bottom: 0;
 }
 
@@ -784,7 +1025,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-top: 9px;
 }
 
-#speakers-details .details .social a:hover {
+#speakers-details .details .social a:hover,
+#speakers-details .details .social a:focus {
   background: #c72027;
   color: #fff;
 }
@@ -799,9 +1041,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 10px;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Schedule Section
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 #schedule {
   padding: 60px 0 60px 0;
@@ -841,8 +1083,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0 auto 30px auto;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  #schedule .tab-pane {
+    transition: none;
+  }
+}
+
 #schedule .tab-pane {
   transition: ease-in-out 0.2s;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #schedule .schedule-item {
+    border-bottom: 1px solid #cad4f6;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: none;
+  }
 }
 
 #schedule .schedule-item {
@@ -852,7 +1109,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: background-color ease-in-out 0.3s;
 }
 
-#schedule .schedule-item:hover {
+#schedule .schedule-item:hover,
+#schedule .schedule-item:focus {
   background-color: #fff;
 }
 
@@ -868,6 +1126,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 50%;
   float: left;
   margin: 0 10px 10px 0;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #schedule .schedule-item .speaker img {
+    height: 100%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-left: 50%;
+    transition: none;
+  }
 }
 
 #schedule .schedule-item .speaker img {
@@ -897,9 +1165,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Venue Section
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 #venue {
   padding: 60px 0;
@@ -916,15 +1184,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #venue .venue-info {
-  background: url('../img/venue-info-bg.jpg') top center no-repeat;
+  background: url("../img/venue-info-bg.jpg") top center no-repeat;
   background-size: cover;
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-#venue .venue-info:before {
-  content: '';
+#venue .venue-info::before {
+  content: "";
   background: rgba(13, 20, 41, 0.8);
   position: absolute;
   bottom: 0;
@@ -954,18 +1222,25 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-bottom: 3px solid #fff;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  #venue .venue-gallery img {
+    transition: none;
+  }
+}
+
 #venue .venue-gallery img {
   transition: all ease-in-out 0.4s;
 }
 
-#venue .venue-gallery:hover img {
+#venue .venue-gallery:hover img,
+#venue .venue-gallery:focus img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Hotels Section
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 #hotels {
   padding: 60px 0;
@@ -977,7 +1252,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 30px;
 }
 
-#hotels .hotel:hover .hotel-img img {
+#hotels .hotel:hover .hotel-img img,
+#hotels .hotel:focus .hotel-img img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -985,6 +1261,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 #hotels .hotel-img {
   overflow: hidden;
   margin-bottom: 15px;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #hotels .hotel-img img {
+    transition: none;
+  }
 }
 
 #hotels .hotel-img img {
@@ -1002,7 +1284,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #152b79;
 }
 
-#hotels a:hover {
+#hotels a:hover,
+#hotels a:focus {
   color: #c72027;
 }
 
@@ -1023,9 +1306,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 15px;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Gallery Section
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 #gallery {
   padding: 60px;
@@ -1069,9 +1352,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   z-index: 1;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # supporters Section
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 #supporters {
   padding: 60px 0;
@@ -1101,18 +1384,25 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 180px;
 }
 
-#supporters .supporter-logo:hover img {
+#supporters .supporter-logo:hover img,
+#supporters .supporter-logo:focus img {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #supporters img {
+    transition: none;
+  }
 }
 
 #supporters img {
   transition: all 0.4s ease-in-out;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # F.A.Q Section
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 #faq {
   padding: 60px 0;
@@ -1131,7 +1421,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 18px 0;
   display: block;
   position: relative;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -1158,12 +1448,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #faq #faq-list a.collapsed i::before {
-  content: '\f055' !important;
+  content: "\f055" !important;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Subscribe Section
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 #subscribe {
   padding: 60px;
@@ -1173,8 +1463,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
 }
 
-#subscribe:before {
-  content: '';
+#subscribe::before {
+  content: "";
   background: rgba(6, 12, 34, 0.8);
   position: absolute;
   bottom: 0;
@@ -1199,6 +1489,20 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  #subscribe button {
+    border: 0;
+    padding: 9px 25px;
+    cursor: pointer;
+    background: #c72027;
+    color: #fff;
+    transition: none;
+    outline: none;
+    font-size: 14px;
+    border-radius: 50px;
+  }
+}
+
 #subscribe button {
   border: 0;
   padding: 9px 25px;
@@ -1211,16 +1515,26 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 50px;
 }
 
-#subscribe button:hover {
+#subscribe button:hover,
+#subscribe button:focus {
   background: #e0072f;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Buy Tickets Section
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 #buy-tickets {
   padding: 60px 0;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #buy-tickets .card {
+    border: none;
+    border-radius: 5px;
+    transition: none;
+    box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
+  }
 }
 
 #buy-tickets .card {
@@ -1230,7 +1544,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
 }
 
-#buy-tickets .card:hover {
+#buy-tickets .card:hover,
+#buy-tickets .card:focus {
   box-shadow: 0 10px 35px 0 rgba(6, 12, 34, 0.2);
 }
 
@@ -1258,6 +1573,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   opacity: 0.7;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  #buy-tickets .card .btn {
+    font-size: 15px;
+    border-radius: 50px;
+    padding: 10px 40px;
+    transition: none;
+    background-color: #c72027;
+    border: 0;
+    color: #fff;
+  }
+}
+
 #buy-tickets .card .btn {
   font-size: 15px;
   border-radius: 50px;
@@ -1268,13 +1595,26 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-#buy-tickets .card .btn:hover {
+#buy-tickets .card .btn:hover,
+#buy-tickets .card .btn:focus {
   background-color: #e0072f;
 }
 
 #buy-tickets #buy-ticket-modal input,
 #buy-tickets #buy-ticket-modal select {
   border-radius: 0;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #buy-tickets #buy-ticket-modal .btn {
+    font-size: 15px;
+    border-radius: 50px;
+    padding: 10px 40px;
+    transition: none;
+    background-color: #c72027;
+    border: 0;
+    color: #fff;
+  }
 }
 
 #buy-tickets #buy-ticket-modal .btn {
@@ -1287,13 +1627,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-#buy-tickets #buy-ticket-modal .btn:hover {
+#buy-tickets #buy-ticket-modal .btn:hover,
+#buy-tickets #buy-ticket-modal .btn:focus {
   background-color: #e0072f;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Contact Section
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 #contact {
   padding: 60px 0;
@@ -1329,7 +1670,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #4869df;
 }
 
-#contact .contact-info a:hover {
+#contact .contact-info a:hover,
+#contact .contact-info a:focus {
   color: #c72027;
 }
 
@@ -1381,7 +1723,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 15px;
 }
 
-#contact .form button[type='submit'] {
+@media screen and (prefers-reduced-motion: reduce) {
+  #contact .form button[type="submit"] {
+    background: #c72027;
+    border: 0;
+    padding: 10px 40px;
+    color: #fff;
+    transition: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+}
+
+#contact .form button[type="submit"] {
   background: #c72027;
   border: 0;
   padding: 10px 40px;
@@ -1391,35 +1745,35 @@ body.mobile-nav-active #mobile-nav-toggle {
   cursor: pointer;
 }
 
-#contact .form button[type='submit']:hover {
+#contact .form button[type="submit"]:hover,
+#contact .form button[type="submit"]:focus {
   background: #e0072f;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Footer
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 #license {
-    text-decoration: none;
-    position: relative;
-    color: white;
+  text-decoration: none;
+  position: relative;
+  color: white;
 }
 
-#license:hover {
+#license:hover,
+#license:focus {
   color: #c72027;
 }
 
-#license:after {
-    content: '';
-    color: #c72027;
-
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-
-    border-width: 0 0 1px;
-    border-style: solid;
+#license::after {
+  content: "";
+  color: #c72027;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  border-width: 0 0 1px;
+  border-style: solid;
 }
 
 #footer {
@@ -1443,7 +1797,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0 0 20px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   color: #fff;
 }
@@ -1457,8 +1811,25 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: #fff;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #footer .footer-top .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #222636;
+    color: #eee;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: none;
+  }
 }
 
 #footer .footer-top .social-links a {
@@ -1476,7 +1847,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: 0.3s;
 }
 
-#footer .footer-top .social-links a:hover {
+#footer .footer-top .social-links a:hover,
+#footer .footer-top .social-links a:focus {
   background: #c72027;
   color: #fff;
 }
@@ -1520,7 +1892,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #eee;
 }
 
-#footer .footer-top .footer-links ul a:hover {
+#footer .footer-top .footer-links ul a:hover,
+#footer .footer-top .footer-links ul a:focus {
   color: #c72027;
 }
 
@@ -1536,13 +1909,26 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 30px;
 }
 
-#footer .footer-top .footer-newsletter input[type='email'] {
+#footer .footer-top .footer-newsletter input[type="email"] {
   border: 0;
   padding: 6px 8px;
   width: 65%;
 }
 
-#footer .footer-top .footer-newsletter input[type='submit'] {
+@media screen and (prefers-reduced-motion: reduce) {
+  #footer .footer-top .footer-newsletter input[type="submit"] {
+    background: #101522;
+    border: 0;
+    width: 35%;
+    padding: 6px 0;
+    text-align: center;
+    color: #fff;
+    transition: none;
+    cursor: pointer;
+  }
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"] {
   background: #101522;
   border: 0;
   width: 35%;
@@ -1553,7 +1939,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   cursor: pointer;
 }
 
-#footer .footer-top .footer-newsletter input[type='submit']:hover {
+#footer .footer-top .footer-newsletter input[type="submit"]:hover,
+#footer .footer-top .footer-newsletter input[type="submit"]:focus {
   background: #101522;
 }
 
@@ -1573,9 +1960,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #101522;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Responsive Media Queries
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 @media (min-width: 767px) {
   #subscribe input {
@@ -1627,6 +2014,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (max-width: 991px) {
+  @media screen and (prefers-reduced-motion: reduce) {
+    #header {
+      background: rgba(6, 12, 34, 0.98);
+      height: 70px;
+      padding: 15px 0;
+      transition: none;
+    }
+  }
   #header {
     background: rgba(6, 12, 34, 0.98);
     height: 70px;

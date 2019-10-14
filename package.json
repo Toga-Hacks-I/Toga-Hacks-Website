@@ -1,0 +1,62 @@
+{
+  "name": "toga-hacks-website",
+  "version": "0.0.1",
+  "description": "a website for the 2020 TogaHacks hackathon",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "fix-code": "prettier-eslint --write '*.js' ",
+    "fix-styles": "prettier-stylelint --write '*.{css,scss}' ",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Toga-Hacks-I/Toga-Hacks-Website.git"
+  },
+  "keywords": [
+    "hackathon",
+    "saratoga",
+    "bootstrap-4",
+    "bootstrap",
+    "jquery",
+    "owlcarousel",
+    "superfish",
+    "venobox",
+    "wow",
+    "easing",
+    "animate",
+    "font-awesome",
+    "event",
+    "landing-page",
+    "event-landing-page",
+    "hackathon-landing-page"
+  ],
+  "author": "TogaHacks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Toga-Hacks-I/Toga-Hacks-Website/issues"
+  },
+  "homepage": "https://github.com/Toga-Hacks-I/Toga-Hacks-Website#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier-eslint": "^9.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^11.1.1",
+    "stylelint-a11y": "^1.2.1",
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-config-standard": "^19.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
