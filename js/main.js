@@ -1,6 +1,38 @@
-jQuery(document).ready(function($) {
+// import libraries' CSS files
+import "bootstrap/dist/css/bootstrap.css"; // Import precompiled Bootstrap css
+import "font-awesome/css/font-awesome.css";
+import "animate.css/animate.css";
+import "venobox/venobox/venobox.css";
+import "owl.carousel2/dist/assets/owl.carousel.css";
+
+// import main css file
+import "../css/style.css";
+
+// import jQuery globally
+import "./jquery-global";
+
+// import Bootstrap's js library
+import "bootstrap";
+
+// import jQuery.easing
+import "jquery.easing/jquery.easing";
+
+// import superfish
+import "superfish/dist/js/hoverIntent";
+import "superfish/dist/js/superfish";
+
+// import wow.js
+import { WOW } from "wowjs";
+
+// import venobox
+import "venobox/venobox/venobox";
+
+// import owl carousel
+import "owl.carousel2/dist/owl.carousel";
+
+$(document).ready(function() {
   // Back to top button
-  $(window).scroll(function() {
+  $(window).scroll(() => {
     if ($(this).scrollTop() > 100) {
       $(".back-to-top").fadeIn("slow");
     } else {
@@ -31,7 +63,9 @@ jQuery(document).ready(function($) {
   }
 
   // Initiate the wowjs animation library
-  new WOW().init();
+  new WOW({
+    live: false
+  }).init();
 
   // Initialize Venobox
   $(".venobox").venobox({
