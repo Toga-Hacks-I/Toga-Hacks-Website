@@ -1,6 +1,38 @@
-jQuery(document).ready(function($) {
+import "bootstrap";
+import "popper.js";
+import "bootstrap/dist/css/bootstrap.css"; // Import precompiled Bootstrap css
+import "@fortawesome/fontawesome-free/css/all.css";
+import "../css/style.css";
+
+// import jQuery and jQuery-migrate
+import $ from "jquery";
+
+// import animate.css
+import "animate.css/animate.css";
+
+// import owl carousel
+// import "owl.carousel2/dist/owl.carousel";
+// import "owl.carousel2/dist/assets/owl.carousel.css";
+
+// import venobox
+import "venobox/venobox/venobox";
+import "venobox/venobox/venobox.css";
+
+import "jquery-migrate/dist/jquery-migrate";
+
+// import jQuery.easing
+import "jquery.easing/jquery.easing";
+
+// import superfish
+// import "superfish/dist/js/hoverIntent";
+// import "superfish/dist/js/superfish";
+
+// import wow.js
+import { WOW } from "wowjs";
+
+$(document).ready(function() {
   // Back to top button
-  $(window).scroll(function() {
+  $(window).scroll(() => {
     if ($(this).scrollTop() > 100) {
       $(".back-to-top").fadeIn("slow");
     } else {
@@ -31,7 +63,9 @@ jQuery(document).ready(function($) {
   }
 
   // Initiate the wowjs animation library
-  new WOW().init();
+  new WOW({
+    live: false
+  });
 
   // Initialize Venobox
   $(".venobox").venobox({
@@ -144,19 +178,19 @@ jQuery(document).ready(function($) {
     }
   });
 
-  // Gallery carousel (uses the Owl Carousel library)
-  $(".gallery-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    center: true,
-    responsive: {
-      0: { items: 1 },
-      768: { items: 3 },
-      992: { items: 4 },
-      1200: { items: 5 }
-    }
-  });
+  // // Gallery carousel (uses the Owl Carousel library)
+  // $(".gallery-carousel").owlCarousel({
+  //   autoplay: true,
+  //   dots: true,
+  //   loop: true,
+  //   center: true,
+  //   responsive: {
+  //     0: { items: 1 },
+  //     768: { items: 3 },
+  //     992: { items: 4 },
+  //     1200: { items: 5 }
+  //   }
+  // });
 
   // Buy tickets select the ticket type on click
   $("#buy-ticket-modal").on("show.bs.modal", function(event) {
