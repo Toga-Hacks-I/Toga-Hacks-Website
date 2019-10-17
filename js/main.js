@@ -205,4 +205,5 @@ $(document).ready(function() {
 
   // custom code
   $.cloudinary.config({ cloud_name: "damnzwekj", secure: true });
+  $.cloudinary.responsive();
 });
