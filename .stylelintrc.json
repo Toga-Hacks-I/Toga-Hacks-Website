@@ -1,5 +1,5 @@
 {
-  "plugins": ["stylelint-a11y"],
+  "plugins": ["stylelint-a11y", "stylelint-prettier"],
   "rules": {
     "a11y/media-prefers-reduced-motion": true,
     "a11y/no-outline-none": true,
