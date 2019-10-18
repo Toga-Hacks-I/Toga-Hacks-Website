@@ -27,7 +27,7 @@ To deploy to the `dist` folder:
 
 # Known Issues
 
-While running the live server, sometimes, none of the Cloudinary images render (although they always do in the production build). If they don't render, just run `$.cloudinary.responsive()` in the console and that should fix it (until you refresh).
+~~While running the live server, sometimes, none of the Cloudinary images render (although they always do in the production build). If they don't render, just run `$.cloudinary.responsive()` in the console and that should fix it (until you refresh).~~ This issue has been resolved. If this still occurs, simply commit your uncommitted changes, delete the project, re-clone the repo, and run `npm i`
 
 # Credits
 
