@@ -127,7 +127,7 @@ h6 {
 -------------------------------- */
 
 .section-header {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   position: relative;
   padding-bottom: 20px;
 }
@@ -158,6 +158,10 @@ h6 {
   font-size: 18px;
   font-weight: 500;
   color: #9195a2;
+}
+
+.section-header.sponsors {
+  margin-top: 75px;
 }
 
 .section-with-bg {
@@ -213,13 +217,13 @@ h6 {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-#header.header-scrolled,
-#header.header-fixed {
-  background: rgba(6, 12, 34, 0.98);
-  height: 70px;
-  padding: 15px 0;
-  transition: none;
-}
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: rgba(6, 12, 34, 0.98);
+    height: 70px;
+    padding: 15px 0;
+    transition: none;
+  }
 }
 
 #header.header-scrolled,
@@ -1361,13 +1365,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #supporters .supporters-wrap {
-  border-top: 1px solid #e0e5fa;
-  border-left: 1px solid #e0e5fa;
+  /* border-top: 1px solid #e0e5fa;
+  border-left: 1px solid #e0e5fa; */
   margin-bottom: 30px;
 }
 
 #supporters .supporter-logo {
-  padding: 100px;
+  padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1377,11 +1381,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-right: 1px solid #e0e5fa;
-  border-bottom: 1px solid #e0e5fa;
+  border: 1px solid #e0e5fa;
+  /* border-right: 1px solid #e0e5fa;
+  border-bottom: 1px solid #e0e5fa; */
   overflow: hidden;
   background: rgba(255, 255, 255, 0.5);
-  height: 180px;
+  height: 100%;
 }
 
 #supporters .supporter-logo:hover img,
@@ -1398,6 +1403,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #supporters img {
   transition: all 0.4s ease-in-out;
+}
+
+.sponsors + #sponsors-grid {
+  margin: 0;
 }
 
 /* --------------------------------------------------------------
