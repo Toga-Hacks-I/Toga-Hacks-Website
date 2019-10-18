@@ -25,6 +25,10 @@ To deploy to the `dist` folder:
 
 1. `npm run build`
 
+# Known Issues
+
+While running the live server, sometimes, none of the Cloudinary images render (although they always do in the production build). If they don't render, just run `$.cloudinary.responsive()` in the console and that should fix it (until you refresh).
+
 # Credits
 
 Special thanks to Netlify for offering us free Pro-tier static site hosting and BootstrapMade for letting us use their theme
