@@ -1466,7 +1466,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #subscribe {
   padding: 60px;
-  background: url(../img/backgrounds/subscribe-bg.jpg) center center no-repeat;
+  background: url("https://res.cloudinary.com/damnzwekj/image/upload/c_fill,dpr_auto,f_auto,q_auto,w_auto:100:1280/v1/TogaHacks/backgrounds/subscribe-bg_gi7zka.jpg") center center no-repeat;
   background-size: cover;
   overflow: hidden;
   position: relative;
