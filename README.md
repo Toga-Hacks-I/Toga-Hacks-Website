@@ -7,7 +7,7 @@ TogaHacks I Hackathon 2020 website
 
 # Want to contribute?
 
-Thanks for your help 🙂! Please see our [code of conduct](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/blob/master/CODE_OF_CONDUCT.md), [create a GitHub issue](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/issues/new/choose) of what you're planning to fix/add, and have it approved by one of our contributors. Then, feel free to [make a PR](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/compare)!
+First of all, thank you so much for your help 🙂! Please see our [code of conduct](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/blob/master/CODE_OF_CONDUCT.md), [create a GitHub issue](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/issues/new/choose) of what you're planning to fix/add, and have it approved by one of our contributors. Then, feel free to [make a PR](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/compare)!
 
 # Usage
 
