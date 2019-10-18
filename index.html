@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width" />
     <meta charset="utf-8" />
     <title>Toga Hacks I</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -52,12 +53,18 @@
             >
           </h1> -->
 
-          <a href="javascript:window.location.href=window.location.href"
-            ><img
-              src="img/logos/logo_white.png"
-              alt="TogaHacks logo"
-              class="img-fluid"
+          <a href="javascript:window.location.href=window.location.href">
+            <img
+              data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/logos/logo_white_b4n0hr.png"
+              alt="small TogaHacks logo"
+              class="img-fluid cld-responsive"
+              responsive_placeholder="blank"
             />
+            <!-- <img
+              src="img/logos/logo_white.png"
+              alt="TogaHacks Logo"
+              class="img-fluid"
+            /> -->
           </a>
         </div>
 
@@ -83,10 +90,11 @@
     <section id="intro">
       <div class="intro-container wow fadeIn">
         <img
-          id="main-logo"
-          src="img/logos/logo_white.png"
+          data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/logos/logo_white_b4n0hr.png"
+          responsive_placeholder="blank"
           alt="TogaHacks logo"
-          class="img-fluid"
+          class="img-fluid cld-responsive"
+          id="main-logo"
         />
         <h1 class="mb-4 pb-0"><span>Toga </span>Hacks<span> I</span></h1>
         <p class="mb-4 pb-0">Silicon Valley, CA</p>
@@ -395,10 +403,16 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
+                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/speakers/blank_team_ztthgh.jpg"
+                  responsive_placeholder="blank"
+                  alt="Mathew Wang"
+                  class="img-fluid cld-responsive"
+                />
+                <!-- <img
                   src="img/speakers/blank_team.png"
                   alt="Speaker 4"
                   class="img-fluid"
-                />
+                /> -->
                 <!--TODO: add picture-->
                 <div class="details">
                   <h3>Mathew Wang</h3>
