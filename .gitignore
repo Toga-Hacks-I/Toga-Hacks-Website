@@ -137,7 +137,8 @@ public/
 # End of https://www.gitignore.io/api/node,macos,visualstudiocode
 
 ### parcel ###
-dist
+dist/*
+!dist/_redirects
 lib
 *.min.js
 tmp
