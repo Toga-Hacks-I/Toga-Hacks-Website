@@ -99,7 +99,7 @@ $(document).ready(function() {
     });
     $("body").append($mobile_nav);
     $("body").prepend(
-      '<button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>'
+      '<button type="button" id="mobile-nav-toggle" aria-label="hamburger menu"><i class="fa fa-bars"></i></button>'
     );
     $("body").append('<div id="mobile-body-overly"></div>');
     $("#mobile-nav")
