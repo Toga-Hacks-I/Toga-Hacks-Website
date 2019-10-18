@@ -30,6 +30,9 @@ import "venobox/venobox/venobox";
 // import owl carousel
 import "owl.carousel2/dist/owl.carousel";
 
+// import cloudinary
+import "cloudinary-jquery/cloudinary-jquery";
+
 $(document).ready(function() {
   // Back to top button
   $(window).scroll(() => {
@@ -201,4 +204,6 @@ $(document).ready(function() {
   });
 
   // custom code
+  $.cloudinary.config({ cloud_name: "damnzwekj", secure: true });
+  $.cloudinary.responsive();
 });

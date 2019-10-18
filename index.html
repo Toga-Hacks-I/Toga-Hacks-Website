@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width" />
     <meta charset="utf-8" />
     <title>Toga Hacks I</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -52,12 +53,18 @@
             >
           </h1> -->
 
-          <a href="javascript:window.location.href=window.location.href"
-            ><img
-              src="img/logo_white.png"
-              alt="TogaHacks logo"
-              class="img-fluid"
+          <a href="javascript:window.location.href=window.location.href">
+            <img
+              data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/logos/logo_white_b4n0hr.png"
+              alt="small TogaHacks logo"
+              class="img-fluid cld-responsive"
+              responsive_placeholder="blank"
             />
+            <!-- <img
+              src="img/logos/logo_white.png"
+              alt="TogaHacks Logo"
+              class="img-fluid"
+            /> -->
           </a>
         </div>
 
@@ -83,10 +90,11 @@
     <section id="intro">
       <div class="intro-container wow fadeIn">
         <img
-          id="main-logo"
-          src="img/logo_white.png"
+          data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/logos/logo_white_b4n0hr.png"
+          responsive_placeholder="blank"
           alt="TogaHacks logo"
-          class="img-fluid"
+          class="img-fluid cld-responsive"
+          id="main-logo"
         />
         <h1 class="mb-4 pb-0"><span>Toga </span>Hacks<span> I</span></h1>
         <p class="mb-4 pb-0">Silicon Valley, CA</p>
@@ -308,20 +316,26 @@
       <!--==========================
           Speakers Section
         ============================-->
-      <section id="speakers" class="wow fadeInUp">
+      <section id="speakers" class="section-with-bg wow fadeInUp">
         <div class="container">
           <div class="section-header">
             <h2>Team</h2>
           </div>
 
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
+                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Arman_Rafati_eunebi.jpg"
+                  responsive_placeholder="blank"
+                  alt="Arman Rafati"
+                  class="img-fluid cld-responsive"
+                />
+                <!-- <img
                   src="img/team/Arman_Rafati.jpg"
                   alt="Speaker 1"
                   class="img-fluid"
-                />
+                /> -->
                 <div class="details">
                   <h3>Arman Rafati</h3>
                   <p>Executive Director</p>
@@ -336,10 +350,16 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
+                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Tony_Jiang_jhbuad.jpg"
+                  responsive_placeholder="blank"
+                  alt="Tony Jiang"
+                  class="img-fluid cld-responsive"
+                />
+                <!-- <img
                   src="img/team/Tony_Jiang.jpg"
                   alt="Speaker 2"
                   class="img-fluid"
-                />
+                /> -->
                 <div class="details">
                   <h3>Tony Jiang</h3>
                   <p>Executive Director</p>
@@ -347,8 +367,9 @@
                     <a href="https://github.com/tonyjiang02"
                       ><i class="fa fa-github"></i
                     ></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                    <!--TODO: add link to LinkedIn-->
+                    <a href="http://linkedin.com/in/tony-jiang-672662139"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
                   </div>
                 </div>
               </div>
@@ -356,10 +377,14 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
-                  src="img/team/Howard_Huang.jpg"
-                  alt="Speaker 3"
-                  class="img-fluid"
+                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Howard_Huang_bfjnfd.jpg"
+                  responsive_placeholder="blank"
+                  alt="Howard Huang"
+                  class="img-fluid cld-responsive"
                 />
+                <!-- <img
+                  src="img/team/Howard_Huang.jpg"
+                /> -->
                 <div class="details">
                   <h3>Howard Huang</h3>
                   <p>Director of Communications</p>
@@ -378,10 +403,16 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
+                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/speakers/blank_team_ztthgh.jpg"
+                  responsive_placeholder="blank"
+                  alt="Mathew Wang"
+                  class="img-fluid cld-responsive"
+                />
+                <!-- <img
                   src="img/speakers/blank_team.png"
                   alt="Speaker 4"
                   class="img-fluid"
-                />
+                /> -->
                 <!--TODO: add picture-->
                 <div class="details">
                   <h3>Mathew Wang</h3>
@@ -397,10 +428,16 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
+                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Nidhi_Mathihalli_qpfgix.jpg"
+                  responsive_placeholder="blank"
+                  alt="Nidhi Mathihalli"
+                  class="img-fluid cld-responsive"
+                />
+                <!-- <img
                   src="img/team/Nidhi_Mathihalli.jpg"
                   alt="Speaker 5"
                   class="img-fluid"
-                />
+                /> -->
                 <div class="details">
                   <h3>Nidhi Mathihalli</h3>
                   <p>Finance Director</p>
@@ -415,10 +452,16 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
+                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Mathew_Luo_dyy0of.jpg"
+                  responsive_placeholder="blank"
+                  alt="Mathew Luo"
+                  class="img-fluid cld-responsive"
+                />
+                <!-- <img
                   src="/img/team/Mathew_Luo.jpg"
                   alt="Speaker 6"
                   class="img-fluid"
-                />
+                /> -->
                 <div class="details">
                   <h3>Mathew Luo</h3>
                   <p>Finance</p>
@@ -433,10 +476,16 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
+                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Shayan_Sarnevesht_jzftzz.jpg"
+                  responsive_placeholder="blank"
+                  alt="Shayan Sarnevesht"
+                  class="img-fluid cld-responsive"
+                />
+                <!-- <img
                   src="img/team/Shayan_Sarnevesht.jpg"
                   alt="Speaker 6"
                   class="img-fluid"
-                />
+                /> -->
                 <div class="details">
                   <h3>Shayan Sarnevesht</h3>
                   <p>Outreach Director</p>
@@ -453,30 +502,19 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
+                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Ujjwal_Krishnamurthi_g6v3gk.jpg"
+                  alt="Ujjwal Krishnamurthi"
+                  class="img-fluid cld-responsive"
+                  responsive_placeholder="blank"
+                />
+                <!-- <img
                   src="img/team/Ujjwal_Krishnamurthi.jpg"
                   alt="Speaker 6"
                   class="img-fluid"
-                />
+                /> -->
                 <div class="details">
                   <h3>Ujjwal Krishnamurthi</h3>
                   <p>Outreach</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-github"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="speaker">
-                <!--TODO: remove redundant speaker-->
-                <img
-                  src="img/speakers/blank_team.png"
-                  alt="Speaker 6"
-                  class="img-fluid"
-                />
-                <div class="details">
-                  <h3>Mathew Luo</h3>
-                  <p>Finance</p>
                   <div class="social">
                     <a href=""><i class="fa fa-github"></i></a>
                   </div>
@@ -490,19 +528,88 @@
       <!--==========================
       Sponsors Section
     ============================-->
-      <section id="supporters" class="section-with-bg wow fadeInUp">
+
+      <!-- <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <img src="img/supporters/2.png" class="img-fluid" alt="">
+          </div>
+        </div>
+      
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <img src="img/supporters/3.png" class="img-fluid" alt="">
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <img src="img/supporters/4.png" class="img-fluid" alt="">
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <img src="img/supporters/5.png" class="img-fluid" alt="">
+          </div>
+        </div>
+      
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <img src="img/supporters/6.png" class="img-fluid" alt="">
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <img src="img/supporters/7.png" class="img-fluid" alt="">
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <img src="img/supporters/8.png" class="img-fluid" alt="">
+          </div>
+        </div> -->
+
+      <section id="supporters" class="wow fadeInUp">
         <div class="container">
           <div class="section-header">
             <h2>Partners</h2>
           </div>
 
-          <div class="row no-gutters supporters-wrap clearfix">
+          <div
+            class="row justify-content-md-center no-gutters supporters-wrap clearfix"
+          >
             <div class="col-lg-3 col-md-4 col-xs-6">
               <div class="supporter-logo">
-                <a href="http://www.18techventures.com/">
+                <a href="https://18techventures.com">
                   <img
-                    src="img/supporters/18Tech Ventures Logo Light Theme.png"
-                    width="250px"
+                    data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/supporters/18Tech_Ventures_Logo_Light_Theme_pyytmd.png"
+                    alt="18Tech Ventures Logo"
+                    responsive_placeholder="blank"
+                    class="img-fluid cld-responsive"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="section-header sponsors">
+            <h2>Sponsors</h2>
+          </div>
+          <div
+            id="sponsors-grid"
+            class="row justify-content-md-center no-gutters supporters-wrap clearfix"
+          >
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="supporter-logo">
+                <a href="https://www.netlify.com">
+                  <img
+                    data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/supporters/netlify_lsvd1f.svg"
+                    alt="Netlify Logo"
+                    responsive_placeholder="blank"
+                    class="img-fluid cld-responsive"
                   />
                 </a>
               </div>
@@ -511,76 +618,10 @@
         </div>
       </section>
 
-      <section id="supporters" class="section-with-bg wow fadeInUp">
-        <div class="container">
-          <div class="section-header">
-            <h2>Sponsors</h2>
-            <p>
-              <strong
-                >Want to sponsor TogaHacks? Email togahacks2020@gmail.com
-              </strong>
-            </p>
-          </div>
-
-          <div class="row no-gutters supporters-wrap clearfix">
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                <img src="img/logo.png" width="240px" />
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div>
-            <!-- <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo"></div>
-            </div> -->
-          </div>
-        </div>
-      </section>
-
       <!--==========================
       F.A.Q Section
     ============================-->
-      <section id="faq" class="wow fadeInUp">
+      <section id="faq" class="section-with-bg wow fadeInUp">
         <div class="container">
           <div class="section-header">
             <h2>F.A.Q</h2>
@@ -683,7 +724,7 @@
       <!--==========================
       Buy Ticket Section
     ============================-->
-      <section id="buy-tickets" class="section-with-bg wow fadeInUp">
+      <section id="buy-tickets" class="wow fadeInUp">
         <div class="container">
           <div class="section-header">
             <h2>Sponsor Us</h2>
