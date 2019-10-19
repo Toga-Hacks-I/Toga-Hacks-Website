@@ -1,15 +1,23 @@
 const production = {
   plugins: [
-    require("autoprefixer"),
+    require("autoprefixer")({
+      flexbox: "no-2009"
+    }),
     require("postcss-nested"),
     require("postcss-uncss")({
-      html: ["./index.html"]
+      html: ["./index.html"],
+      ignore: ["#mobile-nav-toggle", ".header-scrolled"]
     })
   ]
 };
 
 const dev = {
-  plugins: [require("autoprefixer"), require("postcss-nested")]
+  plugins: [
+    require("autoprefixer")({
+      flexbox: "no-2009"
+    }),
+    require("postcss-nested")
+  ]
 };
 
 const config = {
