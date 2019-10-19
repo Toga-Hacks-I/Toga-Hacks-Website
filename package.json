@@ -41,7 +41,6 @@
   },
   "homepage": "https://github.com/Toga-Hacks-I/Toga-Hacks-Website#readme",
   "devDependencies": {
-    "autoprefixer": "^9.6.5",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
@@ -49,8 +48,6 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.1",
     "parcel-bundler": "^1.12.4",
-    "postcss-modules": "^1.4.1",
-    "postcss-uncss": "^0.17.0",
     "prettier-eslint": "^9.0.0",
     "prettier-eslint-cli": "^5.0.0",
     "prettier-stylelint": "^0.4.2",
@@ -58,11 +55,11 @@
     "stylelint-a11y": "^1.2.1",
     "stylelint-config-prettier": "^6.0.0",
     "stylelint-config-standard": "^19.0.0",
-    "stylelint-prettier": "^1.1.1",
-    "uncss": "^0.17.2"
+    "stylelint-prettier": "^1.1.1"
   },
   "dependencies": {
     "animate.css": "^3.7.2",
+    "autoprefixer": "^9.6.5",
     "bootstrap": "^4.3.1",
     "cloudinary-jquery": "^2.7.4",
     "css": "^2.2.4",
@@ -72,7 +69,11 @@
     "owl.carousel": "^2.3.4",
     "owl.carousel2": "^2.2.1",
     "popper.js": "^1.16.0",
+    "postcss-modules": "^1.4.1",
+    "postcss-nested": "^4.1.2",
+    "postcss-uncss": "^0.17.0",
     "superfish": "^1.7.10",
+    "uncss": "^0.17.2",
     "venobox": "^1.8.6",
     "wowjs": "^1.1.3"
   }
