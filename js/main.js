@@ -1,9 +1,9 @@
-// import libraries' CSS files
-import "bootstrap/dist/css/bootstrap.css"; // Import precompiled Bootstrap css
-import "font-awesome/css/font-awesome.css";
-import "animate.css/animate.css";
-import "venobox/venobox/venobox.css";
-import "owl.carousel2/dist/assets/owl.carousel.css";
+// // import libraries' CSS files
+// import "bootstrap/dist/css/bootstrap.css"; // Import precompiled Bootstrap css
+// import "font-awesome/css/font-awesome.css";
+// import "animate.css/animate.css";
+// import "venobox/venobox/venobox.css";
+// import "owl.carousel2/dist/assets/owl.carousel.css";
 
 // import main css file
 import "../css/style.css";
