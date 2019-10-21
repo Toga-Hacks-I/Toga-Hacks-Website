@@ -645,7 +645,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
   width: 100%;
   height: 100vh;
-  background: url("https://res.cloudinary.com/damnzwekj/image/upload/c_fill,dpr_auto,f_auto,q_auto,w_auto:100:1280/v1/TogaHacks/backgrounds/intro-bg_ngqj6c.jpg") top center;
+  background: url("https://res.cloudinary.com/damnzwekj/image/upload/c_fill,dpr_auto,f_auto,q_auto,w_auto:100:1280/v1/TogaHacks/backgrounds/intro-bg_ngqj6c.jpg")
+    top center;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -1191,11 +1192,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 #venue .venue-map iframe {
   width: 100%;
   height: 100%;
-  min-height: 300px;
 }
-
+#map {
+  height: 100%;
+  min-height: 200px;
+}
 #venue .venue-info {
-  background: url("https://res.cloudinary.com/damnzwekj/image/upload/c_fill,dpr_auto,f_auto,q_auto,w_auto:100:640/v1/TogaHacks/backgrounds/venue-info-bg_jii9qp.jpg") top center no-repeat;
+  background: url("https://res.cloudinary.com/damnzwekj/image/upload/c_fill,dpr_auto,f_auto,q_auto,w_auto:100:640/v1/TogaHacks/backgrounds/venue-info-bg_jii9qp.jpg")
+    top center no-repeat;
   background-size: cover;
   position: relative;
   padding-top: 60px;
@@ -1473,7 +1477,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #subscribe {
   padding: 60px;
-  background: url("https://res.cloudinary.com/damnzwekj/image/upload/c_fill,dpr_auto,f_auto,q_auto,w_auto:100:1280/v1/TogaHacks/backgrounds/subscribe-bg_gi7zka.jpg") center center no-repeat;
+  background: url("https://res.cloudinary.com/damnzwekj/image/upload/c_fill,dpr_auto,f_auto,q_auto,w_auto:100:1280/v1/TogaHacks/backgrounds/subscribe-bg_gi7zka.jpg")
+    center center no-repeat;
   background-size: cover;
   overflow: hidden;
   position: relative;

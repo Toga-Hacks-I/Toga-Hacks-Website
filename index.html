@@ -325,7 +325,14 @@
 
           <div class="row no-gutters">
             <div class="col-lg-6 venue-map">
-              <iframe
+              <div id="map"></div>
+              <script src="./js/map.js"></script>
+              <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD2Q5gab7PCxacJX-hivZOoC1WdhY_g-U&callback=initMap"
+                async
+                defer
+              ></script>
+              <!--<iframe
                 width="600"
                 height="500"
                 id="gmap_canvas"
@@ -334,7 +341,7 @@
                 scrolling="no"
                 marginheight="0"
                 marginwidth="0"
-              ></iframe>
+              ></iframe> -->
             </div>
 
             <div class="col-lg-6 venue-info">
@@ -529,7 +536,9 @@
                     <a href="https://github.com/shayans66"
                       ><i class="fa fa-github"></i
                     ></a>
-                    <a href="https://www.linkedin.com/in/shayans66/"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/shayans66/"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
                   </div>
                 </div>
               </div>
