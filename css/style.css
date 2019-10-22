@@ -1195,7 +1195,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 #map {
   height: 100%;
-  min-height: 200px;
+  min-height: 300px;
 }
 #venue .venue-info {
   background: url("https://res.cloudinary.com/damnzwekj/image/upload/c_fill,dpr_auto,f_auto,q_auto,w_auto:100:640/v1/TogaHacks/backgrounds/venue-info-bg_jii9qp.jpg")
