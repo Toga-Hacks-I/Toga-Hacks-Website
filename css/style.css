@@ -823,7 +823,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  #intro .about-btn {
+  #intro .register-btn {
     font-family: "Raleway", sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -838,16 +838,17 @@ body.mobile-nav-active #mobile-nav-toggle {
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
     border: 2px solid #c72027;
+    background: #c72027;
   }
 }
 
-#intro .about-btn {
+#intro .register-btn {
   font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 18px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 12px 32px;
+  padding: 10px 30px;
   border-radius: 50px;
   transition: 0.5s;
   line-height: 1;
@@ -856,11 +857,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   border: 2px solid #c72027;
+  background: #c72027;
 }
 
-#intro .about-btn:hover,
-#intro .about-btn:focus {
-  background: #c72027;
+#intro .register-btn:hover,
+#intro .register-btn:focus {
+  background: none;
   color: #fff;
 }
 
@@ -1984,6 +1986,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* --------------------------------------------------------------
 # Responsive Media Queries
 -------------------------------------------------------------- */
+
+@media only screen and (min-width: 991px) {
+  #intro .register-btn.typeform-share {
+    display: none;
+  }
+}
 
 @media (min-width: 767px) {
   #subscribe input {
