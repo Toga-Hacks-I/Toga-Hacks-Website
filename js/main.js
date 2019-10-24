@@ -93,6 +93,7 @@ $(document).ready(function() {
       .prop({
         id: "mobile-nav"
       });
+    $mobile_nav.find(".buy-tickets").remove();
     $mobile_nav.find("> ul").attr({
       class: "",
       id: ""
