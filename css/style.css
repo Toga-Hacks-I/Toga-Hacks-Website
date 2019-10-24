@@ -1426,6 +1426,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 # Sponsor Packet/Prospectus Section
 -------------------------------------------------------------- */
 
+#prospectus {
+  padding: 60px 0;
+}
 
 /* --------------------------------------------------------------
 # F.A.Q Section
