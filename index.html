@@ -796,47 +796,52 @@
       <div class="container .d-none .d-lg-block .d-xl-none .d-xl-block">
         <div class="section-header">
           <h2>Sponsor Us</h2>
-          <div style="padding: 0px 0px 20px 0px"><p>We are a registered 501(c)(3) non-profit. All donations are tax-deductible.</p></div>
+        </div>
 
-          <!--Sponsorship Prospectus Button-->
-          <!--On devices smaller than desktop, opens pdf in new tab-->
-          <div class="row d-flex justify-content-center prospectus-btn-sec">
-              <div class="text-center prospectus-btn-sec">
-                <a class="btn btn-info btn-sm prospectus-btn" href="TogaHacks Sponsorship Prospectus.pdf"
-                  target="_blank">View Sponsorship Prospectus</a>
+        <div class="row d-flex justify-content-center"></div>
+        <div class="text-center lead">
+          <p>We are a registered 501(c)(3) non-profit. <b>All donations are tax-deductible.</b></p>
+        </div>
+      </div>
+
+      <!--Sponsorship Prospectus Button-->
+      <!--On devices smaller than desktop, opens pdf in new tab-->
+      <div class="row d-flex justify-content-center prospectus-btn-sec">
+        <div class="text-center prospectus-btn-sec">
+          <a class="btn btn-info btn-sm prospectus-btn" href="TogaHacks Sponsorship Prospectus.pdf" target="_blank">View
+            Sponsorship Prospectus</a>
+        </div>
+      </div>
+
+      <!--On devices desktop or larger, button opens embedded pdf in modal-->
+      <div class="container d-flex justify-content-center">
+        <button type="button" class="btn btn-lg prospectus-modal-btn" data-toggle="modal"
+          data-target="#prospectusModal">View Sponsorship Prospectus</button>
+        <!-- Modal -->
+        <div id="prospectusModal" class="modal fade" role="dialog">
+          <div class="modal-dialog modal-xl">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header" style="display:inline">
+                <h4 style="display:inline"><a href="TogaHacks Sponsorship Prospectus.pdf" target="_blank">TogaHacks
+                    Sponsorship Prospectus</a></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
-          </div>
-          
-          <!--On devices desktop or larger, button opens embedded pdf in modal-->
-          <div class="container d-flex justify-content-center">
-            <button type="button" class="btn btn-lg prospectus-modal-btn" data-toggle="modal"
-              data-target="#prospectusModal">View Sponsorship Prospectus</button>
-            <!-- Modal -->
-            <div id="prospectusModal" class="modal fade" role="dialog">
-              <div class="modal-dialog modal-xl">
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header" style="display:inline">
-                    <h4 style="display:inline"><a href="TogaHacks Sponsorship Prospectus.pdf" target="_blank">TogaHacks
-                        Sponsorship Prospectus</a></h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-                  <div class="modal-body">
-                    <embed src="./TogaHacks Sponsorship Prospectus.pdf" frameborder="0" class="modalpdf">
-                    <div class="modal-footer" style="padding:15px 0px 0px 0px">
-                      <div class="btn pros-modal-btn pros-modal-open"><a href="TogaHacks Sponsorship Prospectus.pdf"
-                          target="_blank" style="color:inherit"><b>Open in new tab</b></a></div>
-                      <button type="button" class="btn btn-default btn pros-modal-btn"
-                        data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
+              <div class="modal-body">
+                <embed src="./TogaHacks Sponsorship Prospectus.pdf" frameborder="0" class="modalpdf">
+                <div class="modal-footer" style="padding:15px 0px 0px 0px">
+                  <div class="btn pros-modal-btn pros-modal-open"><a href="TogaHacks Sponsorship Prospectus.pdf"
+                      target="_blank" style="color:inherit"><b>Open in new tab</b></a></div>
+                  <button type="button" class="btn btn-default btn pros-modal-btn" data-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!--
+
+      <!--
           <div class="text-center">
                   <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal"
                     data-ticket-type="premium-access">
