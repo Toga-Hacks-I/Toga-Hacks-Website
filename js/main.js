@@ -207,4 +207,41 @@ $(document).ready(function() {
   // custom code
   $.cloudinary.config({ cloud_name: "damnzwekj", secure: true });
   $.cloudinary.responsive();
+  $(".bg-responsive").each(function(i, element) {
+    const windowWidth = element.clientWidth;
+    const { bg, bgWidth } = getWidths(element);
+    if (Math.ceil(windowWidth / 100) * 100 <= bgWidth) {
+      replaceBackground(bg, element, windowWidth, bgWidth);
+    }
+    resizeObserver.observe(element);
+  });
 });
+
+const resizeObserver = new ResizeObserver(entries => {
+  // eslint-disable-next-line no-restricted-syntax
+  for (let entry of entries) {
+    if (entry.contentRect) {
+      const windowWidth = entry.contentRect.width;
+      const { bg, bgWidth } = getWidths(entry.target);
+      if (windowWidth - parseInt(bgWidth, 10) > 50) {
+        replaceBackground(bg, entry.target, windowWidth, bgWidth);
+      }
+    }
+  }
+});
+function replaceBackground(bg, element, windowWidth, currWidth){
+  bg = bg.replace(currWidth, Math.ceil(windowWidth / 100) * 100);
+  $(element).css("background-image", `url(${bg})`);
+}
+function getWidths(element){
+  let currBg = $(element)
+  .css("background-image")
+  .match(/url\(([^)]+)\)/i)[1];
+  let currWidth = currBg.slice(92);
+  currWidth = currWidth.slice(0, currWidth.indexOf("/"));
+  const curr = {
+    bg: currBg,
+    bgWidth: currWidth
+  }
+  return curr;
+}
