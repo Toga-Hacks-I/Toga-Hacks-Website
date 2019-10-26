@@ -1560,6 +1560,68 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
+#buy-tickets .prospectus-btn, .prospectus-modal-btn {
+  font-size: 20px;
+  border-radius: 50px;
+  padding: 10px 40px;
+  transition: none;
+  background-color: #c72027;
+  border: 0;
+  color: #fff;
+}
+
+.prospectus-modal-btn:hover {
+  background-color: #c72027;
+  color:#fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .prospectus-modal-btn {
+    /*See Prospectus that opens a modal*/
+      display: none !important;
+  }
+  .prospectus-btn {
+    /*See Prospectus button that opens in new tab*/
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .prospectus-btn {
+    display: none !important;
+  }
+
+  .prospectus-modal-btn {
+    display: block;
+  }
+  
+}
+
+.modalpdf {
+  /*pdf embedded in modal*/
+  width: 100%;
+  height: 450px;
+}
+
+.pros-modal-btn {
+  /*buttons on bottom of prospectus modal*/
+  display: inline;
+  border-radius: 5px;
+  background-color: lightgrey;
+  color: black;
+}
+
+.pros-modal-open {
+  /*open button of prospectus modal*/
+  color: #fff;
+  background-color: #c72027;
+}
+
+.pros-modal-open:hover {
+  background-color:#ed131c;
+  color:#fff;
+}
+
 #buy-tickets .card {
   border: none;
   border-radius: 5px;
