@@ -1605,7 +1605,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .pros-modal-btn {
   /*buttons on bottom of prospectus modal*/
-  display: inline;
+  display: inline-block;
   border-radius: 5px;
   background-color: lightgrey;
   color: black;
@@ -1613,6 +1613,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .pros-modal-open {
   /*open button of prospectus modal*/
+  padding: 6px 10px;
   color: #fff;
   background-color: #c72027;
 }
