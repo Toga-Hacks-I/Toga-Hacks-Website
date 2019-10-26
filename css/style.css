@@ -1577,7 +1577,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media screen and (max-width: 1000px) {
   .prospectus-modal-btn {
-    /*See Prospectus that opens a modal*/
+    /*Hide Prospectus that opens a modal*/
       display: none !important;
   }
   .prospectus-btn {
