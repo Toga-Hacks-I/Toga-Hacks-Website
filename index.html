@@ -798,7 +798,6 @@
           <h2>Sponsor Us</h2>
         </div>
 
-        <div class="row d-flex justify-content-center"></div>
         <div class="text-center lead">
           <p>We are a registered 501(c)(3) non-profit. <b>All donations are tax-deductible.</b></p>
         </div>
@@ -840,15 +839,17 @@
         </div>
       </div>
 
+      <div class="text-center" style="padding: 30px 15px 0px 15px">
+        <p>Want to sponsor us? Enter your email and select your sponsorship tier below and we'll get right back to you!<br/>
+          Any more questions? Email <a href="mailto:sponsorship@togahacks.com">sponsorship@togahacks.com</a>.</p>
+      </div>
+      <div class="text-center">
+        <button type="button" class="btn sponsor-btn" data-toggle="modal" data-target="#buy-ticket-modal"
+          data-ticket-type="premium-access">
+          Sponsor Now
+        </button>
+      </div>
 
-      <!--
-          <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal"
-                    data-ticket-type="premium-access">
-                    Sponsor Now
-                  </button>
-                </div>
-        -->
 
       <!-- Modal Order Form -->
       <div id="buy-ticket-modal" class="modal fade">
@@ -870,10 +871,11 @@
                 </div>
                 <div class="form-group">
                   <select id="ticket-type" name="ticket-type" class="form-control">
-                    <option value="">-- Select Your Sponsor Type --</option>
-                    <option value="standard-access">Standard Access</option>
-                    <option value="pro-access">Pro Access</option>
-                    <option value="premium-access">Premium Access</option>
+                    <option value="">-- Select Your Sponsorship Type --</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                    <option value="partner">Partner</option>
                   </select>
                 </div>
                 <div class="text-center">
