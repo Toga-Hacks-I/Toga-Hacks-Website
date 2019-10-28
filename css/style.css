@@ -1422,6 +1422,30 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0;
 }
 
+#sponsor-link {
+  font-weight: bold;
+}
+
+h1 {
+  color: #666;
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+}
+h1:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #019fb6;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+h1:hover:after {
+  transform: scaleX(1);
+}
+h1.fromLeft:after {
+  transform-origin: 0% 50%;
+}
+
 /* --------------------------------------------------------------
 # F.A.Q Section
 -------------------------------------------------------------- */
@@ -1560,7 +1584,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-.sponsor-btn, .prospectus-btn, .prospectus-modal-btn {
+.sponsor-button, #buy-tickets .prospectus-btn,
+.prospectus-modal-btn {
   font-size: 20px;
   border-radius: 50px;
   padding: 10px 40px;
@@ -1573,16 +1598,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 .pros-modal-open:hover, .prospectus-modal-btn:hover, .sponsor-btn:hover, 
 .pros-modal-open:focus, .prospectus-modal-btn:focus, .sponsor-btn:focus {
   background-color:#e0072f;
-  color:#fff;
+  color: #fff;
 }
 
 @media screen and (max-width: 1000px) {
   .prospectus-modal-btn {
     /*Hide Prospectus that opens a modal*/
-      display: none !important;
+    display: none !important;
   }
   .prospectus-btn {
-    /*See Prospectus button that opens in new tab*/
+    /* See Prospectus button that opens in new tab */
     display: block;
   }
 }
@@ -1595,7 +1620,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   .prospectus-modal-btn {
     display: block;
   }
-  
 }
 
 .modalpdf {
