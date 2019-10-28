@@ -9,10 +9,16 @@ TogaHacks I Hackathon 2020 website
 
 First of all, thank you so much for your help 🙂! Please see our [code of conduct](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/blob/master/CODE_OF_CONDUCT.md), [create a GitHub issue](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/issues/new/choose) of what you're planning to fix/add, and have it approved by one of our contributors. Then, feel free to [make a PR](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/compare)!
 
+# Recommended environment
+
+1. Download [VSCode](https://code.visualstudio.com/download)
+2. Get the [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), and [Stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint) extensions
+
 # Usage
 
 To set up:
 
+0. Download the latest git and LTS of Node.js from [here](https://git-scm.com/downloads) and [here](https://nodejs.org/en/download/), respectively
 1. `git clone https://github.com/Toga-Hacks-I/Toga-Hacks-Website.git`
 2. `cd Toga-Hacks-Website`
 3. `npm i`
