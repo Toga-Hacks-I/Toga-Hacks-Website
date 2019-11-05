@@ -13,6 +13,8 @@ module.exports = {
     "mobile-nav",
     "mobile-nav-toggle",
     "header-scrolled",
-    "header-fixed"
+    "header-fixed",
+    "collapsing",
+    "show"
   ]
 };

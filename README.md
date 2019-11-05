@@ -18,7 +18,11 @@ First of all, thank you so much for your help 🙂! Please see our [code of cond
 
 To set up:
 
+<<<<<<< HEAD
 0. Download the latest git and LTS of Node.js from [here](https://git-scm.com/downloads) and [here](https://nodejs.org/en/download/), respectively
+=======
+0. Download the latest git and LTS of Node.js from [here](https://git-scm.com/downloads) and [here](https://nodejs.org/en/download/), respectively. Also, install git-lfs (instructions [here](https://help.github.com/en/github/managing-large-files/installing-git-large-file-storage)).
+>>>>>>> e49b6f7e6c389c25ab59c241a916f39221bb0f9d
 1. `git clone https://github.com/Toga-Hacks-I/Toga-Hacks-Website.git`
 2. `cd Toga-Hacks-Website`
 3. `npm i`
