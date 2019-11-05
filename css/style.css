@@ -650,6 +650,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
   overflow: hidden;
   position: relative;
+  transform:rotate(2deg);
 }
 
 #intro::before {
@@ -1582,13 +1583,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-<<<<<<< HEAD
-.sponsor-btn, .prospectus-btn, .prospectus-modal-btn {
-=======
 .prospectus-btn,
 .prospectus-modal-btn,
 .sponsor-btn {
->>>>>>> e49b6f7e6c389c25ab59c241a916f39221bb0f9d
   font-size: 20px;
   border-radius: 50px;
   padding: 10px 40px;
@@ -1598,12 +1595,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-<<<<<<< HEAD
-.pros-modal-open:hover, .prospectus-modal-btn:hover, .sponsor-btn:hover, 
-.pros-modal-open:focus, .prospectus-modal-btn:focus, .sponsor-btn:focus {
-  background-color:#e0072f;
-  color:#fff;
-=======
 .pros-modal-open:hover,
 .prospectus-modal-btn:hover,
 .sponsor-btn:hover,
@@ -1612,23 +1603,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 .sponsor-btn:focus {
   background-color: #e0072f;
   color: #fff;
->>>>>>> e49b6f7e6c389c25ab59c241a916f39221bb0f9d
 }
 
 @media screen and (max-width: 1000px) {
   .prospectus-modal-btn {
     /*Hide Prospectus that opens a modal*/
-<<<<<<< HEAD
-      display: none !important;
-  }
-  .prospectus-btn {
-    /*See Prospectus button that opens in new tab*/
-=======
     display: none !important;
   }
   .prospectus-btn {
     /* See Prospectus button that opens in new tab */
->>>>>>> e49b6f7e6c389c25ab59c241a916f39221bb0f9d
     display: block;
   }
 }
@@ -1641,10 +1624,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   .prospectus-modal-btn {
     display: block;
   }
-<<<<<<< HEAD
-  
-=======
->>>>>>> e49b6f7e6c389c25ab59c241a916f39221bb0f9d
 }
 
 .modalpdf {
