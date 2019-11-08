@@ -1891,11 +1891,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #101522;
   color: #eee;
   font-size: 14px;
-<<<<<<< HEAD
-  padding: 15vh 0 6vh;
-=======
-  padding: 15vh 0 2vh;
->>>>>>> 2d7eb7eb395a1aaa4d3dcf0883a3c25cc6ca708d
+  padding: 15vh 0 3vh;
   margin-top: -15vh;
 }
 
