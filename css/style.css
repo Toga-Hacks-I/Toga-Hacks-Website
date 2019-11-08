@@ -175,6 +175,10 @@ h6 {
   background-color: #f6f7fd;
 }
 
+.section-wo-bg {
+  background-color: #fff;
+}
+
 /* --------------------------------------------------------------
 # Header
 -------------------------------------------------------------- */
@@ -644,14 +648,20 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro {
   width: 100%;
-  height: 100vh;
+  height: 121vh;
   background: url("https://res.cloudinary.com/damnzwekj/image/upload/c_fill,dpr_auto,f_auto,q_auto,w_auto:100:1280/v1/TogaHacks/backgrounds/intro-bg_ngqj6c.jpg")
     top center;
   background-size: cover;
   overflow: hidden;
   position: relative;
-}
 
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  );
+}
 #intro::before {
   content: "";
   background: rgb(0, 8, 40, 0.6);
@@ -682,7 +692,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
-  padding: 0 15px;
+  padding: 0 15px 20vh 0;
 }
 
 #intro h1 {
@@ -904,8 +914,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
   position: relative;
   color: #fff;
-  padding: 60px 0 40px 0;
+ 
+  margin-top: -17vh;
+  z-index: -1;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  );
 }
+
 
 #about::before {
   content: "";
@@ -943,7 +963,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #speakers {
-  padding: 60px 0 30px 0;
+  padding: 10vh 0 23vh;
+  margin-top: -17vh;
+  z-index: -2;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  );
 }
 
 #speakers .speaker {
@@ -1060,7 +1089,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #schedule {
-  padding: 60px 0 60px 0;
+  padding: 10vh 0 20vh;
+  margin-top: -17vh;
+  z-index: -11;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  );
 }
 
 #schedule .nav-tabs {
@@ -1184,7 +1222,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #venue {
-  padding: 60px 0;
+  padding: 23vh 0;
+  margin-top: -17vh;
+  z-index: -3;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  );
 }
 
 #venue .container-fluid {
@@ -1374,7 +1421,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #supporters {
-  padding: 60px 0;
+  padding: 5vh 0 6vh;
 }
 
 #supporters .supporters-wrap {
@@ -1449,7 +1496,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #faq {
-  padding: 60px 0;
+  padding: 5vh 0 23vh 0;
+
+  z-index: -10;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  );
 }
 
 #faq #faq-list {
@@ -1570,7 +1626,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #buy-tickets {
-  padding: 60px 0;
+  padding: 10vh 0 23vh 0;
+
+  z-index: -10;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  );
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -1582,13 +1647,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-<<<<<<< HEAD
-.sponsor-btn, .prospectus-btn, .prospectus-modal-btn {
-=======
 .prospectus-btn,
 .prospectus-modal-btn,
 .sponsor-btn {
->>>>>>> e49b6f7e6c389c25ab59c241a916f39221bb0f9d
   font-size: 20px;
   border-radius: 50px;
   padding: 10px 40px;
@@ -1598,12 +1659,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-<<<<<<< HEAD
-.pros-modal-open:hover, .prospectus-modal-btn:hover, .sponsor-btn:hover, 
-.pros-modal-open:focus, .prospectus-modal-btn:focus, .sponsor-btn:focus {
-  background-color:#e0072f;
-  color:#fff;
-=======
 .pros-modal-open:hover,
 .prospectus-modal-btn:hover,
 .sponsor-btn:hover,
@@ -1612,23 +1667,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 .sponsor-btn:focus {
   background-color: #e0072f;
   color: #fff;
->>>>>>> e49b6f7e6c389c25ab59c241a916f39221bb0f9d
 }
 
 @media screen and (max-width: 1000px) {
   .prospectus-modal-btn {
     /*Hide Prospectus that opens a modal*/
-<<<<<<< HEAD
-      display: none !important;
-  }
-  .prospectus-btn {
-    /*See Prospectus button that opens in new tab*/
-=======
     display: none !important;
   }
   .prospectus-btn {
     /* See Prospectus button that opens in new tab */
->>>>>>> e49b6f7e6c389c25ab59c241a916f39221bb0f9d
     display: block;
   }
 }
@@ -1641,10 +1688,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   .prospectus-modal-btn {
     display: block;
   }
-<<<<<<< HEAD
-  
-=======
->>>>>>> e49b6f7e6c389c25ab59c241a916f39221bb0f9d
 }
 
 .modalpdf {
@@ -1846,9 +1889,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer {
   background: #101522;
-  padding: 0 0 25px 0;
   color: #eee;
   font-size: 14px;
+  padding: 15vh 0 6vh;
+  margin-top: -15vh;
 }
 
 #footer .footer-top {
@@ -2163,5 +2207,28 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media (max-width: 460px) {
   #subscribe button {
     margin-top: 10px;
+  }
+}
+
+/* change top and bottom padding for sections because of slanted divider margin problems */
+@media screen and (max-width: 800px) {
+  /* small devices */
+  #about {
+    padding: 26vh 10px 18vh;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  /* medium devices */
+  #about {
+    padding: 26vh 10px 18vh;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  /* large devices */
+  #about {
+    padding: 22vh 10px 23vh;
   }
 }
