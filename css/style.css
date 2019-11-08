@@ -648,7 +648,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro {
   width: 100%;
-  height: 110vh;
+  height: 118vh;
   background: url("https://res.cloudinary.com/damnzwekj/image/upload/c_fill,dpr_auto,f_auto,q_auto,w_auto:100:1280/v1/TogaHacks/backgrounds/intro-bg_ngqj6c.jpg")
     top center;
   background-size: cover;
@@ -914,7 +914,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
   position: relative;
   color: #fff;
-  padding: 23vh 0;
+ 
   margin-top: -17vh;
   z-index: -1;
 
@@ -925,6 +925,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     0 calc(100% - 7vw)
   );
 }
+
 
 #about::before {
   content: "";
@@ -1625,7 +1626,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #buy-tickets {
-  padding: 60px 0;
+  padding: 10vh 0 23vh 0;
+
+  z-index: -10;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  );
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -1879,9 +1889,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer {
   background: #101522;
-  padding: 0 0 25px 0;
   color: #eee;
   font-size: 14px;
+  padding: 15vh 0 2vh;
+  margin-top: -15vh;
 }
 
 #footer .footer-top {
@@ -2196,5 +2207,28 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media (max-width: 460px) {
   #subscribe button {
     margin-top: 10px;
+  }
+}
+
+/* change top and bottom padding for sections because of slanted divider margin problems */
+@media screen and (max-width: 800px) {
+  /* small devices */
+  #about {
+    padding: 26vh 10px 18vh;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  /* medium devices */
+  #about {
+    padding: 26vh 10px 18vh;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  /* large devices */
+  #about {
+    padding: 22vh 10px 23vh;
   }
 }
