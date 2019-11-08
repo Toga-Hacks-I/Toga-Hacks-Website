@@ -1626,7 +1626,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #buy-tickets {
-  padding: 60px 0;
+  padding: 10vh 0 23vh 0;
+
+  z-index: -10;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  );
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -1880,9 +1889,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer {
   background: #101522;
-  padding: 0 0 25px 0;
   color: #eee;
   font-size: 14px;
+  padding: 15vh 0 2vh;
+  margin-top: -15vh;
 }
 
 #footer .footer-top {
