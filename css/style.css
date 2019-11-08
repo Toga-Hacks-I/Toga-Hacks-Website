@@ -910,9 +910,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
   position: relative;
   color: #fff;
-  padding: 25vh 0 15vh 0;
+  padding: 23vh 0;
   margin-top: -17vh;
   z-index: -1;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  );
 }
 
 #about::before {
@@ -1068,7 +1075,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #schedule {
-  padding: 60px 0 60px 0;
+  padding: 20vh 0;
+
+  z-index: -6;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  );
 }
 
 #schedule .nav-tabs {
@@ -1193,6 +1209,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #venue {
   padding: 60px 0;
+
+  z-index: -2;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  );
 }
 
 #venue .container-fluid {
@@ -1457,7 +1482,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #faq {
-  padding: 60px 0;
+  padding: 20vh 0;
+
+  z-index: -5;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  );
 }
 
 #faq #faq-list {
