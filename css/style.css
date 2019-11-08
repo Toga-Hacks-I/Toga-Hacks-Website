@@ -2219,6 +2219,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media screen and (min-width: 1024px) {
   /* large devices */
   #about {
-    padding: 20vh 10px 20vh;
+    padding: 22vh 10px 23vh;
   }
 }
