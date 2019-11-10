@@ -1892,7 +1892,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #101522;
   color: #eee;
   font-size: 14px;
-  padding: 15vh 0 6vh;
+  padding: 15vh 0 8vh;
   margin-top: -15vh;
 }
 
@@ -2215,14 +2215,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media screen and (max-width: 800px) {
   /* small devices */
   #about {
-    padding: 26vh 10px 18vh;
+    padding: 26vh 10px 16vh;
   }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1024px) {
   /* medium devices */
   #about {
-    padding: 26vh 10px 18vh;
+    padding: 26vh 10px 17vh;
   }
 }
 
