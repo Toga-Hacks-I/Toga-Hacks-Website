@@ -193,7 +193,7 @@ h6 {
     top: 0;
     right: 0;
     transition: none;
-    z-index: 997;
+    z-index: 995;
   }
 }
 
@@ -205,7 +205,7 @@ h6 {
   top: 0;
   right: 0;
   transition: all 0.5s;
-  z-index: 997;
+  z-index: 995;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -506,7 +506,7 @@ h6 {
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 999;
+    z-index: 996;
     margin: 15px 15px 0 0;
     border: 0;
     background: none;
@@ -522,7 +522,7 @@ h6 {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 999;
+  z-index: 996;
   margin: 15px 15px 0 0;
   border: 0;
   background: none;
@@ -545,7 +545,7 @@ h6 {
     top: 0;
     padding-top: 18px;
     bottom: 0;
-    z-index: 998;
+    z-index: 997;
     background: rgba(6, 12, 34, 0.9);
     left: -260px;
     width: 260px;
@@ -559,7 +559,7 @@ h6 {
   top: 0;
   padding-top: 18px;
   bottom: 0;
-  z-index: 998;
+  z-index: 997;
   background: rgba(6, 12, 34, 0.9);
   left: -260px;
   width: 260px;
@@ -618,7 +618,7 @@ h6 {
 #mobile-body-overly {
   width: 100%;
   height: 100%;
-  z-index: 997;
+  z-index: 996;
   top: 0;
   left: 0;
   position: fixed;
@@ -1723,6 +1723,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #c72027;
   border: 0;
   color: #fff;
+}
+
+#buy-ticket-modal {
+  max-width: 95vw;
 }
 
 #buy-tickets #buy-ticket-modal .btn:hover,
