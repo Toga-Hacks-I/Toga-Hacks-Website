@@ -2064,13 +2064,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #101522;
 }
 
-.center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
 /* --------------------------------------------------------------
 # Responsive Media Queries
 -------------------------------------------------------------- */
