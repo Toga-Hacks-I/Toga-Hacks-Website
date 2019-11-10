@@ -5,3 +5,4 @@ TogaHacks[[:space:]]Sponsorship[[:space:]]Prospectus.pdf filter=lfs diff=lfs mer
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 >>>>>>> e49b6f7e6c389c25ab59c241a916f39221bb0f9d
+TogaHacks[[:space:]]Sponsorship[[:space:]]Prospectus.pdf filter=lfs diff=lfs merge=lfs -text
