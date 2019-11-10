@@ -1879,8 +1879,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #101522;
   color: #eee;
   font-size: 14px;
-  padding: 16vh 0 8vh;
-  margin-top: -16vh;
+  padding: 20vh 0 5vh;
+  margin-top: -20vh;
 }
 
 #footer .footer-top {
@@ -2204,6 +2204,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   #about {
     padding: 26vh 10px 16vh;
   }
+  #buy-tickets {
+    padding-bottom: 12vh;
+  }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1024px) {
@@ -2221,7 +2224,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-top: -40vh;
   }
   #footer {
-    padding: 35vh 0 8vh;
+    padding: 35vh 0 5vh;
     margin-top: -35vh;
   }
 }
