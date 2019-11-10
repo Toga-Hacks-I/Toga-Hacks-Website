@@ -1727,7 +1727,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #buy-ticket-modal {
-  max-width: 95vw;
+  max-width: 99vw;
 }
 
 #buy-ticket-modal .btn:hover,
@@ -2062,6 +2062,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   font-size: 13px;
   color: #101522;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* --------------------------------------------------------------
