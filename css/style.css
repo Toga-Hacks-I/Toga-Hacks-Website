@@ -21,6 +21,7 @@ body {
   color: #2f3138;
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
+  min-height: 500px;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -285,6 +286,7 @@ h6 {
   margin: 0;
   padding: 0;
   list-style: none;
+  max-width: 100vw;
 }
 
 .nav-menu ul {
@@ -655,6 +657,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
   overflow: hidden;
   position: relative;
+  padding: 10px;
 
   clip-path: polygon(
     0 0,
@@ -915,9 +918,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
   position: relative;
   color: #fff;
- 
-  margin-top: -17vh;
-  z-index: -1;
+  z-index:-1;
+  margin-top: -20vh;
 
   clip-path: polygon(
     0 0,
@@ -964,7 +966,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #speakers {
-  padding: 10vh 0 23vh;
+  padding: 15vh 0 24vh;
   margin-top: -17vh;
   z-index: -2;
 
@@ -1090,7 +1092,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #schedule {
-  padding: 10vh 0 20vh;
+  padding: 12vh 0 25vh;
   margin-top: -17vh;
   z-index: -11;
 
@@ -1223,16 +1225,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #venue {
-  padding: 23vh 0;
+  padding: 23vh 10vh 30vh;
   margin-top: -17vh;
-  z-index: -3;
-
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 calc(100% - 7vw)
-  );
 }
 
 #venue .container-fluid {
@@ -1422,7 +1416,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #supporters {
-  padding: 5vh 0 6vh;
+  padding: 7vh;
 }
 
 #supporters .supporters-wrap {
@@ -1497,16 +1491,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #faq {
-  padding: 5vh 0 23vh 0;
-
-  z-index: -10;
-
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 calc(100% - 7vw)
-  );
+  padding: 5vh 0 23vh 5vh;
 }
 
 #faq #faq-list {
@@ -1627,7 +1612,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #buy-tickets {
-  padding: 10vh 0 23vh 0;
+  padding: 10vh 0 25vh;
 
   clip-path: polygon(
     0 0,
@@ -2232,6 +2217,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media screen and (min-width: 1024px) {
   /* large devices */
   #about {
-    padding: 22vh 10px 23vh;
+    padding: 50vh 10px 25vh;
+    margin-top: -40vh;
+  }
+  #footer {
+    padding: 35vh 0 8vh;
+    margin-top: -35vh;
   }
 }
