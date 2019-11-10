@@ -1225,7 +1225,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #venue {
-  padding: 23vh 10vh 30vh;
+  padding: 23vh 2vw 30vh;
   margin-top: -17vh;
 }
 
@@ -2207,12 +2207,28 @@ body.mobile-nav-active #mobile-nav-toggle {
   #buy-tickets {
     padding-bottom: 12vh;
   }
+
+  #schedule {
+    padding: 12vh 0;
+  }
+
+  #speakers {
+    padding: 15vh 0 2vh;
+  }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1024px) {
   /* medium devices */
   #about {
     padding: 26vh 10px 17vh;
+  }
+  
+  #schedule {
+    padding: 12vh 0;
+  }
+
+  #speakers {
+    padding: 15vh 0 2vh;
   }
 }
 
