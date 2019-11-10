@@ -193,7 +193,7 @@ h6 {
     top: 0;
     right: 0;
     transition: none;
-    z-index: 997;
+    z-index: 995;
   }
 }
 
@@ -205,7 +205,7 @@ h6 {
   top: 0;
   right: 0;
   transition: all 0.5s;
-  z-index: 997;
+  z-index: 995;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -506,7 +506,7 @@ h6 {
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 999;
+    z-index: 996;
     margin: 15px 15px 0 0;
     border: 0;
     background: none;
@@ -522,7 +522,7 @@ h6 {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 999;
+  z-index: 996;
   margin: 15px 15px 0 0;
   border: 0;
   background: none;
@@ -545,7 +545,7 @@ h6 {
     top: 0;
     padding-top: 18px;
     bottom: 0;
-    z-index: 998;
+    z-index: 997;
     background: rgba(6, 12, 34, 0.9);
     left: -260px;
     width: 260px;
@@ -559,7 +559,7 @@ h6 {
   top: 0;
   padding-top: 18px;
   bottom: 0;
-  z-index: 998;
+  z-index: 997;
   background: rgba(6, 12, 34, 0.9);
   left: -260px;
   width: 260px;
@@ -618,7 +618,7 @@ h6 {
 #mobile-body-overly {
   width: 100%;
   height: 100%;
-  z-index: 997;
+  z-index: 996;
   top: 0;
   left: 0;
   position: fixed;
@@ -1224,7 +1224,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #venue {
-  padding: 23vh 10vh 30vh;
+  padding: 23vh 2vw 30vh;
   margin-top: -17vh;
 }
 
@@ -1698,13 +1698,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #c72027;
 }
 
-#buy-tickets #buy-ticket-modal input,
-#buy-tickets #buy-ticket-modal select {
+
+#buy-ticket-modal input,
+#buy-ticket-modal select {
   border-radius: 0;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  #buy-tickets #buy-ticket-modal .btn {
+  #buy-ticket-modal .btn {
     font-size: 15px;
     border-radius: 50px;
     padding: 10px 40px;
@@ -1715,7 +1716,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-#buy-tickets #buy-ticket-modal .btn {
+#buy-ticket-modal .btn {
   font-size: 15px;
   border-radius: 50px;
   padding: 10px 40px;
@@ -1725,8 +1726,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-#buy-tickets #buy-ticket-modal .btn:hover,
-#buy-tickets #buy-ticket-modal .btn:focus {
+#buy-ticket-modal {
+  max-width: 95vw;
+}
+
+#buy-ticket-modal .btn:hover,
+#buy-ticket-modal .btn:focus {
   background-color: #e0072f;
 }
 
@@ -2206,12 +2211,28 @@ body.mobile-nav-active #mobile-nav-toggle {
   #buy-tickets {
     padding-bottom: 12vh;
   }
+
+  #schedule {
+    padding: 12vh 0;
+  }
+
+  #speakers {
+    padding: 15vh 0 2vh;
+  }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1024px) {
   /* medium devices */
   #about {
     padding: 26vh 10px 17vh;
+  }
+  
+  #schedule {
+    padding: 12vh 0;
+  }
+
+  #speakers {
+    padding: 15vh 0 2vh;
   }
 }
 
