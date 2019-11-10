@@ -129,7 +129,7 @@
       About Section
     ============================-->
     <section id="about">
-      <div class="container"> 
+      <div class="container wow fadeInUp"> 
         <div class="row">
           <div class="col-lg-6">
             <h2>About The Event</h2>
@@ -705,8 +705,8 @@
     <!--==========================
       Sponsors Section
     ============================-->
-    <section id="supporters" class="wow fadeInUp">
-      <div class="container">
+    <section id="supporters">
+      <div class="container wow fadeInUp">
         <div class="section-header">
           <h2>Partners</h2>
         </div>
@@ -752,7 +752,8 @@
     <!--==========================
       Buy Ticket Section
     ============================-->
-    <section id="buy-tickets" class="wow fadeInUp section-with-bg">
+    <section id="buy-tickets" class="section-with-bg">
+      <div class="wow fadeInUp">
       <div class="container .d-none .d-lg-block .d-xl-none .d-xl-block">
         <div class="section-header">
           <h2>Sponsor Us</h2>
@@ -796,6 +797,7 @@
           data-ticket-type="premium-access">
           Sponsor Now
         </button>
+      </div>
       </div>
     </section>
 
@@ -849,11 +851,11 @@
               </div>
               <div class="form-group">
                 <select id="ticket-type" name="ticket-type" class="form-control">
-                  <option value="">-- Select Your Sponsorship Type --</option>
+                  <option value="none" selected disabled>-- Select Your Sponsorship Type --</option>
                   <option value="bronze">Bronze</option>
                   <option value="silver">Silver</option>
                   <option value="gold">Gold</option>
-                  <option value="partner">Partner</option>
+                  <option value="platinum">Platinum</option>
                 </select>
               </div>
               <div class="text-center">
@@ -873,7 +875,7 @@
   Footer
 ============================-->
   <footer id="footer">
-    <div class="container">
+    <div class="container wow fadeInUp">
       <div class="copyright">
         &copy; 2019 <strong>Toga Hacks</strong>. Licensed under
         <strong><a href="https://github.com/Toga-Hacks-I/Toga-Hacks-Website/blob/master/LICENSE" id="license">MIT

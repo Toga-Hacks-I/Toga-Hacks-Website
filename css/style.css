@@ -1698,13 +1698,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #c72027;
 }
 
-#buy-tickets #buy-ticket-modal input,
-#buy-tickets #buy-ticket-modal select {
+
+#buy-ticket-modal input,
+#buy-ticket-modal select {
   border-radius: 0;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  #buy-tickets #buy-ticket-modal .btn {
+  #buy-ticket-modal .btn {
     font-size: 15px;
     border-radius: 50px;
     padding: 10px 40px;
@@ -1715,7 +1716,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-#buy-tickets #buy-ticket-modal .btn {
+#buy-ticket-modal .btn {
   font-size: 15px;
   border-radius: 50px;
   padding: 10px 40px;
@@ -1729,8 +1730,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   max-width: 95vw;
 }
 
-#buy-tickets #buy-ticket-modal .btn:hover,
-#buy-tickets #buy-ticket-modal .btn:focus {
+#buy-ticket-modal .btn:hover,
+#buy-ticket-modal .btn:focus {
   background-color: #e0072f;
 }
 
