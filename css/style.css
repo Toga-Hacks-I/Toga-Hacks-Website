@@ -21,7 +21,6 @@ body {
   color: #2f3138;
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
-  min-height: 500px;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
