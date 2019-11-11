@@ -558,6 +558,7 @@ h6 {
     left: -260px;
     width: 260px;
     overflow-y: auto;
+    overflow-x: hidden;
     transition: none;
   }
 }
@@ -1656,9 +1657,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: 0;
   color: #fff;
 }
+.modal.modal-wide .modal-dialog {
+  width: 90%;
+}
+
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
 
 .pros-modal-open:hover,
 .prospectus-modal-btn:hover,
+.prospectus-btn:hover,
 .sponsor-btn:hover,
 .pros-modal-open:focus,
 .prospectus-modal-btn:focus,
