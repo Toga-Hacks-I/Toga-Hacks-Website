@@ -550,6 +550,7 @@ h6 {
     left: -260px;
     width: 260px;
     overflow-y: auto;
+    overflow-x: hidden;
     transition: none;
   }
 }
@@ -1647,13 +1648,24 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #c72027;
   border: 0;
   color: #fff;
+  margin: 0 15vw;
+}
+.modal.modal-wide .modal-dialog {
+  width: 90%;
+}
+
+.modal-wide .modal-body {
+  overflow-y: auto;
 }
 
 .pros-modal-open:hover,
 .prospectus-modal-btn:hover,
+.prospectus-btn:hover,
+.prospectus-btn:active,
 .sponsor-btn:hover,
 .pros-modal-open:focus,
 .prospectus-modal-btn:focus,
+.prospectus-btn:focus,
 .sponsor-btn:focus {
   background-color: #e0072f;
   color: #fff;
