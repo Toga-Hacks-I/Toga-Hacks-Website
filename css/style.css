@@ -653,12 +653,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 40vh;
 }
 
-.ml6 .text-wrapper {
+.animate .text-wrapper {
   display: inline-block;
   overflow: hidden;
 }
 
-.ml6 .letter {
+.animate .letter {
   display: inline-block;
   line-height: 1em;
 }
