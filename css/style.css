@@ -261,6 +261,10 @@ h6 {
   color: #c72027;
 }
 
+#header #logo {
+  padding: 0 2vh;
+}
+
 #header #logo h1 a,
 #header #logo h1 a:hover,
 #header #logo h1 a,
@@ -2272,7 +2276,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-@media screen and (min-width: 800px) and (max-width: 1024px) {
+@media screen and (min-width: 800px) and (max-width: 990px) {
   /* medium devices */
   #about {
     padding: 26vh 10px 17vh;
@@ -2288,7 +2292,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 990px) {
   /* large devices */
   #about {
     padding: 50vh 10px 25vh;
@@ -2297,5 +2301,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   #footer {
     padding: 35vh 0 5vh;
     margin-top: -35vh;
+  }
+
+  #header #logo {
+    display: none;
   }
 }

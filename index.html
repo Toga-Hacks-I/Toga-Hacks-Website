@@ -41,48 +41,68 @@
     Header
   ============================-->
   <header id="header">
-    <div class="container d-flex justify-content-center">
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#venue">Venue</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#speakers">Team</a></li>
-          <li><a href="#supporters">Sponsors</a></li>
-          <li><a href="#buy-tickets">Sponsor Us</a></li>
-          <li class="buy-tickets">
-            <!--this links the button to an embedded popup typeform-->
-            <a class="typeform-share button" href="https://armanrafati.typeform.com/to/dqXF7O" rel="noopener"
-              data-mode="popup" target="_blank">Register Now
-            </a>
-            <script>
-              (function () {
-                var qs,
-                  js,
-                  q,
-                  s,
-                  d = document,
-                  gi = d.getElementById,
-                  ce = d.createElement,
-                  gt = d.getElementsByTagName,
-                  id = "typef_orm_share",
-                  b = "https://embed.typeform.com/";
-                if (!gi.call(d, id)) {
-                  js = ce.call(d, "script");
-                  js.id = id;
-                  js.src = b + "embed.js";
-                  q = gt.call(d, "script")[0];
-                  q.parentNode.insertBefore(js, q);
-                }
-              })();
-            </script>
-          </li>
-        </ul>
-      </nav>
-      <!-- #nav-menu-container -->
+    <div id="logo" class="pull-left">
+      <!-- Uncomment below if you prefer to use a text logo -->
+      <!-- <h1>
+              <a href="javascript:window.location.href=window.location.href"
+                >T<span>H </span></a
+              >
+            </h1> -->
+
+      <a href="javascript:window.location.href=window.location.href">
+        <img
+          data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/logos/logo_white_b4n0hr.png"
+          alt="small TogaHacks logo" class="img-fluid cld-responsive" responsive_placeholder="blank" />
+        <!-- <img
+                src="img/logos/logo_white.png"
+                alt="TogaHacks Logo"
+                class="img-fluid"
+              /> -->
+      </a>
     </div>
+    <div class="container">
+      <div class="container d-flex justify-content-center">
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <li class="menu-active"><a href="#intro">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#speakers">Team</a></li>
+            <li><a href="#supporters">Sponsors</a></li>
+            <li><a href="#buy-tickets">Sponsor Us</a></li>
+            <li class="buy-tickets">
+              <!--this links the button to an embedded popup typeform-->
+              <a class="typeform-share button" href="https://armanrafati.typeform.com/to/dqXF7O" rel="noopener"
+                data-mode="popup" target="_blank">Register Now
+              </a>
+              <script>
+                (function () {
+                  var qs,
+                    js,
+                    q,
+                    s,
+                    d = document,
+                    gi = d.getElementById,
+                    ce = d.createElement,
+                    gt = d.getElementsByTagName,
+                    id = "typef_orm_share",
+                    b = "https://embed.typeform.com/";
+                  if (!gi.call(d, id)) {
+                    js = ce.call(d, "script");
+                    js.id = id;
+                    js.src = b + "embed.js";
+                    q = gt.call(d, "script")[0];
+                    q.parentNode.insertBefore(js, q);
+                  }
+                })();
+              </script>
+            </li>
+          </ul>
+        </nav>
+        <!-- #nav-menu-container -->
+      </div>
   </header>
   <!-- #header -->
 
@@ -109,7 +129,7 @@
       About Section
     ============================-->
     <section id="about">
-      <div class="container wow fadeInUp"> 
+      <div class="container wow fadeInUp">
         <div class="row">
           <div class="col-lg-6">
             <h2>About The Event</h2>
@@ -734,50 +754,50 @@
     ============================-->
     <section id="buy-tickets" class="section-with-bg">
       <div class="wow fadeInUp">
-      <div class="container .d-none .d-lg-block .d-xl-none .d-xl-block">
-        <div class="section-header">
-          <h2>Sponsor Us</h2>
+        <div class="container .d-none .d-lg-block .d-xl-none .d-xl-block">
+          <div class="section-header">
+            <h2>Sponsor Us</h2>
+          </div>
+
+          <div class="text-center lead">
+            <p>
+              We are under a 501(c)(3) non-profit.
+              <b>All donations are tax-deductible.</b>
+            </p>
+          </div>
         </div>
 
-        <div class="text-center lead">
+        <!--Sponsorship Prospectus Button-->
+        <!--On devices smaller than desktop, opens pdf in new tab-->
+        <div class="text-center">
+          <a class="btn btn-sm prospectus-btn" href="TogaHacks Sponsorship Prospectus.pdf" target="_blank">View
+            Sponsorship Prospectus</a>
+        </div>
+
+
+
+        <!--On devices desktop or larger, button opens embedded pdf in modal-->
+        <div class="container d-flex justify-content-center">
+          <button type="button" class="btn btn-lg prospectus-modal-btn" data-toggle="modal"
+            data-target="#prospectusModal">
+            View Sponsorship Prospectus
+          </button>
+          <!-- Modals outside so this element so they do not get cut off by slant dividers -->
+        </div>
+        <div class="text-center" style="padding: 30px 15px 0">
           <p>
-            We are under a 501(c)(3) non-profit.
-            <b>All donations are tax-deductible.</b>
+            Want to sponsor us? Enter your email and select your sponsorship
+            tier below and we'll get right back to you!<br />
+            Any questions? Email
+            <a href="mailto:sponsorship@togahacks.com">sponsorship@togahacks.com</a>.
           </p>
         </div>
-      </div>
-
-      <!--Sponsorship Prospectus Button-->
-      <!--On devices smaller than desktop, opens pdf in new tab-->
-      <div class="text-center">
-          <a class="btn btn-sm prospectus-btn" href="TogaHacks Sponsorship Prospectus.pdf" target="_blank">View
-              Sponsorship Prospectus</a>
+        <div class="text-center">
+          <button type="button" class="sponsor-btn" data-toggle="modal" data-target="#buy-ticket-modal"
+            data-ticket-type="premium-access">
+            Sponsor Now
+          </button>
         </div>
-
-      
-
-      <!--On devices desktop or larger, button opens embedded pdf in modal-->
-      <div class="container d-flex justify-content-center">
-        <button type="button" class="btn btn-lg prospectus-modal-btn" data-toggle="modal"
-          data-target="#prospectusModal">
-          View Sponsorship Prospectus
-        </button>
-        <!-- Modals outside so this element so they do not get cut off by slant dividers -->
-      </div>
-      <div class="text-center" style="padding: 30px 15px 0">
-        <p>
-          Want to sponsor us? Enter your email and select your sponsorship
-          tier below and we'll get right back to you!<br />
-          Any questions? Email
-          <a href="mailto:sponsorship@togahacks.com">sponsorship@togahacks.com</a>.
-        </p>
-      </div>
-      <div class="text-center">
-        <button type="button" class="sponsor-btn" data-toggle="modal" data-target="#buy-ticket-modal"
-          data-ticket-type="premium-access">
-          Sponsor Now
-        </button>
-      </div>
       </div>
     </section>
 
