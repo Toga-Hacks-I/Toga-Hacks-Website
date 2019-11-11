@@ -653,6 +653,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 40vh;
 }
 
+.ml6 .text-wrapper {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+
 #intro {
   width: 100%;
   height: 121vh;
@@ -691,7 +702,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: absolute;
   bottom: 0;
   left: 0;
-  top: 90px;
+  top: 25px;
   right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -718,7 +729,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-transform: uppercase;
 }
 
-#intro h1 span {
+#intro .red {
   color: #c72027;
 }
 
@@ -2261,7 +2272,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media screen and (max-width: 800px) {
   /* small devices */
   #about {
-    padding: 26vh 10px 16vh;
+    padding: 26vh 10px 15vh;
   }
   #buy-tickets {
     padding-bottom: 12vh;

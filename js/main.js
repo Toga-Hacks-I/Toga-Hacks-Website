@@ -208,3 +208,17 @@ $(document).ready(function() {
   $.cloudinary.config({ cloud_name: "damnzwekj", secure: true });
   $.cloudinary.responsive();
 });
+
+// title animation
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml6 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 1000,
+    delay: (el, i) => 300 * i
+  });
