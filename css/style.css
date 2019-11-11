@@ -1656,6 +1656,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #c72027;
   border: 0;
   color: #fff;
+  margin: 0 15vw;
 }
 .modal.modal-wide .modal-dialog {
   width: 90%;
