@@ -1003,7 +1003,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
-  border-radius: 500px;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -1254,7 +1253,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #venue {
-  padding: 23vh 2vw 30vh;
+  padding: 23vh 1vw 30vh;
   margin-top: -17vh;
 }
 
