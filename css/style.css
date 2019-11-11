@@ -667,6 +667,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   padding: 10px;
 
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  ); 
+
   clip-path: polygon(
     0 0,
     100% 0,
@@ -929,6 +936,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   z-index:-1;
   margin-top: -20vh;
   
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  ); 
+
   clip-path: polygon(
     0 0,
     100% 0,
@@ -978,6 +992,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-top: -17vh;
   z-index: -2;
   
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  ); 
+
   clip-path: polygon(
     0 0,
     100% 0,
@@ -990,6 +1011,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
+  border-radius: 500px;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -1104,6 +1126,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-top: -17vh;
   z-index: -11;
   
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  ); 
+
   clip-path: polygon(
     0 0,
     100% 0,
@@ -1625,6 +1654,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 #buy-tickets {
   padding: 10vh 0 25vh;
   
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  ); 
+
   clip-path: polygon(
     0 0,
     100% 0,
