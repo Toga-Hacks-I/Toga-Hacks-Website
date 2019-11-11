@@ -1003,6 +1003,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
+  border-radius: 0;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
