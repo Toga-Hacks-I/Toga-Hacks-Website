@@ -928,13 +928,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   z-index:-1;
   margin-top: -20vh;
-
+  
   clip-path: polygon(
     0 0,
     100% 0,
     100% 100%,
     0 calc(100% - 7vw)
-  );
+  ); 
 }
 
 
@@ -977,13 +977,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 15vh 0 24vh;
   margin-top: -17vh;
   z-index: -2;
-
+  
   clip-path: polygon(
     0 0,
     100% 0,
     100% 100%,
     0 calc(100% - 7vw)
-  );
+  ); 
 }
 
 #speakers .speaker {
@@ -1103,13 +1103,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 12vh 0 25vh;
   margin-top: -17vh;
   z-index: -11;
-
+  
   clip-path: polygon(
     0 0,
     100% 0,
     100% 100%,
     0 calc(100% - 7vw)
-  );
+  ); 
 }
 
 #schedule .nav-tabs {
@@ -1624,13 +1624,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #buy-tickets {
   padding: 10vh 0 25vh;
-
+  
   clip-path: polygon(
     0 0,
     100% 0,
     100% 100%,
     0 calc(100% - 7vw)
-  );
+  ); 
 }
 
 .modal {
