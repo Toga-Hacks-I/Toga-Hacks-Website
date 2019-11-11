@@ -1671,6 +1671,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .sponsor-btn:hover,
 .pros-modal-open:focus,
 .prospectus-modal-btn:focus,
+.prospectus-btn:focus,
 .sponsor-btn:focus {
   background-color: #e0072f;
   color: #fff;
