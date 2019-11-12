@@ -245,3 +245,20 @@ function getWidths(element){
   }
   return curr;
 }
+
+// title animation
+// Wrap every letter in a span (for ever word)
+var i;
+for (var i = 1; i <= 3; i++) {
+  var textWrapper = document.querySelector('.animate .word' + i);
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+}
+
+anime.timeline({ loop: false })
+  .add({
+    targets: '.letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 1000,
+    delay: (el, i) => 300 * i
+  });
