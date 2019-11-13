@@ -33,7 +33,7 @@ import "owl.carousel2/dist/owl.carousel";
 // import cloudinary
 import "cloudinary-jquery/cloudinary-jquery";
 
-$(document).ready(function () {
+$(document).ready(function() {
   // Back to top button
   $(window).scroll(() => {
     if ($(this).scrollTop() > 100) {
@@ -42,13 +42,13 @@ $(document).ready(function () {
       $(".back-to-top").fadeOut("slow");
     }
   });
-  $(".back-to-top").click(function () {
+  $(".back-to-top").click(function() {
     $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
     return false;
   });
 
   // Header fixed on scroll
-  $(window).scroll(function () {
+  $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $("#header").addClass("header-scrolled");
     } else {
@@ -107,7 +107,7 @@ $(document).ready(function () {
       .find(".menu-has-children")
       .prepend('<i class="fa fa-chevron-down"></i>');
 
-    $(document).on("click", ".menu-has-children i", function (e) {
+    $(document).on("click", ".menu-has-children i", function(e) {
       $(this)
         .next()
         .toggleClass("menu-item-active");
@@ -118,13 +118,13 @@ $(document).ready(function () {
       $(this).toggleClass("fa-chevron-up fa-chevron-down");
     });
 
-    $(document).on("click", "#mobile-nav-toggle", function (e) {
+    $(document).on("click", "#mobile-nav-toggle", function(e) {
       $("body").toggleClass("mobile-nav-active");
       $("#mobile-nav-toggle i").toggleClass("fa-times fa-bars");
       $("#mobile-body-overly").toggle();
     });
 
-    $(document).click(function (e) {
+    $(document).click(function(e) {
       const container = $("#mobile-nav, #mobile-nav-toggle");
       if (!container.is(e.target) && container.has(e.target).length === 0) {
         if ($("body").hasClass("mobile-nav-active")) {
@@ -139,10 +139,10 @@ $(document).ready(function () {
   }
 
   // Smooth scroll for the menu and links with .scrollto classes
-  $(".nav-menu a, #mobile-nav a, .scrollto").on("click", function () {
+  $(".nav-menu a, #mobile-nav a, .scrollto").on("click", function() {
     if (
       location.pathname.replace(/^\//, "") ==
-      this.pathname.replace(/^\//, "") &&
+        this.pathname.replace(/^\//, "") &&
       location.hostname == this.hostname
     ) {
       const target = $(this.hash);
@@ -197,7 +197,7 @@ $(document).ready(function () {
   });
 
   // Buy tickets select the ticket type on click
-  $("#buy-ticket-modal").on("show.bs.modal", function (event) {
+  $("#buy-ticket-modal").on("show.bs.modal", function(event) {
     const button = $(event.relatedTarget);
     const ticketType = button.data("ticket-type");
     const modal = $(this);
@@ -207,7 +207,44 @@ $(document).ready(function () {
   // custom code
   $.cloudinary.config({ cloud_name: "damnzwekj", secure: true });
   $.cloudinary.responsive();
+  $(".bg-responsive").each(function(i, element) {
+    const windowWidth = element.clientWidth;
+    const { bg, bgWidth } = getWidths(element);
+    if (Math.ceil(windowWidth / 100) * 100 <= bgWidth) {
+      replaceBackground(bg, element, windowWidth, bgWidth);
+    }
+    resizeObserver.observe(element);
+  });
 });
+
+const resizeObserver = new ResizeObserver(entries => {
+  // eslint-disable-next-line no-restricted-syntax
+  for (let entry of entries) {
+    if (entry.contentRect) {
+      const windowWidth = entry.contentRect.width;
+      const { bg, bgWidth } = getWidths(entry.target);
+      if (windowWidth - parseInt(bgWidth, 10) > 50) {
+        replaceBackground(bg, entry.target, windowWidth, bgWidth);
+      }
+    }
+  }
+});
+function replaceBackground(bg, element, windowWidth, currWidth){
+  bg = bg.replace(currWidth, Math.ceil(windowWidth / 100) * 100);
+  $(element).css("background-image", `url(${bg})`);
+}
+function getWidths(element){
+  let currBg = $(element)
+  .css("background-image")
+  .match(/url\(([^)]+)\)/i)[1];
+  let currWidth = currBg.slice(92);
+  currWidth = currWidth.slice(0, currWidth.indexOf("/"));
+  const curr = {
+    bg: currBg,
+    bgWidth: currWidth
+  }
+  return curr;
+}
 
 // title animation
 // Wrap every letter in a span (for ever word)
