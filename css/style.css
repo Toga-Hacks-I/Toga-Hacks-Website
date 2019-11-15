@@ -2300,6 +2300,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   #speakers {
     padding: 15vh 0 2vh;
   }
+  
+  .prospectus-btn {
+    margin: 0 25vw;
+  }
 }
 
 
