@@ -1949,7 +1949,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer {
-  background: #101522;
+  background: #040919;
   color: #eee;
   font-size: 14px;
   padding: 20vh 0 5vh;
@@ -1957,12 +1957,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top {
-  background: #040919;
+  
   padding: 60px 0 30px 0;
-}
-
-#footer .footer-top .footer-info {
-  margin-bottom: 30px;
 }
 
 #footer .footer-top .footer-info h3 {
@@ -2026,14 +2022,22 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-#footer .footer-top h4 {
-  font-size: 14px;
+#footer .footer-top h2 {
+  font-size: 18px;
   font-weight: bold;
   color: #fff;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 12px;
   border-bottom: 2px solid #c72027;
+}
+
+#footer .footer-top a {
+  color: #fff;
+}
+
+#footer .footer-top a:hover, a:focus {
+  color: #c72027;
 }
 
 #footer .footer-top .footer-links {
@@ -2071,7 +2075,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-contact {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 #footer .footer-top .footer-contact p {
@@ -2317,7 +2321,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-top: -40vh;
   }
   #footer {
-    padding: 35vh 0 5vh;
+    padding: 35vh 0 7vh;
     margin-top: -35vh;
   }
 
