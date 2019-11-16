@@ -261,6 +261,10 @@ h6 {
   color: #c72027;
 }
 
+#header #logo {
+  padding: 0 2vh;
+}
+
 #header #logo h1 a,
 #header #logo h1 a:hover,
 #header #logo h1 a,
@@ -343,7 +347,7 @@ h6 {
 /* Nav Meu Container */
 
 #nav-menu-container {
-  float: right;
+  
   margin: 0;
 }
 
@@ -550,6 +554,7 @@ h6 {
     left: -260px;
     width: 260px;
     overflow-y: auto;
+    overflow-x: hidden;
     transition: none;
   }
 }
@@ -648,6 +653,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 40vh;
 }
 
+.animate .text-wrapper {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.animate .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+
 #intro {
   width: 100%;
   height: 121vh;
@@ -657,6 +673,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
   position: relative;
   padding: 10px;
+
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  ); 
 
   clip-path: polygon(
     0 0,
@@ -679,7 +702,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: absolute;
   bottom: 0;
   left: 0;
-  top: 90px;
+  top: 25px;
   right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -706,7 +729,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-transform: uppercase;
 }
 
-#intro h1 span {
+#intro .red {
   color: #c72027;
 }
 
@@ -919,13 +942,20 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   z-index:-1;
   margin-top: -20vh;
+  
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  ); 
 
   clip-path: polygon(
     0 0,
     100% 0,
     100% 100%,
     0 calc(100% - 7vw)
-  );
+  ); 
 }
 
 
@@ -968,19 +998,27 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 15vh 0 24vh;
   margin-top: -17vh;
   z-index: -2;
+  
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  ); 
 
   clip-path: polygon(
     0 0,
     100% 0,
     100% 100%,
     0 calc(100% - 7vw)
-  );
+  ); 
 }
 
 #speakers .speaker {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
+  border-radius: 0;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -1094,13 +1132,20 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 12vh 0 25vh;
   margin-top: -17vh;
   z-index: -11;
+  
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  ); 
 
   clip-path: polygon(
     0 0,
     100% 0,
     100% 100%,
     0 calc(100% - 7vw)
-  );
+  ); 
 }
 
 #schedule .nav-tabs {
@@ -1224,7 +1269,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #venue {
-  padding: 23vh 2vw 30vh;
+  padding: 23vh 1vw 30vh;
   margin-top: -17vh;
 }
 
@@ -1615,13 +1660,20 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #buy-tickets {
   padding: 10vh 0 25vh;
+  
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 7vw)
+  ); 
 
   clip-path: polygon(
     0 0,
     100% 0,
     100% 100%,
     0 calc(100% - 7vw)
-  );
+  ); 
 }
 
 .modal {
@@ -1647,13 +1699,24 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #c72027;
   border: 0;
   color: #fff;
+  margin: 0 15vw;
+}
+.modal.modal-wide .modal-dialog {
+  width: 90%;
+}
+
+.modal-wide .modal-body {
+  overflow-y: auto;
 }
 
 .pros-modal-open:hover,
 .prospectus-modal-btn:hover,
+.prospectus-btn:hover,
+.prospectus-btn:active,
 .sponsor-btn:hover,
 .pros-modal-open:focus,
 .prospectus-modal-btn:focus,
+.prospectus-btn:focus,
 .sponsor-btn:focus {
   background-color: #e0072f;
   color: #fff;
@@ -2209,7 +2272,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media screen and (max-width: 800px) {
   /* small devices */
   #about {
-    padding: 26vh 10px 16vh;
+    padding: 26vh 10px 15vh;
   }
   #buy-tickets {
     padding-bottom: 12vh;
@@ -2224,7 +2287,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-@media screen and (min-width: 800px) and (max-width: 1024px) {
+@media screen and (min-width: 800px) and (max-width: 990px) {
   /* medium devices */
   #about {
     padding: 26vh 10px 17vh;
@@ -2240,7 +2303,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 990px) {
   /* large devices */
   #about {
     padding: 50vh 10px 25vh;
@@ -2249,5 +2312,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   #footer {
     padding: 35vh 0 5vh;
     margin-top: -35vh;
+  }
+
+  #header #logo {
+    display: none;
   }
 }
