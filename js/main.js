@@ -219,6 +219,9 @@ for (var i = 1; i <= 3; i++) {
 
 anime.timeline({ loop: false })
   .add({
+    delay: 200
+  })
+  .add({
     targets: '.letter',
     translateY: ["1.1em", 0],
     translateZ: 0,

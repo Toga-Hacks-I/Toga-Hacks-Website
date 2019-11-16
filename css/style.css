@@ -649,6 +649,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 # Intro Section
 -------------------------------------------------------------- */
 
+.word {
+  opacity: 0;
+}
+
 #main-logo {
   height: 40vh;
 }
