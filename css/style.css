@@ -1129,7 +1129,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #schedule {
-  padding: 12vh 0 25vh;
+  padding: 12vh 10px 25vh;
   margin-top: -17vh;
   z-index: -11;
   
@@ -1533,7 +1533,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* --------------------------------------------------------------
 # F.A.Q Section
 -------------------------------------------------------------- */
-
+#faq {
+  margin-right: 20px;
+}
 
 #faq #faq-list {
   padding: 0;
