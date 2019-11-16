@@ -2292,6 +2292,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   #speakers {
     padding: 15vh 0 2vh;
   }
+
+  #footer {
+    padding-bottom: 10vh;
+  }
 }
 
 @media screen and (min-width: 800px) and (max-width: 990px) {
@@ -2311,6 +2315,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   .prospectus-btn {
     margin: 0 25vw;
   }
+
 }
 
 
