@@ -1018,7 +1018,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
-  border-radius: 0;
+  border-radius: 5%;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -1129,7 +1129,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #schedule {
-  padding: 12vh 0 25vh;
+  padding: 12vh 10px 25vh;
   margin-top: -17vh;
   z-index: -11;
   
@@ -1481,6 +1481,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   -ms-flex-align: center;
   align-items: center;
   border: 1px solid #e0e5fa;
+  border-radius: 5%;
   /* border-right: 1px solid #e0e5fa;
   border-bottom: 1px solid #e0e5fa; */
   overflow: hidden;
@@ -1533,7 +1534,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* --------------------------------------------------------------
 # F.A.Q Section
 -------------------------------------------------------------- */
-
+#faq {
+  margin-right: 20px;
+}
 
 #faq #faq-list {
   padding: 0;
@@ -2299,6 +2302,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   #speakers {
     padding: 15vh 0 2vh;
+  }
+  
+  .prospectus-btn {
+    margin: 0 25vw;
   }
 }
 
