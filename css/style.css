@@ -1018,7 +1018,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
-  border-radius: 0;
+  border-radius: 5%;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -1481,6 +1481,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   -ms-flex-align: center;
   align-items: center;
   border: 1px solid #e0e5fa;
+  border-radius: 5%;
   /* border-right: 1px solid #e0e5fa;
   border-bottom: 1px solid #e0e5fa; */
   overflow: hidden;
