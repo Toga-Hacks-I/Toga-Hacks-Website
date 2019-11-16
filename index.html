@@ -794,21 +794,12 @@
           </button>
           <!-- Modals outside so this element so they do not get cut off by slant dividers -->
         </div>
-        <div class="text-center" style="padding: 30px 15px 0">
+        <div class="text-center lead" style="padding: 30px 15px 0">
           <p>
-            Want to sponsor us? Enter your email and select your sponsorship
-            tier below and we'll get right back to you!<br />
-            Any questions? Email
-            <a href="mailto:sponsorship@togahacks.com">sponsorship@togahacks.com</a>.
+            Want to sponsor us? Email
+            <b><a href="mailto:sponsorship@togahacks.com">sponsorship@togahacks.com</a></b>.
           </p>
         </div>
-        <div class="text-center">
-          <button type="button" class="sponsor-btn" data-toggle="modal" data-target="#buy-ticket-modal"
-            data-ticket-type="premium-access">
-            Sponsor Now
-          </button>
-        </div>
-      </div>
     </section>
 
 
@@ -841,59 +832,39 @@
       </div>
     </div>
 
-    <!-- Modal Order Form -->
-    <div id="buy-ticket-modal" class="modal fade" style="z-index: 9999">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Get Access</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form method="POST" action="#">
-              <div class="form-group">
-                <input type="text" class="form-control" name="your-name" placeholder="Your Name" />
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="your-email" placeholder="Your Email" />
-              </div>
-              <div class="form-group">
-                <select id="ticket-type" name="ticket-type" class="form-control">
-                  <option value="none" selected disabled>-- Select Your Sponsorship Type --</option>
-                  <option value="bronze">Bronze</option>
-                  <option value="silver">Silver</option>
-                  <option value="gold">Gold</option>
-                  <option value="platinum">Platinum</option>
-                </select>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn">Sponsor Now</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <!-- /.modal-content -->
-      </div>
-      <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-
   </main>
+
   <!--==========================
   Footer
 ============================-->
   <footer id="footer">
     <div class="container wow fadeInUp">
+      <div class="footer-top d-flex justify-content-center">
+        <div class="footer-contact text-center col-lg-6">
+          <h2>Contact Us</h2>
+          <p>
+            Venue Address TBD <br>
+            Silicon Valley, CA<br>
+            United States <br>
+            <strong>Email:</strong> <a href="mailto: hello@togahacks.com">hello@togahacks.com</a><br>
+            <strong>Sponsor us:</strong> <a href="mailto: sponsorship@togahacks.com">sponsorship@togahacks.com</a><br>
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
       <div class="copyright">
         &copy; 2019 <strong>Toga Hacks</strong>. Licensed under
         <strong><a href="https://github.com/Toga-Hacks-I/Toga-Hacks-Website/blob/master/LICENSE" id="license">MIT
             license</a></strong>
-        <p>Contact us at <a href="mailto: hello@togahacks.com">hello@togahacks.com</a>. <br />
-          Sponsorship questions? Email <a href="mailto: hello@togahacks.com">sponsorship@togahacks.com</a>.</p>
       </div>
-
+    </div>
     </div>
   </footer>
   <!-- #footer -->
