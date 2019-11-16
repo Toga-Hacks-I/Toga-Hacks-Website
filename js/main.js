@@ -220,8 +220,8 @@ for (var i = 1; i <= 3; i++) {
 anime.timeline({ loop: false })
   .add({
     targets: '.letter',
-    translateY: ["1.1em", 0],
+    translateY: ["1.2em", 0],
     translateZ: 0,
-    duration: 2500,
-    delay: (el, i) => 100 * i
+    duration: 2000,
+    delay: (el, i) => 45 * i
   });
