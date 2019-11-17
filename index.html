@@ -1,72 +1,43 @@
-  <footer id="footer">
-    <div class="container wow fadeInUp">
-      <div class="copyright">
-        &copy; 2019 <strong>Toga Hacks</strong>. Licensed under
-        <strong><a href="https://github.com/Toga-Hacks-I/Toga-Hacks-Website/blob/master/LICENSE" id="license">MIT
-            license</a></strong>
-        <p>Contact us at <a href="mailto: hello@togahacks.com">hello@togahacks.com</a>. <br />
-          Sponsorship questions? Email <a href="mailto: hello@togahacks.com">sponsorship@togahacks.com</a>.</p>
-      </div>
-
-    </div>
-  </footer>
-  <!-- #footer -->
-
-  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-
-  <!-- Main Javascript File -->
-  <script src="./js/main.js"></script>
-</body>
-
-</html>
-=======
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width" />
-    <meta
-      name="Description"
-      content="A free-to-attend, 24-hour hackathon coming this April 2020. For high-schoolers, by high-schoolers."
-    />
-    <meta charset="utf-8" />
-    <title>Toga Hacks I</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#cd1d2c" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
+<head>
+  <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width" />
+  <meta name="Description"
+    content="A free-to-attend, 24-hour hackathon coming this April 2020. For high-schoolers, by high-schoolers." />
+  <meta charset="utf-8" />
+  <title>Toga Hacks I</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
-      rel="stylesheet"
-    />
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#cd1d2c" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
 
-    <!-- Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-149590316-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet" />
 
-      gtag("config", "UA-149590316-1");
-    </script>
-  </head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149590316-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-149590316-1");
+  </script>
+</head>
 
-  <body>
-    <!--==========================
+<body>
+  <!--==========================
     Header
   ============================-->
   <header id="header">
@@ -135,7 +106,7 @@
   </header>
   <!-- #header -->
 
-    <!--==========================
+  <!--==========================
     Intro Section
   ============================-->
   <section id="intro" class="bg-responsive">
@@ -189,9 +160,8 @@
         </div>
     </section>
 
-    <main id="main">
-      <!--==========================
-      About Section
+    <!--==========================
+      Venue Section
     ============================-->
     <section id="venue" class="wow fadeInUp">
       <div class="container-fluid">
@@ -324,9 +294,10 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--==========================
+    <!--==========================
       Schedule Section
     ============================-->
     <section id="schedule" class="section-with-bg">
@@ -335,124 +306,130 @@
           <h2>Event Schedule</h2>
         </div>
 
-          <div class="tab-content row justify-content-center">
-            <!-- Schedule Day 1 -->
-            <div
-              role="tabpanel"
-              class="col-lg-9 tab-pane fade show active"
-              id="day-1"
-            >
-              <div class="row schedule-item">
-                <div class="col-md-2"><time>09:00 AM</time></div>
-                <div class="col-md-10">
-                  <h4>Hacker Check In Begins</h4>
-                </div>
-              </div>
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Day 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Day 2</a>
+          </li>
+        </ul>
 
-              <div class="row schedule-item">
-                <div class="col-md-2"><time>10:00 AM</time></div>
-                <div class="col-md-10">
-                  <h4>Opening Ceremony</h4>
-                </div>
+        <div class="tab-content row justify-content-center">
+          <!-- Schedule Day 1 -->
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>09:00 AM</time></div>
+              <div class="col-md-10">
+                <h4>Hacker Check In Begins</h4>
               </div>
+            </div>
 
-              <div class="row schedule-item">
-                <div class="col-md-2"><time>10:20 AM</time></div>
-                <div class="col-md-10">
-                  <h4>Team Formation</h4>
-                </div>
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>10:00 AM</time></div>
+              <div class="col-md-10">
+                <h4>Opening Ceremony</h4>
               </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>10:20 AM</time></div>
+              <div class="col-md-10">
+                <h4>Team Formation</h4>
+              </div>
+            </div>
 
             <div class="row schedule-item">
               <div class="col-md-2"><time>12:00 PM</time></div>
               <div class="col-md-10">
                 <h4>Lunch</h4>
               </div>
+            </div>
 
-              <div class="row schedule-item">
-                <div class="col-md-2"><time>02:00 PM</time></div>
-                <div class="col-md-10">
-                  <h4>Workshop 1</h4>
-                </div>
-              </div>
-
-              <div class="row schedule-item">
-                <div class="col-md-2"><time>03:30 PM</time></div>
-                <div class="col-md-10">
-                  <h4>Snacks</h4>
-                </div>
-              </div>
-
-              <div class="row schedule-item">
-                <div class="col-md-2"><time>04:30 PM</time></div>
-                <div class="col-md-10">
-                  <h4>Workshop 2</h4>
-                </div>
-              </div>
-              <div class="row schedule-item">
-                <div class="col-md-2"><time>06:30 PM</time></div>
-                <div class="col-md-10">
-                  <h4>Dinner</h4>
-                </div>
-              </div>
-              <div class="row schedule-item">
-                <div class="col-md-2"><time>09:30 PM</time></div>
-                <div class="col-md-10">
-                  <h4>Cup Stacking</h4>
-                </div>
-                <div class="row schedule-item"></div>
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>02:00 PM</time></div>
+              <div class="col-md-10">
+                <h4>Workshop 1</h4>
               </div>
             </div>
-            <!-- End Schedule Day 1 -->
 
-            <!-- Schedule Day 2 -->
-            <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
-              <div class="row schedule-item">
-                <div class="col-md-2"><time>12:00 AM</time></div>
-                <div class="col-md-10">
-                  <h4>Midnight Snack</h4>
-                </div>
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>03:30 PM</time></div>
+              <div class="col-md-10">
+                <h4>Snacks</h4>
               </div>
+            </div>
 
-              <div class="row schedule-item">
-                <div class="col-md-2"><time>07:00 AM</time></div>
-                <div class="col-md-10">
-                  <h4>Breakfast</h4>
-                </div>
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>04:30 PM</time></div>
+              <div class="col-md-10">
+                <h4>Workshop 2</h4>
               </div>
-
-              <div class="row schedule-item">
-                <div class="col-md-2"><time>09:30 AM</time></div>
-                <div class="col-md-10">
-                  <h4>Submissions to Devpost</h4>
-                </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>06:30 PM</time></div>
+              <div class="col-md-10">
+                <h4>Dinner</h4>
               </div>
-
-              <div class="row schedule-item">
-                <div class="col-md-2"><time>10:00 AM</time></div>
-                <div class="col-md-10">
-                  <h4>Presentations and Judging</h4>
-                </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>09:30 PM</time></div>
+              <div class="col-md-10">
+                <h4>Cup Stacking</h4>
               </div>
+              <div class="row schedule-item"></div>
+            </div>
+          </div>
+          <!-- End Schedule Day 1 -->
 
-              <div class="row schedule-item">
-                <div class="col-md-2"><time>11:30 AM</time></div>
-                <div class="col-md-10">
-                  <h4>Prizes and Closing Ceremony</h4>
-                </div>
+          <!-- Schedule Day 2 -->
+          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>12:00 AM</time></div>
+              <div class="col-md-10">
+                <h4>Midnight Snack</h4>
               </div>
+            </div>
 
-              <div class="row schedule-item">
-                <div class="col-md-2"><time>12:00 PM</time></div>
-                <div class="col-md-10">
-                  <h4>Event End</h4>
-                </div>
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>07:00 AM</time></div>
+              <div class="col-md-10">
+                <h4>Breakfast</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>09:30 AM</time></div>
+              <div class="col-md-10">
+                <h4>Submissions to Devpost</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>10:00 AM</time></div>
+              <div class="col-md-10">
+                <h4>Presentations and Judging</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>11:30 AM</time></div>
+              <div class="col-md-10">
+                <h4>Prizes and Closing Ceremony</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>12:00 PM</time></div>
+              <div class="col-md-10">
+                <h4>Event End</h4>
               </div>
             </div>
           </div>
-          <!-- End Schedule Day 2 -->
         </div>
-      </section>
+        <!-- End Schedule Day 2 -->
+      </div>
+    </section>
 
     <!--==========================
       F.A.Q. Section
@@ -541,13 +518,15 @@
                     Each team should have a maximum of four people.
                   </p>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
+      </div>
+    </section>
 
-      <!--==========================
+    <!--==========================
           Speakers Section
         ============================-->
     <section id="speakers" class="section-with-bg wow fadeInUp">
@@ -567,302 +546,198 @@
                   alt="Speaker 1"
                   class="img-fluid"
                 /> -->
-                <div class="details">
-                  <h3>Arman Rafati</h3>
-                  <p>Executive Director</p>
-                  <div class="social">
-                    <a href="https://github.com/code-arman"
-                      ><i class="fa fa-github"></i
-                    ></a>
-                  </div>
+              <div class="details">
+                <h3>Arman Rafati</h3>
+                <p>Executive Director</p>
+                <div class="social">
+                  <a href="https://github.com/code-arman"><i class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="speaker">
-                <img
-                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Tony_Jiang_jhbuad.jpg"
-                  responsive_placeholder="blank"
-                  alt="Tony Jiang"
-                  class="img-fluid cld-responsive"
-                />
-                <!-- <img
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img
+                data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Tony_Jiang_jhbuad.jpg"
+                responsive_placeholder="blank" alt="Tony Jiang" class="img-fluid cld-responsive" />
+              <!-- <img
                   src="img/team/Tony_Jiang.jpg"
                   alt="Speaker 2"
                   class="img-fluid"
                 /> -->
-                <div class="details">
-                  <h3>Tony Jiang</h3>
-                  <p>Executive Director</p>
-                  <div class="social">
-                    <a href="https://github.com/tonyjiang02"
-                      ><i class="fa fa-github"></i
-                    ></a>
-                    <a href="http://linkedin.com/in/tony-jiang-672662139"
-                      ><i class="fa fa-linkedin"></i
-                    ></a>
-                  </div>
+              <div class="details">
+                <h3>Tony Jiang</h3>
+                <p>Executive Director</p>
+                <div class="social">
+                  <a href="https://github.com/tonyjiang02"><i class="fa fa-github"></i></a>
+                  <a href="http://linkedin.com/in/tony-jiang-672662139"><i class="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="speaker">
-                <img
-                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Howard_Huang_bfjnfd.jpg"
-                  responsive_placeholder="blank"
-                  alt="Howard Huang"
-                  class="img-fluid cld-responsive"
-                />
-                <!-- <img
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img
+                data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Howard_Huang_bfjnfd.jpg"
+                responsive_placeholder="blank" alt="Howard Huang" class="img-fluid cld-responsive" />
+              <!-- <img
                   src="img/team/Howard_Huang.jpg"
                 /> -->
-                <div class="details">
-                  <h3>Howard Huang</h3>
-                  <p>Operations Director</p>
-                  <div class="social">
-                    <a href="https://github.com/HowardHuang1"
-                      ><i class="fa fa-github"></i
-                    ></a>
-                    <a
-                      href="https://www.linkedin.com/in/howard-huang-b24465183/"
-                      ><i class="fa fa-linkedin"></i
-                    ></a>
-                  </div>
+              <div class="details">
+                <h3>Howard Huang</h3>
+                <p>Operations Director</p>
+                <div class="social">
+                  <a href="https://github.com/HowardHuang1"><i class="fa fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/howard-huang-b24465183/"><i class="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="speaker">
-                <img
-                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/speakers/blank_team_ztthgh.jpg"
-                  responsive_placeholder="blank"
-                  alt="Mathew Wang"
-                  class="img-fluid cld-responsive"
-                />
-                <!-- <img
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img
+                data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/speakers/blank_team_ztthgh.jpg"
+                responsive_placeholder="blank" alt="Mathew Wang" class="img-fluid cld-responsive" />
+              <!-- <img
                   src="img/speakers/blank_team.png"
                   alt="Speaker 4"
                   class="img-fluid"
                 /> -->
-                <!--TODO: add picture-->
-                <div class="details">
-                  <h3>Mathew Wang</h3>
-                  <p>Communications and Webmaster</p>
-                  <div class="social">
-                    <a href="https:///www.github.com/SwiftWinds"
-                      ><i class="fa fa-github"></i
-                    ></a>
-                  </div>
+              <!--TODO: add picture-->
+              <div class="details">
+                <h3>Mathew Wang</h3>
+                <p>Communications and Webmaster</p>
+                <div class="social">
+                  <a href="https:///www.github.com/SwiftWinds"><i class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="speaker">
-                <img
-                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Mason_Wang_gnfarq.jpg"
-                  alt="Mason Wang"
-                  class="img-fluid cld-responsive"
-                  responsive_placeholder="blank"
-                />
-                <div class="details">
-                  <h3>Mason Wang</h3>
-                  <p>Tech Director</p>
-                  <div class="social">
-                    <a href="https://github.com/MasonWang025"
-                      ><i class="fa fa-github"></i
-                    ></a>
-                    <a href="https://www.linkedin.com/in/mason-wang-7b2758176"
-                      ><i class="fa fa-linkedin"></i
-                    ></a>
-                  </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img
+                data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Mason_Wang_gnfarq.jpg"
+                alt="Mason Wang" class="img-fluid cld-responsive" responsive_placeholder="blank" />
+              <div class="details">
+                <h3>Mason Wang</h3>
+                <p>Tech Director</p>
+                <div class="social">
+                  <a href="https://github.com/MasonWang025"><i class="fa fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/mason-wang-7b2758176"><i class="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="speaker">
-                <img
-                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Nidhi_Mathihalli_qpfgix.jpg"
-                  responsive_placeholder="blank"
-                  alt="Nidhi Mathihalli"
-                  class="img-fluid cld-responsive"
-                />
-                <!-- <img
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img
+                data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Nidhi_Mathihalli_qpfgix.jpg"
+                responsive_placeholder="blank" alt="Nidhi Mathihalli" class="img-fluid cld-responsive" />
+              <!-- <img
                   src="img/team/Nidhi_Mathihalli.jpg"
                   alt="Speaker 5"
                   class="img-fluid"
                 /> -->
-                <div class="details">
-                  <h3>Nidhi Mathihalli</h3>
-                  <p>Finance Director</p>
-                  <div class="social">
-                    <a href="https://github.com/nidhimath"
-                      ><i class="fa fa-github"></i
-                    ></a>
-                  </div>
+              <div class="details">
+                <h3>Nidhi Mathihalli</h3>
+                <p>Finance Director</p>
+                <div class="social">
+                  <a href="https://github.com/nidhimath"><i class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="speaker">
-                <img
-                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Mathew_Luo_dyy0of.jpg"
-                  responsive_placeholder="blank"
-                  alt="Mathew Luo"
-                  class="img-fluid cld-responsive"
-                />
-                <!-- <img
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img
+                data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Mathew_Luo_dyy0of.jpg"
+                responsive_placeholder="blank" alt="Mathew Luo" class="img-fluid cld-responsive" />
+              <!-- <img
                   src="/img/team/Mathew_Luo.jpg"
                   alt="Speaker 6"
                   class="img-fluid"
                 /> -->
-                <div class="details">
-                  <h3>Mathew Luo</h3>
-                  <p>Finance</p>
-                  <div class="social">
-                    <a href="https://github.com/mluo2002"
-                      ><i class="fa fa-github"></i
-                    ></a>
-                  </div>
+              <div class="details">
+                <h3>Mathew Luo</h3>
+                <p>Finance</p>
+                <div class="social">
+                  <a href="https://github.com/mluo2002"><i class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="speaker">
-                <img
-                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Shayan_Sarnevesht_jzftzz.jpg"
-                  responsive_placeholder="blank"
-                  alt="Shayan Sarnevesht"
-                  class="img-fluid cld-responsive"
-                />
-                <!-- <img
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img
+                data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Shayan_Sarnevesht_jzftzz.jpg"
+                responsive_placeholder="blank" alt="Shayan Sarnevesht" class="img-fluid cld-responsive" />
+              <!-- <img
                   src="img/team/Shayan_Sarnevesht.jpg"
                   alt="Speaker 6"
                   class="img-fluid"
                 /> -->
-                <div class="details">
-                  <h3>Shayan Sarnevesht</h3>
-                  <p>Outreach Director</p>
-                  <div class="social">
-                    <a href="https://github.com/shayans66"
-                      ><i class="fa fa-github"></i
-                    ></a>
-                    <a href="https://www.linkedin.com/in/shayans66/"
-                      ><i class="fa fa-linkedin"></i
-                    ></a>
-                  </div>
+              <div class="details">
+                <h3>Shayan Sarnevesht</h3>
+                <p>Outreach Director</p>
+                <div class="social">
+                  <a href="https://github.com/shayans66"><i class="fa fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/shayans66/"><i class="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="speaker">
-                <img
-                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Ujjwal_Krishnamurthi_g6v3gk.jpg"
-                  alt="Ujjwal Krishnamurthi"
-                  class="img-fluid cld-responsive"
-                  responsive_placeholder="blank"
-                />
-                <!-- <img
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img
+                data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Ujjwal_Krishnamurthi_g6v3gk.jpg"
+                alt="Ujjwal Krishnamurthi" class="img-fluid cld-responsive" responsive_placeholder="blank" />
+              <!-- <img
                   src="img/team/Ujjwal_Krishnamurthi.jpg"
                   alt="Speaker 6"
                   class="img-fluid"
                 /> -->
-                <div class="details">
-                  <h3>Ujjwal Krishnamurthi</h3>
-                  <p>Outreach</p>
-                  <div class="social">
-                    <a href="https://github.com/kujjwal"
-                      ><i class="fa fa-github"></i
-                    ></a>
-                    <a href="https://www.linkedin.com/in/ujjwal-kri/"
-                      ><i class="fa fa-linkedin"></i
-                    ></a>
-                  </div>
+              <div class="details">
+                <h3>Ujjwal Krishnamurthi</h3>
+                <p>Outreach</p>
+                <div class="social">
+                  <a href="https://github.com/kujjwal"><i class="fa fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/ujjwal-kri/"><i class="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--==========================
+    <!--==========================
       Sponsors Section
     ============================-->
+    <section id="supporters">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h2>Partners</h2>
+        </div>
 
-      <!-- <div class="col-lg-3 col-md-4 col-xs-6">
-          <div class="supporter-logo">
-            <img src="img/supporters/2.png" class="img-fluid" alt="">
-          </div>
-        </div>
-      
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <div class="supporter-logo">
-            <img src="img/supporters/3.png" class="img-fluid" alt="">
-          </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <div class="supporter-logo">
-            <img src="img/supporters/4.png" class="img-fluid" alt="">
-          </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <div class="supporter-logo">
-            <img src="img/supporters/5.png" class="img-fluid" alt="">
-          </div>
-        </div>
-      
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <div class="supporter-logo">
-            <img src="img/supporters/6.png" class="img-fluid" alt="">
-          </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <div class="supporter-logo">
-            <img src="img/supporters/7.png" class="img-fluid" alt="">
-          </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <div class="supporter-logo">
-            <img src="img/supporters/8.png" class="img-fluid" alt="">
-          </div>
-        </div> -->
-
-      <section id="supporters" class="wow fadeInUp">
-        <div class="container">
-          <div class="section-header">
-            <h2>Partners</h2>
-          </div>
-
-          <div
-            class="row justify-content-md-center no-gutters supporters-wrap clearfix"
-          >
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                <a href="https://18techventures.com">
-                  <img
-                    data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/supporters/18Tech_Ventures_Logo_Light_Theme_pyytmd.png"
-                    alt="18Tech Ventures Logo"
-                    responsive_placeholder="blank"
-                    class="img-fluid cld-responsive"
-                /></a>
-              </div>
+        <div class="row justify-content-md-center no-gutters supporters-wrap clearfix">
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://18techventures.com">
+                <img
+                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/supporters/18Tech_Ventures_Logo_Light_Theme_pyytmd.png"
+                  alt="18Tech Ventures Logo" responsive_placeholder="blank" class="img-fluid cld-responsive" /></a>
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                <a href="https://ushackathonleague.com/">
-                  <img
-                    data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/supporters/USHL_Logo_dzxr4l.png"
-                    alt="US Hackathon League Logo"
-                    responsive_placeholder="blank"
-                    class="img-fluid cld-responsive"
-                /></a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://ushackathonleague.com/">
+                <img
+                  data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/supporters/USHL_Logo_dzxr4l.png"
+                  alt="US Hackathon League Logo" responsive_placeholder="blank" class="img-fluid cld-responsive" /></a>
             </div>
           </div>
         </div>
+      </div>
 
       <div class="container wow fadeInUp">
         <div class="section-header sponsors">
@@ -879,10 +754,11 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--==========================
-      F.A.Q Section
+    <!--==========================
+      Buy Ticket Section
     ============================-->
     <section id="buy-tickets" class="section-with-bg">
       <div class="wow fadeInUp">
@@ -933,301 +809,97 @@
       </div>
     </section>
 
-                <li>
-                  <a data-toggle="collapse" href="#faq4" class="collapsed"
-                    >Who can participate? <i class="fa fa-minus-circle"></i
-                  ></a>
-                  <div id="faq4" class="collapse" data-parent="#faq-list">
-                    <p>
-                      Any high school student can participate
-                    </p>
-                  </div>
-                </li>
 
-                <li>
-                  <a data-toggle="collapse" href="#faq5" class="collapsed"
-                    >What if I don't know how to code?
-                    <i class="fa fa-minus-circle"></i
-                  ></a>
-                  <div id="faq5" class="collapse" data-parent="#faq-list">
-                    <p>
-                      No problem! We will be hosting several workshops
-                      throughout the event intended to help you learn to code
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  <a data-toggle="collapse" href="#faq6" class="collapsed"
-                    >What should I bring? <i class="fa fa-minus-circle"></i
-                  ></a>
-                  <div id="faq6" class="collapse" data-parent="#faq-list">
-                    <p>
-                      A laptop and a charger is all that you need. A sleeping
-                      bag is recommended (if you plan to sleep 😉)
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  <a data-toggle="collapse" href="#faq7" class="collapsed"
-                    >How do I form a team? <i class="fa fa-minus-circle"></i
-                  ></a>
-                  <div id="faq7" class="collapse" data-parent="#faq-list">
-                    <p>
-                      If you do not have a team already, there will be team
-                      formation at the beginning of the hackathon. This is an
-                      opportunity for you to meet new people and form teams.
-                      Each team should have a maximum of four people
-                    </p>
-                  </div>
-                </li>
-              </ul>
+    <!--Modals-->
+    <div id="prospectusModal" class="modal fade" role="dialog" style="z-index: 9999">
+      <div class="modal-dialog modal-xl">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" style="display:inline">
+            <h4 style="display:inline">
+              <a href="TogaHacks Sponsorship Prospectus.pdf" target="_blank">TogaHacks Sponsorship Prospectus</a>
+            </h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <embed src="./TogaHacks Sponsorship Prospectus.pdf" frameborder="0" class="modalpdf" />
+            <div class="modal-footer" style="padding:15px 0 0 0">
+              <div class="btn pros-modal-btn pros-modal-open">
+                <a href="TogaHacks Sponsorship Prospectus.pdf" target="_blank" style="color:inherit"><b>Open in new
+                    tab</b></a>
+              </div>
+              <button type="button" class="btn btn-default btn pros-modal-btn" data-dismiss="modal">
+                Close
+              </button>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!--==========================
-      Buy Ticket Section
-    ============================-->
-      <section id="buy-tickets" class="wow fadeInUp">
-        <div class="container">
-          <div class="section-header">
-            <h2>Sponsor Us</h2>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="card mb-5 mb-lg-0">
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">
-                    Bronze Sponsor Tier
-                  </h5>
-                  <h6 class="card-price text-center">$500</h6>
-                  <hr />
-                  <ul class="fa-ul">
-                    <li>
-                      <span class="fa-li"><i class="fa fa-check"></i></span>Logo
-                      on Website
-                    </li>
-                    <li>
-                      <span class="fa-li"><i class="fa fa-check"></i></span>Logo
-                      on T-Shirt
-                    </li>
-                    <li>
-                      <span class="fa-li"><i class="fa fa-check"></i></span>Send
-                      Recruiter
-                    </li>
-                    <li class="text-muted">
-                      <span class="fa-li"><i class="fa fa-times"></i></span
-                      >Award API & Themed Prizes
-                    </li>
-                    <li class="text-muted">
-                      <span class="fa-li"><i class="fa fa-times"></i></span
-                      >Mailing List
-                    </li>
-                    <li class="text-muted">
-                      <span class="fa-li"><i class="fa fa-times"></i></span
-                      >Presentation at Opening/Closing Ceremony
-                    </li>
-                  </ul>
-                  <hr />
-                  <div class="text-center">
-                    <button
-                      type="button"
-                      class="btn"
-                      data-toggle="modal"
-                      data-target="#buy-ticket-modal"
-                      data-ticket-type="standard-access"
-                    >
-                      Sponsor Now
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card mb-5 mb-lg-0">
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">
-                    Silver Sponsor Tier
-                  </h5>
-                  <h6 class="card-price text-center">$1000</h6>
-                  <hr />
-                  <ul class="fa-ul">
-                    <li>
-                      <span class="fa-li"><i class="fa fa-check"></i></span>Logo
-                      on Website
-                    </li>
-                    <li>
-                      <span class="fa-li"><i class="fa fa-check"></i></span>Logo
-                      on T-Shirt
-                    </li>
-                    <li>
-                      <span class="fa-li"><i class="fa fa-check"></i></span>Send
-                      Recruiter
-                    </li>
-                    <li>
-                      <span class="fa-li"><i class="fa fa-check"></i></span
-                      >Award API & Themed Prizes
-                    </li>
-                    <li class="text-muted">
-                      <span class="fa-li"><i class="fa fa-times"></i></span
-                      >Mailing List
-                    </li>
-                    <li class="text-muted">
-                      <span class="fa-li"><i class="fa fa-times"></i></span
-                      >Presentation at Opening/Closing Ceremony
-                    </li>
-                  </ul>
-                  <hr />
-                  <div class="text-center">
-                    <button
-                      type="button"
-                      class="btn"
-                      data-toggle="modal"
-                      data-target="#buy-ticket-modal"
-                      data-ticket-type="pro-access"
-                    >
-                      Sponsor Now
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Pro Tier -->
-            <div class="col-lg-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">
-                    Gold Tier Sponsor
-                  </h5>
-                  <h6 class="card-price text-center">$2500</h6>
-                  <hr />
-                  <ul class="fa-ul">
-                    <li>
-                      <span class="fa-li"><i class="fa fa-check"></i></span>Logo
-                      on Website
-                    </li>
-                    <li>
-                      <span class="fa-li"><i class="fa fa-check"></i></span>Logo
-                      on T-Shirt
-                    </li>
-                    <li>
-                      <span class="fa-li"><i class="fa fa-check"></i></span>Send
-                      Recruiter
-                    </li>
-                    <li>
-                      <span class="fa-li"><i class="fa fa-check"></i></span
-                      >Award API & Themed Prizes
-                    </li>
-                    <li>
-                      <span class="fa-li"><i class="fa fa-check"></i></span
-                      >Mailing List
-                    </li>
-                    <li>
-                      <span class="fa-li"><i class="fa fa-check"></i></span
-                      >Presentation at Opening/Closing Ceremony
-                    </li>
-                  </ul>
-                  <hr />
-                  <div class="text-center">
-                    <button
-                      type="button"
-                      class="btn"
-                      data-toggle="modal"
-                      data-target="#buy-ticket-modal"
-                      data-ticket-type="premium-access"
-                    >
-                      Sponsor Now
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal Order Form -->
-        <div id="buy-ticket-modal" class="modal fade">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title">Get Access</h4>
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form method="POST" action="#">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="your-name"
-                      placeholder="Your Name"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="your-email"
-                      placeholder="Your Email"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <select
-                      id="ticket-type"
-                      name="ticket-type"
-                      class="form-control"
-                    >
-                      <option value="">-- Select Your Sponsor Type --</option>
-                      <option value="standard-access">Standard Access</option>
-                      <option value="pro-access">Pro Access</option>
-                      <option value="premium-access">Premium Access</option>
-                    </select>
-                  </div>
-                  <div class="text-center">
-                    <button type="submit" class="btn">Buy Now</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <!-- /.modal-content -->
-          </div>
-          <!-- /.modal-dialog -->
-        </div>
-        <!-- /.modal -->
-      </section>
-    </main>
-
-    <!--==========================
-    Footer
-  ============================-->
-    <footer id="footer">
-      <div class="container">
-        <div class="copyright">
-          &copy; 2019 <strong>Toga Hacks</strong>. Licensed under
-          <strong
-            ><a href="https://tldrlegal.com/license/mit-license" id="license"
-              >MIT license</a
-            ></strong
-          >
         </div>
       </div>
-    </footer>
-    <!-- #footer -->
+    </div>
 
-    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+    <!-- Modal Order Form -->
+    <div id="buy-ticket-modal" class="modal fade" style="z-index: 9999">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Get Access</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="POST" action="#">
+              <div class="form-group">
+                <input type="text" class="form-control" name="your-name" placeholder="Your Name" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="your-email" placeholder="Your Email" />
+              </div>
+              <div class="form-group">
+                <select id="ticket-type" name="ticket-type" class="form-control">
+                  <option value="none" selected disabled>-- Select Your Sponsorship Type --</option>
+                  <option value="bronze">Bronze</option>
+                  <option value="silver">Silver</option>
+                  <option value="gold">Gold</option>
+                  <option value="platinum">Platinum</option>
+                </select>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn">Sponsor Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 
-    <!-- Main Javascript File -->
-    <script src="./js/main.js"></script>
-  </body>
+  </main>
+  <!--==========================
+  Footer
+============================-->
+  <footer id="footer">
+    <div class="container wow fadeInUp">
+      <div class="copyright">
+        &copy; 2019 <strong>Toga Hacks</strong>. Licensed under
+        <strong><a href="https://github.com/Toga-Hacks-I/Toga-Hacks-Website/blob/master/LICENSE" id="license">MIT
+            license</a></strong>
+        <p>Contact us at <a href="mailto: hello@togahacks.com">hello@togahacks.com</a>. <br />
+          Sponsorship questions? Email <a href="mailto: hello@togahacks.com">sponsorship@togahacks.com</a>.</p>
+      </div>
+
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- Main Javascript File -->
+  <script src="./js/main.js"></script>
+</body>
+
 </html>
