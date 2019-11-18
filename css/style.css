@@ -2261,7 +2261,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media screen and (max-width: 800px) {
   /* small devices */
   #intro .intro-container {
-    margin-top: 12vh;
+    margin-top: 11vh;
   }
 
   #about {
