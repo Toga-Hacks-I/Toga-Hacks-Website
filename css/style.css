@@ -631,6 +631,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #main-logo {
   height: 40vh;
+  margin-top: -40vh;
+  width: auto
+}
+
+#main-logo-T {
+  height: 40vh;
+  position: relative;
+  width: auto;
 }
 
 .animate .text-wrapper {
