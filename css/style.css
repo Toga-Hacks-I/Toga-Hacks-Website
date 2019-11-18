@@ -630,7 +630,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #main-logo {
-  height: 40vh;
+  height: 50vh;
+  margin-top: -50vh;
+  width: auto
+}
+
+#main-logo-T {
+  height: 50vh;
+  position: relative;
+  width: auto;
 }
 
 .animate .text-wrapper {
@@ -683,7 +691,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: absolute;
   bottom: 0;
   left: 0;
-  top: 25px;
+  top: 3vh;
   right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -705,7 +713,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro h1 {
   color: #fff;
   font-family: "Raleway", sans-serif;
-  font-size: 120px;
+  font-size: 50px;
   font-weight: 600;
   text-transform: uppercase;
 }
