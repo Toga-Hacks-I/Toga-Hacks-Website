@@ -630,13 +630,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #main-logo {
-  height: 40vh;
-  margin-top: -40vh;
+  height: 50vh;
+  margin-top: -50vh;
   width: auto
 }
 
 #main-logo-T {
-  height: 40vh;
+  height: 50vh;
   position: relative;
   width: auto;
 }
@@ -713,7 +713,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro h1 {
   color: #fff;
   font-family: "Raleway", sans-serif;
-  font-size: 120px;
+  font-size: 50px;
   font-weight: 600;
   text-transform: uppercase;
 }
