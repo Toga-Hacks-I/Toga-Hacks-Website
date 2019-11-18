@@ -222,6 +222,6 @@ anime.timeline({ loop: false })
     targets: '.letter',
     translateY: ["1.2em", 0],
     translateZ: 0,
-    duration: 2000,
+    duration: 2500,
     delay: (el, i) => 100 * i
   });
