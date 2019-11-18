@@ -691,7 +691,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: absolute;
   bottom: 0;
   left: 0;
-  top: 3vh;
+  top: 5vh;
   right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2260,6 +2260,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* change top and bottom padding for sections because of slanted divider margin problems */
 @media screen and (max-width: 800px) {
   /* small devices */
+  #intro .intro-container {
+    margin-top: 12vh;
+  }
+
   #about {
     padding: 26vh 10px 15vh;
   }
