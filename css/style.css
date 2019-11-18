@@ -1033,6 +1033,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #team .member:hover .member-info {
+  border-radius: 100%;
   background: rgba(145, 0, 7, .76);
   opacity: 1;
   transition: 0.4s;
