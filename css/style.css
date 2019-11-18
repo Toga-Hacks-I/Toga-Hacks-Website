@@ -1023,22 +1023,26 @@ body.mobile-nav-active #mobile-nav-toggle {
   left: 0;
   right: 0;
   transition: 0.2s;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 #team .member .member-info-content {
   margin-top: 25px;
   transition: margin 0.2s;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 #team .member:hover .member-info {
   background: rgba(145, 0, 7, .76);
   opacity: 1;
   transition: 0.4s;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 #team .member:hover .member-info-content {
   margin-top: 0;
   transition: margin 0.4s;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 #team .member h3 {
