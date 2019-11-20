@@ -238,6 +238,16 @@ h6 {
   }
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+#header.header-scrolled,
+#header.header-fixed {
+  background: rgba(6, 12, 34, 0.98);
+  height: 70px;
+  padding: 15px 0;
+  transition: none;
+}
+}
+
 #header.header-scrolled,
 #header.header-fixed {
   background: rgba(6, 12, 34, 0.98);
@@ -347,7 +357,6 @@ h6 {
 /* Nav Meu Container */
 
 #nav-menu-container {
-  
   margin: 0;
 }
 
@@ -663,30 +672,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   line-height: 1em;
 }
 
-
 #intro {
   width: 100%;
   height: 121vh;
-  background: url("https://res.cloudinary.com/damnzwekj/image/upload/c_fill,dpr_auto,f_auto,q_auto,w_auto:100:1280/v1/TogaHacks/backgrounds/intro-bg_ngqj6c.jpg")
+  background: url("https://res.cloudinary.com/damnzwekj/image/upload/c_fill,dpr_auto,f_auto,q_auto,w_auto:100:300/v1/TogaHacks/backgrounds/intro-bg_ngqj6c.jpg")
     top center;
   background-size: cover;
   overflow: hidden;
   position: relative;
   padding: 10px;
-
-  -webkit-clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 calc(100% - 7vw)
-  ); 
-
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 calc(100% - 7vw)
-  );
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
 }
 #intro::before {
   content: "";
@@ -940,24 +936,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
   position: relative;
   color: #fff;
-  z-index:-1;
+  z-index: -1;
   margin-top: -20vh;
-  
-  -webkit-clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 calc(100% - 7vw)
-  ); 
-
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 calc(100% - 7vw)
-  ); 
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
 }
-
 
 #about::before {
   content: "";
@@ -998,20 +981,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 15vh 0 24vh;
   margin-top: -17vh;
   z-index: -2;
-  
-  -webkit-clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 calc(100% - 7vw)
-  ); 
-
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 calc(100% - 7vw)
-  ); 
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
 }
 
 #speakers .speaker {
@@ -1132,20 +1103,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 12vh 0 25vh;
   margin-top: -17vh;
   z-index: -11;
-  
-  -webkit-clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 calc(100% - 7vw)
-  ); 
-
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 calc(100% - 7vw)
-  ); 
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
 }
 
 #schedule .nav-tabs {
@@ -1481,6 +1440,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   -ms-flex-align: center;
   align-items: center;
   border: 1px solid #e0e5fa;
+
   /* border-right: 1px solid #e0e5fa;
   border-bottom: 1px solid #e0e5fa; */
   overflow: hidden;
@@ -1514,7 +1474,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0;
 }
 
-#sponsor-link:after {
+@media screen and (prefers-reduced-motion: reduce) {
+#sponsor-link::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #c72027;
+  transform: scaleX(0);
+  transition: none;
+}
+}
+
+#sponsor-link::after {
   display: block;
   content: "";
   border-bottom: solid 2px #c72027;
@@ -1522,18 +1492,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: transform 0.3s ease-in-out 0s;
 }
 
-#sponsor-link:hover:after {
+#sponsor-link:hover::after, #sponsor-link:focus::after {
   transform: scaleX(1);
 }
 
-#sponsor-link:after {
+#sponsor-link::after {
   transform-origin: 0% 50%;
 }
 
 /* --------------------------------------------------------------
 # F.A.Q Section
 -------------------------------------------------------------- */
-
 
 #faq #faq-list {
   padding: 0;
@@ -1582,7 +1551,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 5vh 0 23vh 5vh;
   max-width: 100vw;
 }
-
 
 /* --------------------------------------------------------------
 # Subscribe Section
@@ -1660,20 +1628,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #buy-tickets {
   padding: 10vh 0 25vh;
-  
-  -webkit-clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 calc(100% - 7vw)
-  ); 
-
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 calc(100% - 7vw)
-  ); 
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
 }
 
 .modal {
@@ -1724,7 +1680,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media screen and (max-width: 1000px) {
   .prospectus-modal-btn {
-    /*Hide Prospectus that opens a modal*/
+    /* Hide Prospectus that opens a modal */
     display: none !important;
   }
   .prospectus-btn {
@@ -1744,13 +1700,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .modalpdf {
-  /*pdf embedded in modal*/
+  /* pdf embedded in modal */
   width: 100%;
   height: 450px;
 }
 
 .pros-modal-btn {
-  /*buttons on bottom of prospectus modal*/
+  /* buttons on bottom of prospectus modal */
   display: inline-block;
   border-radius: 5px;
   background-color: lightgrey;
@@ -1758,12 +1714,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .pros-modal-open {
-  /*open button of prospectus modal*/
+  /* open button of prospectus modal */
   padding: 6px 10px;
   color: #fff;
   background-color: #c72027;
 }
-
 
 #buy-ticket-modal input,
 #buy-ticket-modal select {
@@ -2292,7 +2247,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   #about {
     padding: 26vh 10px 17vh;
   }
-  
+
   #schedule {
     padding: 12vh 0;
   }
@@ -2301,7 +2256,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 15vh 0 2vh;
   }
 }
-
 
 @media screen and (min-width: 990px) {
   /* large devices */

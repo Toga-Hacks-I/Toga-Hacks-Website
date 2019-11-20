@@ -34,6 +34,7 @@ import "owl.carousel2/dist/owl.carousel";
 import "cloudinary-jquery/cloudinary-jquery";
 
 $(document).ready(function() {
+
   // Back to top button
   $(window).scroll(() => {
     if ($(this).scrollTop() > 100) {
@@ -208,27 +209,56 @@ $(document).ready(function() {
   $.cloudinary.config({ cloud_name: "damnzwekj", secure: true });
   $.cloudinary.responsive();
   $(".bg-responsive").each(function(i, element) {
-    const windowWidth = element.clientWidth;
-    const { bg, bgWidth } = getWidths(element);
-    if (Math.ceil(windowWidth / 100) * 100 <= bgWidth) {
+    //window value is the value to round the picture to
+    let newBgHeight;
+    let newBgWidth;
+    console.log(`clientHeight: ${element.clientHeight}, clientWidth: ${element.clientWidth}`)
+    element.clientHeight > element.clientWidth ? ({width: newBgWidth, height: newBgHeight} = getLengths(undefined, element.clientHeight)) : ({width: newBgWidth, height: newBgHeight} = getLengths(element.clientWidth, undefined));
+    //console.log(newBgHeight, newBgWidth);
+    setValues(newBgWidth, newBgHeight);
+    //console.log($.cloudinary.url(`v1/TogaHacks/backgrounds/${"intro-bg_ngqj6c.jpg"}`, {width: newBgWidth, height: newBgHeight, crop: "fill", quality: "auto", dpr: "auto"}));
+    //const { bg, bgWidth } = getWidths(element);
+/*     if (Math.ceil(windowWidth / 100) * 100 <= bgWidth) {
       replaceBackground(bg, element, windowWidth, bgWidth);
-    }
+    } */
+    console.log(`newBgWidth in first: ${newBgWidth}, newBgHeight in first: ${newBgHeight}`)
+    const url = $.cloudinary.url(`v1/TogaHacks/backgrounds/${"intro-bg_ngqj6c.jpg"}`, {width: newBgWidth, height: newBgHeight, crop: "fill", quality: "auto", dpr: "auto"})
+    console.log('changing css in first');
+    console.log(url);
+    $(element).css("background-image", `url(${url})`);
     resizeObserver.observe(element);
   });
-});
 
+});
+let newBgHeight;
+let newBgWidth;
+function setValues(width, height){
+  newBgWidth = width;
+  newBgHeight = height;
+}
 const resizeObserver = new ResizeObserver(entries => {
   // eslint-disable-next-line no-restricted-syntax
   for (let entry of entries) {
     if (entry.contentRect) {
-      const windowWidth = entry.contentRect.width;
-      const { bg, bgWidth } = getWidths(entry.target);
-      if (windowWidth - parseInt(bgWidth, 10) > 50) {
-        replaceBackground(bg, entry.target, windowWidth, bgWidth);
+      const windowValue = entry.contentRect.width > entry.contentRect.height ? entry.contentRect.width : entry.contentRect.height;
+      //const { bg, bgWidth } = getWidths(entry.target);
+      console.log(`width: ${newBgWidth}, height: ${newBgHeight}`);
+      console.log(`windowValue: ${windowValue - (newBgWidth > newBgHeight ? newBgWidth : newBgHeight)}`)
+      if (windowValue - (newBgWidth > newBgHeight ? newBgWidth : newBgHeight) > 50) {
+        newBgWidth > newBgHeight ? {width: newBgWidth, height: newBgHeight} = getLengths(windowValue, undefined) : {width: newBgWidth, height: newBgHeight} = getLengths(undefined, windowValue);
+        const url = $.cloudinary.url(`v1/TogaHacks/backgrounds/${"intro-bg_ngqj6c.jpg"}`, {width: newBgWidth, height: newBgHeight, crop: "fill", quality: "auto", dpr: "auto"})
+        console.log(`changing css in second ${newBgWidth, newBgHeight}`);
+        $(entry.target).css("background-image", `url(${url})`);
       }
     }
   }
 });
+function getLengths(width=-1, height=-1){
+  console.log('getLengths');
+  width === -1 ? width = Math.trunc(1.5*height) : height = Math.trunc(width/1.5); 
+
+  return {width, height};
+}
 function replaceBackground(bg, element, windowWidth, currWidth){
   bg = bg.replace(currWidth, Math.ceil(windowWidth / 100) * 100);
   $(element).css("background-image", `url(${bg})`);
@@ -262,3 +292,4 @@ anime.timeline({ loop: false })
     duration: 1000,
     delay: (el, i) => 300 * i
   });
+
