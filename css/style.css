@@ -2019,7 +2019,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top a:hover, a:focus {
-  color: #73000E;
+  color: #c72027;
 }
 
 #footer .footer-top .footer-links {
@@ -2261,7 +2261,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media screen and (max-width: 800px) {
   /* small devices */
   #intro .intro-container {
-    margin-top: 10vh;
+    margin-top: 10svh;
   }
 
   #about {
