@@ -36,6 +36,27 @@
     gtag("js", new Date());
     gtag("config", "UA-149590316-1");
   </script>
+  <style>
+#customers {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #ffe6e5;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #bd2600;
+  color: white;
+}
+</style>
 </head>
 
 <body>
@@ -290,130 +311,48 @@
       <div class="container wow fadeInUp">
         <div class="section-header">
           <h2>Event Schedule</h2>
-          <p>Here is our event schedule</p>
         </div>
 
-        <ul class="nav nav-tabs" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Day 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Day 2</a>
-          </li>
-        </ul>
-
-        <div class="tab-content row justify-content-center">
-          <!-- Schedule Day 1 -->
-          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>09:00 AM</time></div>
-              <div class="col-md-10">
-                <h4>Hacker Check In Begins</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
-              <div class="col-md-10">
-                <h4>Opening Ceremony</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>10:20 AM</time></div>
-              <div class="col-md-10">
-                <h4>Team Formation</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 PM</time></div>
-              <div class="col-md-10">
-                <h4>Lunch</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
-              <div class="col-md-10">
-                <h4>Workshop 1</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>03:30 PM</time></div>
-              <div class="col-md-10">
-                <h4>Snacks</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:30 PM</time></div>
-              <div class="col-md-10">
-                <h4>Workshop 2</h4>
-              </div>
-            </div>
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>06:30 PM</time></div>
-              <div class="col-md-10">
-                <h4>Dinner</h4>
-              </div>
-            </div>
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>09:30 PM</time></div>
-              <div class="col-md-10">
-                <h4>Cup Stacking</h4>
-              </div>
-              <div class="row schedule-item"></div>
-            </div>
-          </div>
-          <!-- End Schedule Day 1 -->
-
-          <!-- Schedule Day 2 -->
-          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 AM</time></div>
-              <div class="col-md-10">
-                <h4>Midnight Snack</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>07:00 AM</time></div>
-              <div class="col-md-10">
-                <h4>Breakfast</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>09:30 AM</time></div>
-              <div class="col-md-10">
-                <h4>Submissions to Devpost</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
-              <div class="col-md-10">
-                <h4>Presentations and Judging</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>11:30 AM</time></div>
-              <div class="col-md-10">
-                <h4>Prizes and Closing Ceremony</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 PM</time></div>
-              <div class="col-md-10">
-                <h4>Event End</h4>
-              </div>
-            </div>
-          </div>
-        </div>
+        <table id="customers">
+          <tr>
+            <th>Day 1</th>
+            <th>Day 2</th>
+          </tr>
+          <tr>
+            <td>09:00 AM - Hacker Check In Begins</td>
+            <td>12:00 AM - Midnight Snack</td>
+          </tr>
+          <tr>
+            <td>10:00 AM - Opening Ceremony</td>
+            <td>07:00 AM - Breakfast</td>
+          </tr>
+          <tr>
+            <td>10:20 AM - Team Formation</td>
+            <td>09:30 AM - Submissions to Devpost</td>
+          </tr>
+          <tr>
+            <td>12:00 PM - Lunch</td>
+            <td>10:00 AM - Presentations and Judging</td>
+          </tr>
+          <tr>
+            <td>02:00 PM - Workshop 1</td>
+            <td>11:30 AM - Prizes and Closing Ceremony</td>
+          </tr>
+          <tr>
+            <td>03:30 PM - Snacks</td>
+            <td>12:00 PM - Event End</td>
+          </tr>
+          <tr>
+            <td>04:00 PM - Workshop 2</td>
+          </tr>
+          <tr>
+            <td>06:30 PM - Dinner</td>
+          </tr>
+          <tr>
+            <td>09:30 PM - Cup Stacking</td>
+          </tr>
+        </table>
+        
         <!-- End Schedule Day 2 -->
       </div>
     </section>
