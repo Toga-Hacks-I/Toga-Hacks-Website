@@ -12,7 +12,7 @@ First of all, thank you so much for your help 🙂! Please see our [code of cond
 # Recommended environment
 
 1. Download and install [VSCode](https://code.visualstudio.com/download)
-2. Get the [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), and [Stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint) extensions
+2. Get the [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), and [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) extensions
 
 # Usage
 
