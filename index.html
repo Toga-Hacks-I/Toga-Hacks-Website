@@ -39,20 +39,23 @@
   <style>
 #customers {
   border-collapse: collapse;
-  width: 100%;
+  width: 45%;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Raleway";
+  color: #C72027;
 }
+#customers tr:hover {background-color: white}
 
 #customers td, #customers th {
-  border: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   padding: 8px;
 }
-
-#customers tr:nth-child(even){background-color: #ffe6e5;}
 
 #customers th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align: center;
   background-color: #bd2600;
   color: white;
 }
@@ -313,34 +316,27 @@
           <h2>Event Schedule</h2>
         </div>
 
-        <table id="customers">
+        <table id="customers" style="display: inline-block, flex; float: left;border-collapse:collapse">
           <tr>
             <th>Saturday</th>
-            <th>Sunday</th>
           </tr>
           <tr>
             <td>09:00 AM - Hacker Check In Begins</td>
-            <td>12:00 AM - Midnight Snack</td>
           </tr>
           <tr>
             <td>10:00 AM - Opening Ceremony</td>
-            <td>07:00 AM - Breakfast</td>
           </tr>
           <tr>
             <td>10:20 AM - Team Formation</td>
-            <td>09:30 AM - Submissions to Devpost</td>
           </tr>
           <tr>
             <td>12:00 PM - Lunch</td>
-            <td>10:00 AM - Presentations and Judging</td>
           </tr>
           <tr>
             <td>02:00 PM - Workshop 1</td>
-            <td>11:30 AM - Prizes and Closing Ceremony</td>
           </tr>
           <tr>
             <td>03:30 PM - Snacks</td>
-            <td>12:00 PM - Event End</td>
           </tr>
           <tr>
             <td>04:00 PM - Workshop 2</td>
@@ -351,6 +347,42 @@
           <tr>
             <td>09:30 PM - Cup Stacking</td>
           </tr>
+        </table>
+
+        <!-- <table style="width: 10%; border-collapse:collapse">
+          <tr>
+            <th>    </th>
+          </tr>
+          <tr>
+            <td>    </td>
+          </tr>
+        </table> -->
+          
+        </table>
+
+        <table id="customers" style="position:relative; left:120px;display: inline-block, flex; border-collapse:collapse;">
+          <tr>
+            <th>Sunday</th>
+          </tr>
+          <tr>
+            <td>12:00 AM - Midnight Snack</td>
+          </tr>
+          <tr>
+            <td>07:00 AM - Breakfast</td>
+          </tr>
+          <tr>
+            <td>09:30 AM - Submissions to Devpost</td>
+          </tr>
+          <tr>
+            <td>10:00 AM - Presentations and Judging</td>
+          </tr>
+          <tr>
+            <td>11:30 AM - Prizes and Closing Ceremony</td>
+          </tr>
+          <tr>
+            <td>12:00 PM - Event End</td>
+          </tr>
+          
         </table>
         
         <!-- End Schedule Day 2 -->
