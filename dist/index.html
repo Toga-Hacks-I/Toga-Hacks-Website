@@ -51,6 +51,20 @@ gtag("config", "UA-149590316-1");</script>
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:hover{background-color: white;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
   background-color: #bd2600;
   color: white;
 }</style>
@@ -342,17 +356,7 @@ function initMap() {
           </tr>
           <tr>
             <td>03:30 PM - Snacks</td>
-          </tr>
-          <tr>
-            <td>04:00 PM - Workshop 2</td>
-          </tr>
-          <tr>
-            <td>06:30 PM - Dinner</td>
-          </tr>
-          <tr>
-            <td>09:30 PM - Cup Stacking</td>
-          </tr>
-        </table>
+        
 
         <!-- <table style="width: 10%; border-collapse:collapse">
           <tr>
@@ -363,7 +367,7 @@ function initMap() {
           </tr>
         </table> -->
           
-        
+        </tr></table>
 
         <table id="customers" style="position:relative; left:120px;display: inline-block, flex; border-collapse:collapse;">
           <tr>
@@ -389,7 +393,7 @@ function initMap() {
           </tr>
           
         </table>
-        
+
         <!-- End Schedule Day 2 -->
       </div>
     </section>
