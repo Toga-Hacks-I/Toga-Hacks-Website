@@ -43,8 +43,15 @@ gtag("config", "UA-149590316-1");</script>
 #customers tr:hover {background-color: white}
 
 #customers td, #customers th {
+  border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   padding: 8px;
+  border-left: 0px solid;
+  border-right: 0px solid;
+}
+
+#customers .wide {
+  width: 100px;
 }
 
 #customers th {
@@ -52,11 +59,6 @@ gtag("config", "UA-149590316-1");</script>
   padding-bottom: 12px;
   text-align: center;
   width: 100%;
-}
-
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
 }
 
 #customers tr:hover{background-color: white;}
@@ -335,27 +337,40 @@ function initMap() {
           <h2>Event Schedule</h2>
         </div>
 
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item" style="float:left; padding-left:110px; padding-bottom: 30px">
+            <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Saturday</a>
+          </li>
+          <li class="nav-item" style="float:right; padding-right:110px; padding-bottom: 30px">
+            <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Sunday</a>
+          </li>
+        </ul>
+
         <table id="customers" style="display: inline-block, flex; float: left;border-collapse:collapse">
-          <tr>
-            <th>Saturday</th>
-          </tr>
-          <tr>
-            <td>09:00 AM - Hacker Check In Begins</td>
-          </tr>
-          <tr>
-            <td>10:00 AM - Opening Ceremony</td>
-          </tr>
-          <tr>
-            <td>10:20 AM - Team Formation</td>
-          </tr>
-          <tr>
-            <td>12:00 PM - Lunch</td>
-          </tr>
-          <tr>
-            <td>02:00 PM - Workshop 1</td>
-          </tr>
-          <tr>
-            <td>03:30 PM - Snacks</td>
+          <col class="wide">
+            <tr>
+              <td>09:00 AM</td>
+              <td>Hacker Check In Begins</td>
+            </tr>
+            <tr>
+              <td>10:00 AM</td>
+              <td>Opening Ceremony</td>
+            </tr>
+            <tr>
+              <td>10:20 AM</td>
+              <td>Team Formation</td>
+            </tr>
+            <tr>
+              <td>12:00 PM</td>
+              <td>Lunch</td>
+            </tr>
+            <tr>
+              <td>02:00 PM</td>
+              <td>Workshop 1</td>
+            </tr>
+            <tr>
+              <td>03:30 PM</td>
+              <td>Snacks</td>
         
 
         <!-- <table style="width: 10%; border-collapse:collapse">
@@ -370,27 +385,31 @@ function initMap() {
         </tr></table>
 
         <table id="customers" style="position:relative; left:120px;display: inline-block, flex; border-collapse:collapse;">
-          <tr>
-            <th>Sunday</th>
-          </tr>
-          <tr>
-            <td>12:00 AM - Midnight Snack</td>
-          </tr>
-          <tr>
-            <td>07:00 AM - Breakfast</td>
-          </tr>
-          <tr>
-            <td>09:30 AM - Submissions to Devpost</td>
-          </tr>
-          <tr>
-            <td>10:00 AM - Presentations and Judging</td>
-          </tr>
-          <tr>
-            <td>11:30 AM - Prizes and Closing Ceremony</td>
-          </tr>
-          <tr>
-            <td>12:00 PM - Event End</td>
-          </tr>
+          <col class="wide">
+            <tr>
+              <td>12:00 AM</td>
+              <td>Midnight Snack</td>
+            </tr>
+            <tr>
+              <td>07:00 AM</td>
+              <td>Breakfast</td>
+            </tr>
+            <tr>
+              <td>09:30 AM</td>
+              <td>Submissions to Devpost</td>
+            </tr>
+            <tr>
+              <td>10:00 AM</td>
+              <td>Presentations and Judging</td>
+            </tr>
+            <tr>
+              <td>11:30 AM</td>
+              <td>Prizes and Closing Ceremony</td>
+            </tr>
+            <tr>
+              <td>12:00 PM</td>
+              <td>Event End</td>
+            </tr>
           
         </table>
 
