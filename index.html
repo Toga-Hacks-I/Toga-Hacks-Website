@@ -36,6 +36,46 @@
     gtag("js", new Date());
     gtag("config", "UA-149590316-1");
   </script>
+  <style>
+#customers {
+  border-collapse: collapse;
+  width: 45%;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Raleway";
+  color: #C72027;
+}
+#customers tr:hover {background-color: white}
+
+#customers td, #customers th {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  border-left: 0px solid;
+  border-right: 0px solid;
+}
+
+#customers .wide {
+  width: 100px;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+#customers tr:hover{background-color: white;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #bd2600;
+  color: white;
+}
+</style>
 </head>
 
 <body>
@@ -290,130 +330,84 @@
       <div class="container wow fadeInUp">
         <div class="section-header">
           <h2>Event Schedule</h2>
-          <p>Here is our event schedule</p>
         </div>
 
         <ul class="nav nav-tabs" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Day 1</a>
+          <li class="nav-item" style="float:left; padding-left:110px; padding-bottom: 30px">
+            <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Saturday</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Day 2</a>
+          <li class="nav-item" style="float:right; padding-right:110px; padding-bottom: 30px">
+            <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Sunday</a>
           </li>
         </ul>
 
-        <div class="tab-content row justify-content-center">
-          <!-- Schedule Day 1 -->
-          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>09:00 AM</time></div>
-              <div class="col-md-10">
-                <h4>Hacker Check In Begins</h4>
-              </div>
-            </div>
+        <table id="customers" style="display: inline-block, flex; float: left;border-collapse:collapse">
+          <col class="wide">
+            <tr>
+              <td>09:00 AM</td>
+              <td>Hacker Check In Begins</td>
+            </tr>
+            <tr>
+              <td>10:00 AM</td>
+              <td>Opening Ceremony</td>
+            </tr>
+            <tr>
+              <td>10:20 AM</td>
+              <td>Team Formation</td>
+            </tr>
+            <tr>
+              <td>12:00 PM</td>
+              <td>Lunch</td>
+            </tr>
+            <tr>
+              <td>02:00 PM</td>
+              <td>Workshop 1</td>
+            </tr>
+            <tr>
+              <td>03:30 PM</td>
+              <td>Snacks</td>
+        
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
-              <div class="col-md-10">
-                <h4>Opening Ceremony</h4>
-              </div>
-            </div>
+        <!-- <table style="width: 10%; border-collapse:collapse">
+          <tr>
+            <th>    </th>
+          </tr>
+          <tr>
+            <td>    </td>
+          </tr>
+        </table> -->
+          
+        </table>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>10:20 AM</time></div>
-              <div class="col-md-10">
-                <h4>Team Formation</h4>
-              </div>
-            </div>
+        <table id="customers" style="position:relative; left:120px;display: inline-block, flex; border-collapse:collapse;">
+          <col class="wide">
+            <tr>
+              <td>12:00 AM</td>
+              <td>Midnight Snack</td>
+            </tr>
+            <tr>
+              <td>07:00 AM</td>
+              <td>Breakfast</td>
+            </tr>
+            <tr>
+              <td>09:30 AM</td>
+              <td>Submissions to Devpost</td>
+            </tr>
+            <tr>
+              <td>10:00 AM</td>
+              <td>Presentations and Judging</td>
+            </tr>
+            <tr>
+              <td>11:30 AM</td>
+              <td>Prizes and Closing Ceremony</td>
+            </tr>
+            <tr>
+              <td>12:00 PM</td>
+              <td>Event End</td>
+            </tr>
+          
+        </table>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 PM</time></div>
-              <div class="col-md-10">
-                <h4>Lunch</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
-              <div class="col-md-10">
-                <h4>Workshop 1</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>03:30 PM</time></div>
-              <div class="col-md-10">
-                <h4>Snacks</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:30 PM</time></div>
-              <div class="col-md-10">
-                <h4>Workshop 2</h4>
-              </div>
-            </div>
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>06:30 PM</time></div>
-              <div class="col-md-10">
-                <h4>Dinner</h4>
-              </div>
-            </div>
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>09:30 PM</time></div>
-              <div class="col-md-10">
-                <h4>Cup Stacking</h4>
-              </div>
-              <div class="row schedule-item"></div>
-            </div>
-          </div>
-          <!-- End Schedule Day 1 -->
-
-          <!-- Schedule Day 2 -->
-          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 AM</time></div>
-              <div class="col-md-10">
-                <h4>Midnight Snack</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>07:00 AM</time></div>
-              <div class="col-md-10">
-                <h4>Breakfast</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>09:30 AM</time></div>
-              <div class="col-md-10">
-                <h4>Submissions to Devpost</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
-              <div class="col-md-10">
-                <h4>Presentations and Judging</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>11:30 AM</time></div>
-              <div class="col-md-10">
-                <h4>Prizes and Closing Ceremony</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 PM</time></div>
-              <div class="col-md-10">
-                <h4>Event End</h4>
-              </div>
-            </div>
-          </div>
-        </div>
         <!-- End Schedule Day 2 -->
       </div>
     </section>
@@ -678,6 +672,22 @@
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
               <img
+                data-src="https://www.nwyj.org/wp-content/uploads/2019/01/2019-01-12-1.jpg"
+                alt="Vignav Ramesh" class="cld-responsive" responsive_placeholder="blank" />
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h3>Vignav Ramesh</h3>
+                  <p>Tech, Outreach</p>
+                  <div class="social">
+                    <a href="https://github.com/rvignav"><i class="fa fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="member">
+              <img
                 data-src="https://res.cloudinary.com/damnzwekj/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_auto/v1/TogaHacks/team/Ujjwal_Krishnamurthi_g6v3gk.jpg"
                 alt="Ujjwal Krishnamurthi" class="cld-responsive" responsive_placeholder="blank" />
               <div class="member-info">
@@ -687,7 +697,7 @@
                   <div class="social">
                     <a href="https://github.com/kujjwal"><i class="fa fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/ujjwal-kri/"><i class="fa fa-linkedin"></i></a>
-                  </div>s
+                  </div>
                 </div>
               </div>
             </div>
