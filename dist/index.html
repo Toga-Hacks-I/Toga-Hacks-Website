@@ -336,80 +336,182 @@ function initMap() {
         <div class="section-header">
           <h2>Event Schedule</h2>
         </div>
-
+        
+        <div id="phonebuttons">
         <ul class="nav nav-tabs" role="tablist">
-          <li class="nav-item" style="float:left; padding-left:110px; padding-bottom: 30px">
+          <li class="nav-item">
             <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Saturday</a>
           </li>
-          <li class="nav-item" style="float:right; padding-right:110px; padding-bottom: 30px">
+          <li class="nav-item">
             <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Sunday</a>
           </li>
         </ul>
+      </div>
+
+        <div id="smallscreen" class="tab-content row justify-content-center">
+          <!-- Schedule Day 1 -->
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>09:00 AM</time></div>
+              <div class="col-md-10">
+                <h4>Hacker Check In Begins</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>10:00 AM</time></div>
+              <div class="col-md-10">
+                <h4>Opening Ceremony</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>10:20 AM</time></div>
+              <div class="col-md-10">
+                <h4>Team Formation</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>12:00 PM</time></div>
+              <div class="col-md-10">
+                <h4>Lunch</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>02:00 PM</time></div>
+              <div class="col-md-10">
+                <h4>Workshop 1</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>03:30 PM</time></div>
+              <div class="col-md-10">
+                <h4>Snacks</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>04:30 PM</time></div>
+              <div class="col-md-10">
+                <h4>Workshop 2</h4>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>06:30 PM</time></div>
+              <div class="col-md-10">
+                <h4>Dinner</h4>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>09:30 PM</time></div>
+              <div class="col-md-10">
+                <h4>Cup Stacking</h4>
+              </div>
+              <div class="row schedule-item"></div>
+            </div>
+          </div>
+          <!-- End Schedule Day 1 -->
+
+          <!-- Schedule Day 2 -->
+          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>12:00 AM</time></div>
+              <div class="col-md-10">
+                <h4>Midnight Snack</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>07:00 AM</time></div>
+              <div class="col-md-10">
+                <h4>Breakfast</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>09:30 AM</time></div>
+              <div class="col-md-10">
+                <h4>Submissions to Devpost</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>10:00 AM</time></div>
+              <div class="col-md-10">
+                <h4>Presentations and Judging</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>11:30 AM</time></div>
+              <div class="col-md-10">
+                <h4>Prizes and Closing Ceremony</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>12:00 PM</time></div>
+              <div class="col-md-10">
+                <h4>Event End</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <table id="customers" style="display: inline-block, flex; float: left;border-collapse:collapse">
-          <col class="wide">
-            <tr>
-              <td>09:00 AM</td>
-              <td>Hacker Check In Begins</td>
-            </tr>
-            <tr>
-              <td>10:00 AM</td>
-              <td>Opening Ceremony</td>
-            </tr>
-            <tr>
-              <td>10:20 AM</td>
-              <td>Team Formation</td>
-            </tr>
-            <tr>
-              <td>12:00 PM</td>
-              <td>Lunch</td>
-            </tr>
-            <tr>
-              <td>02:00 PM</td>
-              <td>Workshop 1</td>
-            </tr>
-            <tr>
-              <td>03:30 PM</td>
-              <td>Snacks</td>
-        
-
-        <!-- <table style="width: 10%; border-collapse:collapse">
+            
           <tr>
-            <th>    </th>
+            <th>Saturday</th>
           </tr>
           <tr>
-            <td>    </td>
+            <td>&nbsp&nbsp&nbsp09:00 AM&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHacker Check In Begins</td>
           </tr>
-        </table> -->
+          <tr>
+            <td>&nbsp&nbsp&nbsp10:00 AM&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspOpening Ceremony</td>
+          </tr>
+          <tr>
+            <td>&nbsp&nbsp&nbsp10:20 AM&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTeam Formation</td>
+          </tr>
+          <tr>
+            <td>&nbsp&nbsp&nbsp12:00 PM&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLunch</td>
+          </tr>
+          <tr>
+            <td>&nbsp&nbsp&nbsp02:00 PM&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWorkshop 1</td>
+          </tr>
+          <tr>
+            <td>&nbsp&nbsp&nbsp03:30 PM&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSnacks</td>
           
         </tr></table>
 
         <table id="customers" style="position:relative; left:120px;display: inline-block, flex; border-collapse:collapse;">
-          <col class="wide">
-            <tr>
-              <td>12:00 AM</td>
-              <td>Midnight Snack</td>
-            </tr>
-            <tr>
-              <td>07:00 AM</td>
-              <td>Breakfast</td>
-            </tr>
-            <tr>
-              <td>09:30 AM</td>
-              <td>Submissions to Devpost</td>
-            </tr>
-            <tr>
-              <td>10:00 AM</td>
-              <td>Presentations and Judging</td>
-            </tr>
-            <tr>
-              <td>11:30 AM</td>
-              <td>Prizes and Closing Ceremony</td>
-            </tr>
-            <tr>
-              <td>12:00 PM</td>
-              <td>Event End</td>
-            </tr>
+          <table id="customers" style="position:relative; left:120px;display: inline-block, flex; border-collapse:collapse;">
+          <tr>
+            <th>Sunday</th>
+          </tr>
+          <tr>
+            <td>&nbsp&nbsp&nbsp12:00 AM&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMidnight Snack</td>
+          </tr>
+          <tr>
+            <td>&nbsp&nbsp&nbsp07:00 AM&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBreakfast</td>
+          </tr>
+          <tr>
+            <td>&nbsp&nbsp&nbsp09:30 AM&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSubmissions to Devpost</td>
+          </tr>
+          <tr>
+            <td>&nbsp&nbsp&nbsp10:00 AM&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPresentations and Judging</td>
+          </tr>
+          <tr>
+            <td>&nbsp&nbsp&nbsp11:30 AM&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPrizes and Closing Ceremony</td>
+          </tr>
+          <tr>
+            <td>&nbsp&nbsp&nbsp12:00 PM&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEvent End</td>
+          </tr>
+          
+        </table>
           
         </table>
 
@@ -574,7 +676,7 @@ function initMap() {
               <!--TODO: add picture-->
               <div class="member-info">
                 <div class="member-info-content">
-                  <h3>Mathew Wang</h3>
+                  <h3>Mateo Wang</h3>
                   <p>Communications and Webmaster</p>
                   <div class="social">
                     <a href="https:///www.github.com/SwiftWinds"><i class="fa fa-github"></i></a>
