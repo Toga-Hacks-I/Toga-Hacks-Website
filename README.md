@@ -9,10 +9,19 @@ TogaHacks I Hackathon 2020 website
 
 First of all, thank you so much for your help 🙂! Please see our [code of conduct](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/blob/master/CODE_OF_CONDUCT.md), [create a GitHub issue](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/issues/new/choose) of what you're planning to fix/add, and have it approved by one of our contributors. Then, feel free to [make a PR](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/compare)!
 
+# Git workflow
+
+1. For a new bug fix or feature idea, add it to the [To do](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/projects/1#column-6790813) column of the [project board](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/projects/1).
+2. When you can work on it, move it to [In progress](https://github.com/Toga-Hacks-I/Toga-Hacks-Website/projects/1#column-6790814), convert it to an issue, and self assign it.
+3. Create a new branch with `git checkout -b [branch-name]` and `git push -u` (branches are `kebab-cased`).
+4. Create a new pull request draft pointing to your branch. Make sure to comment `Fixes #[issue number]` for each issue it resolves (e.g., the one your converted when you moved the issue to `In progress`).
+5. As you're working on your branch, to keep up to date with `master`, run `git rebase master` and `git push --force-with-lease`.
+6. When you're done, click `Ready for review` and then `Squash and merge`.
+
 # Recommended environment
 
-1. Download [VSCode](https://code.visualstudio.com/download)
-2. Get the [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), and [Stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint) extensions
+1. Download and install [VSCode](https://code.visualstudio.com/download)
+2. Get the [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), and [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) extensions
 
 # Usage
 
