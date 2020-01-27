@@ -913,21 +913,11 @@ function initMap() {
         </div>
 
         <!--Sponsorship Prospectus Button-->
-        <!--On devices smaller than desktop, opens pdf in new tab-->
         <div class="text-center">
-          <a class="btn btn-sm prospectus-btn" href="/TogaHacks Sponsorship Prospectus.pdf" target="_blank">View
+          <a class="btn prospectus-btn" href="/TogaHacks Sponsorship Prospectus.pdf" target="_blank">View
             Sponsorship Prospectus</a>
         </div>
 
-
-
-        <!--On devices desktop or larger, button opens embedded pdf in modal-->
-        <div class="container d-flex justify-content-center">
-          <button type="button" class="btn btn-lg prospectus-modal-btn" data-toggle="modal" data-target="#prospectusModal">
-            View Sponsorship Prospectus
-          </button>
-          <!-- Modals outside so this element so they do not get cut off by slant dividers -->
-        </div>
         <div class="text-center lead" style="padding: 30px 15px 0">
           <p>
             Want to sponsor us? Email
@@ -935,36 +925,6 @@ function initMap() {
           </p>
         </div>
     </div></section>
-
-
-    <!--Modals-->
-    <div id="prospectusModal" class="modal fade" role="dialog" style="z-index: 9999">
-      <div class="modal-dialog modal-xl">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header" style="display:inline">
-            <h4 style="display:inline">
-              <a href="/TogaHacks Sponsorship Prospectus.pdf" target="_blank">TogaHacks Sponsorship Prospectus</a>
-            </h4>
-            <button type="button" class="close" data-dismiss="modal">
-              &times;
-            </button>
-          </div>
-          <div class="modal-body">
-            <embed src="/TogaHacks Sponsorship Prospectus.pdf" frameborder="0" class="modalpdf">
-            <div class="modal-footer" style="padding:15px 0 0 0">
-              <div class="btn pros-modal-btn pros-modal-open">
-                <a href="/TogaHacks Sponsorship Prospectus.pdf" target="_blank" style="color:inherit"><b>Open in new
-                    tab</b></a>
-              </div>
-              <button type="button" class="btn btn-default btn pros-modal-btn" data-dismiss="modal">
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
   </main>
 

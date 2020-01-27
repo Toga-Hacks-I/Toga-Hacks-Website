@@ -1689,7 +1689,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .prospectus-btn,
-.prospectus-modal-btn,
 .sponsor-btn {
   font-size: 20px;
   border-radius: 50px;
@@ -1700,6 +1699,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   margin: 0 15vw;
 }
+
 .modal.modal-wide .modal-dialog {
   width: 90%;
 }
@@ -1720,49 +1720,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #e0072f;
   color: #fff;
 }
-
-@media screen and (max-width: 1000px) {
-  .prospectus-modal-btn {
-    /*Hide Prospectus that opens a modal*/
-    display: none !important;
-  }
-  .prospectus-btn {
-    /* See Prospectus button that opens in new tab */
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .prospectus-btn {
-    display: none !important;
-  }
-
-  .prospectus-modal-btn {
-    display: block;
-  }
-}
-
-.modalpdf {
-  /*pdf embedded in modal*/
-  width: 100%;
-  height: 450px;
-}
-
-.pros-modal-btn {
-  /*buttons on bottom of prospectus modal*/
-  display: inline-block;
-  border-radius: 5px;
-  background-color: lightgrey;
-  color: black;
-}
-
-.pros-modal-open {
-  /*open button of prospectus modal*/
-  padding: 6px 10px;
-  color: #fff;
-  background-color: #c72027;
-}
-
 
 #buy-ticket-modal input,
 #buy-ticket-modal select {
