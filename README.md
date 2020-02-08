@@ -37,7 +37,7 @@ To deploy to the `dist` folder:
 
 # Credits
 
-Special thanks to Netlify for offering us free Pro-tier static site hosting and BootstrapMade for letting us use their theme
+Special thanks to Netlify for offering us free Pro-tier static site hosting and BootstrapMade for letting us use their theme.
 <br>
 <br>
 <span>
