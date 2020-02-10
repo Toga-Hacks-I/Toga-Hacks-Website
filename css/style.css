@@ -229,6 +229,16 @@ h6 {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: rgba(145, 0, 7, 0.98);
+    height: 4.38em;
+    padding: 0.94em 0;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
 #header.header-scrolled,
 #header.header-fixed {
   background: rgba(145, 0, 7, 0.98);
@@ -1063,6 +1073,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info,
+  #team .member:focus .member-info {
+    border-radius: 100%;
+    background: rgba(145, 0, 7, 0.76);
+    opacity: 1;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
 #team .member:hover .member-info,
 #team .member:focus .member-info {
   border-radius: 100%;
@@ -1078,6 +1098,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: rgba(145, 0, 7, 0.76);
   opacity: 1;
   transition: 0.4s;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info-content,
+  #team .member:focus .member-info-content {
+    margin-top: 0;
+    border-radius: 100%;
+    transition: none;
+  }
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
