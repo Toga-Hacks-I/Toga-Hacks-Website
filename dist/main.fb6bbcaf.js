@@ -33481,14 +33481,14 @@ $(document).ready(function () {
 var i;
 
 for (var i = 1; i <= 3; i++) {
-  var textWrapper = document.querySelector('.animate .word' + i);
+  var textWrapper = document.querySelector(".animate .word".concat(i));
   textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 }
 
 anime.timeline({
   loop: false
 }).add({
-  targets: '.letter',
+  targets: ".letter",
   translateY: ["1.2em", 0],
   translateZ: 0,
   duration: 2500,
