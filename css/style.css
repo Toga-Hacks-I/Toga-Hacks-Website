@@ -774,8 +774,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
   position: relative;
   padding: 0.62em;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
 }
 #intro::before {
   content: "";
@@ -1031,8 +1031,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   z-index: -1;
   margin-top: -20vh;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
 }
 
 #about::before {
@@ -1070,8 +1070,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 15vh 0 24vh;
   margin-top: -17vh;
   z-index: -2;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
 }
 
 #team .member {
@@ -1448,8 +1448,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 12vh 0.62em 25vh;
   margin-top: -17vh;
   z-index: -11;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
 }
 
 #schedule .nav-tabs {
@@ -1978,8 +1978,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #buy-tickets {
   padding: 10vh 0 25vh;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
 }
 
 .modal {
