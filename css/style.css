@@ -1764,7 +1764,8 @@ body.mobile-nav-active #mobile-nav-toggle {
  -------------------------------------------------------------- */
 
 #supporters {
-  padding: 7vh;
+  padding-top: 7vh;
+  padding-bottom: 7vh;
 }
 
 #supporters .supporters-wrap {
