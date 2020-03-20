@@ -16744,13 +16744,17 @@ h6 {
   padding-bottom: 1.25em;
 }
 
+.section-header h2 {
+  color: #333;
+}
+
 .section-header::before {
   content: "";
   position: absolute;
   display: block;
   width: 3.75em;
   height: 0.31em;
-  background: #73000e;
+  background: rgba(145, 0, 7);
   bottom: 0;
   left: calc(50% - 1.56em);
 }
