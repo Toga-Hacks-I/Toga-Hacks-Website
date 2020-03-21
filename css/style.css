@@ -773,6 +773,26 @@ h6 {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: var(--secondary-red-navbar);
+    height: 4.38em;
+    padding: 0.94em 0;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: var(--secondary-red-navbar);
+    height: 4.38em;
+    padding: 0.94em 0;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
 #header.header-scrolled,
 #header.header-fixed {
   background: var(--secondary-red-navbar);
@@ -2138,6 +2158,26 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info,
+  #team .member:focus .member-info {
+    border-radius: 100%;
+    background: var(--secondary-red-member);
+    opacity: 1;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info,
+  #team .member:focus .member-info {
+    border-radius: 100%;
+    background: var(--secondary-red-member);
+    opacity: 1;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
 #team .member:hover .member-info,
 #team .member:focus .member-info {
   border-radius: 100%;
@@ -2153,6 +2193,24 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: var(--secondary-red-member);
   opacity: 1;
   transition: 0.4s;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info-content,
+  #team .member:focus .member-info-content {
+    margin-top: 0;
+    border-radius: 100%;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info-content,
+  #team .member:focus .member-info-content {
+    margin-top: 0;
+    border-radius: 100%;
+    transition: none;
+  }
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -2791,15 +2849,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: inline-block;
 }
 
-#schedule .schedule-item .speaker {
-  width: 3.75em;
-  height: 3.75em;
-  overflow: hidden;
-  border-radius: 50%;
-  float: left;
-  margin: 0 0.62em 0.62em 0;
-}
-
 @media screen and (prefers-reduced-motion: reduce) {
   #schedule .schedule-item .speaker img {
     height: 100%;
@@ -2822,19 +2871,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 1.12em;
   font-weight: 600;
   margin-bottom: 0.31em;
-}
-
-#schedule .schedule-item h4 span {
-  font-style: italic;
-  color: #19328e;
-  font-weight: normal;
-  font-size: 1em;
-}
-
-#schedule .schedule-item p {
-  font-style: italic;
-  color: #152b79;
-  margin-bottom: 0;
 }
 
 /* --------------------------------------------------------------
