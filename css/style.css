@@ -763,6 +763,16 @@ h6 {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: var(--secondary-red-navbar);
+    height: 4.38em;
+    padding: 0.94em 0;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
 #header.header-scrolled,
 #header.header-fixed {
   background: var(--secondary-red-navbar);
@@ -2118,6 +2128,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info,
+  #team .member:focus .member-info {
+    border-radius: 100%;
+    background: var(--secondary-red-member);
+    opacity: 1;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
 #team .member:hover .member-info,
 #team .member:focus .member-info {
   border-radius: 100%;
@@ -2133,6 +2153,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: var(--secondary-red-member);
   opacity: 1;
   transition: 0.4s;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info-content,
+  #team .member:focus .member-info-content {
+    margin-top: 0;
+    border-radius: 100%;
+    transition: none;
+  }
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -2951,52 +2980,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #060c22;
   font-style: italic;
   font-size: 0.94em;
-}
-
-/* --------------------------------------------------------------
- # Gallery Section
- -------------------------------------------------------------- */
-
-#gallery {
-  padding: 3.75em;
-  overflow: hidden;
-}
-
-#gallery .owl-nav,
-#gallery .owl-dots {
-  margin-top: 1.56em;
-  text-align: center;
-}
-
-#gallery .owl-item {
-  border-left: 0.12em solid white;
-  border-right: 0.12em solid white;
-}
-
-#gallery .owl-dot {
-  display: inline-block;
-  margin: 0 0.31em;
-  width: 0.75em;
-  height: 0.75em;
-  border-radius: 50%;
-  background-color: #ddd;
-}
-
-#gallery .owl-dot.active {
-  background-color: var(--primary-red);
-}
-
-#gallery .gallery-carousel .owl-stage-outer {
-  overflow: visible;
-}
-
-#gallery .gallery-carousel .center {
-  border: 0.38em solid var(--primary-red);
-  margin: -0.62em;
-  box-sizing: content-box;
-  padding: 0.25em;
-  background: white;
-  z-index: 1;
 }
 
 /* --------------------------------------------------------------
