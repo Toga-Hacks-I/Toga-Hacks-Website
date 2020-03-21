@@ -793,6 +793,56 @@ h6 {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: var(--secondary-red-navbar);
+    height: 4.38em;
+    padding: 0.94em 0;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: var(--secondary-red-navbar);
+    height: 4.38em;
+    padding: 0.94em 0;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: var(--secondary-red-navbar);
+    height: 4.38em;
+    padding: 0.94em 0;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: var(--secondary-red-navbar);
+    height: 4.38em;
+    padding: 0.94em 0;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: var(--secondary-red-navbar);
+    height: 4.38em;
+    padding: 0.94em 0;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
 #header.header-scrolled,
 #header.header-fixed {
   background: var(--secondary-red-navbar);
@@ -2178,6 +2228,56 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info,
+  #team .member:focus .member-info {
+    border-radius: 100%;
+    background: var(--secondary-red-member);
+    opacity: 1;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info,
+  #team .member:focus .member-info {
+    border-radius: 100%;
+    background: var(--secondary-red-member);
+    opacity: 1;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info,
+  #team .member:focus .member-info {
+    border-radius: 100%;
+    background: var(--secondary-red-member);
+    opacity: 1;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info,
+  #team .member:focus .member-info {
+    border-radius: 100%;
+    background: var(--secondary-red-member);
+    opacity: 1;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info,
+  #team .member:focus .member-info {
+    border-radius: 100%;
+    background: var(--secondary-red-member);
+    opacity: 1;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
 #team .member:hover .member-info,
 #team .member:focus .member-info {
   border-radius: 100%;
@@ -2193,6 +2293,51 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: var(--secondary-red-member);
   opacity: 1;
   transition: 0.4s;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info-content,
+  #team .member:focus .member-info-content {
+    margin-top: 0;
+    border-radius: 100%;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info-content,
+  #team .member:focus .member-info-content {
+    margin-top: 0;
+    border-radius: 100%;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info-content,
+  #team .member:focus .member-info-content {
+    margin-top: 0;
+    border-radius: 100%;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info-content,
+  #team .member:focus .member-info-content {
+    margin-top: 0;
+    border-radius: 100%;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info-content,
+  #team .member:focus .member-info-content {
+    margin-top: 0;
+    border-radius: 100%;
+    transition: none;
+  }
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -3123,7 +3268,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 3.12em;
   padding: 0.62em 2.5em;
   transition: none;
-  background-color: var(--primary-red);
+  background-color: var(--secondary-red);
   border: 0;
   color: white;
   margin: 0 15vw;
@@ -3146,44 +3291,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 .prospectus-modal-btn:focus,
 .prospectus-btn:focus,
 .sponsor-btn:focus {
-  background-color: #e0072f;
-  color: white;
-}
-
-#buy-ticket-modal input,
-#buy-ticket-modal select {
-  border-radius: 0;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  #buy-ticket-modal .btn {
-    font-size: 0.94em;
-    border-radius: 3.12em;
-    padding: 0.62em 2.5em;
-    transition: none;
-    background-color: var(--primary-red);
-    border: 0;
-    color: white;
-  }
-}
-
-#buy-ticket-modal .btn {
-  font-size: 0.94em;
-  border-radius: 3.12em;
-  padding: 0.62em 2.5em;
-  transition: all 0.2s;
   background-color: var(--primary-red);
-  border: 0;
   color: white;
-}
-
-#buy-ticket-modal {
-  max-width: 99vw;
-}
-
-#buy-ticket-modal .btn:hover,
-#buy-ticket-modal .btn:focus {
-  background-color: #e0072f;
 }
 
 /* --------------------------------------------------------------
@@ -3349,17 +3458,6 @@ a:focus {
 #footer .copyright {
   text-align: center;
   padding-top: 1.88em;
-}
-
-#footer .credits a {
-  text-align: center;
-  font-size: 0.81em;
-  color: #101522;
-}
-#footer .credits {
-  text-align: center;
-  font-size: 0.81em;
-  color: #101522;
 }
 
 /* --------------------------------------------------------------
