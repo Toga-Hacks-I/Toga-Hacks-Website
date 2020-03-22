@@ -21,6 +21,7 @@
   --primary-dark-red: #73000e;
   --secondary-red-navbar: rgba(145, 0, 7, 0.98);
   --secondary-red-member: rgba(145, 0, 7, 0.76);
+  --secondar-red-about: rgba(145, 0, 7, 0.7)
   --primary-dark-gray: #333;
   --secondary-dark-gray: #2f3138;
   --primary-light-gray: #9195a2;
@@ -220,6 +221,16 @@ h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 995;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: var(--secondary-red-navbar);
+    height: 4.38em;
+    padding: 0.94em 0;
+    transition: none;
+  }
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -1559,7 +1570,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about::before {
   content: "";
-  background: var(--secondary-red-navbar);
+  background: var(--secondary-red-about);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -2278,6 +2289,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info,
+  #team .member:focus .member-info {
+    border-radius: 100%;
+    background: var(--secondary-red-member);
+    opacity: 1;
+    transition: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
 #team .member:hover .member-info,
 #team .member:focus .member-info {
   border-radius: 100%;
@@ -2293,6 +2314,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: var(--secondary-red-member);
   opacity: 1;
   transition: 0.4s;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #team .member:hover .member-info-content,
+  #team .member:focus .member-info-content {
+    margin-top: 0;
+    border-radius: 100%;
+    transition: none;
+  }
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
