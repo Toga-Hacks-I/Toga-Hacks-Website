@@ -874,13 +874,13 @@ h6 {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-#header.header-scrolled,
-#header.header-fixed {
-  background: var(--secondary-red-navbar);
-  height: 4.38em;
-  padding: 0.94em 0;
-  transition: none;
-}
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: var(--secondary-red-navbar);
+    height: 4.38em;
+    padding: 0.94em 0;
+    transition: none;
+  }
 }
 
 #header.header-scrolled,
@@ -2339,13 +2339,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-#team .member:hover .member-info,
-#team .member:focus .member-info {
-  border-radius: 100%;
-  background: var(--secondary-red-member);
-  opacity: 1;
-  transition: none;
-}
+  #team .member:hover .member-info,
+  #team .member:focus .member-info {
+    border-radius: 100%;
+    background: var(--secondary-red-member);
+    opacity: 1;
+    transition: none;
+  }
 }
 
 #team .member:hover .member-info,
@@ -2933,12 +2933,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-#team .member:hover .member-info-content,
-#team .member:focus .member-info-content {
-  margin-top: 0;
-  border-radius: 100%;
-  transition: none;
-}
+  #team .member:hover .member-info-content,
+  #team .member:focus .member-info-content {
+    margin-top: 0;
+    border-radius: 100%;
+    transition: none;
+  }
 }
 
 #team .member:hover .member-info-content,
@@ -3126,6 +3126,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #map {
   height: 100%;
   min-height: 18.75em;
+  background-color: #e8e8e8;
 }
 #venue .venue-info {
   background: url("https://res.cloudinary.com/damnzwekj/image/upload/c_fill,dpr_auto,f_auto,q_auto,w_auto:100:640/v1/TogaHacks/backgrounds/venue-info-bg_jii9qp.jpg")
@@ -3144,11 +3145,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   top: 0;
   left: 0;
   right: 0;
+  height: 100%;
 }
 
 #venue .venue-info h3 {
   font-size: 2.25em;
   font-weight: 700;
+  margin-bottom: 0.1em;
   color: white;
 }
 
