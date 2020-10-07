@@ -155,10 +155,6 @@ h6 {
   padding-bottom: 1.25em;
 }
 
-.section-header h2 {
-  color: var(--primary-dark-gray);
-}
-
 .section-header::before {
   content: "";
   position: absolute;
@@ -172,17 +168,18 @@ h6 {
 
 .section-header h2 {
   font-size: 2.25em;
+  color: var(--primary-dark-gray);
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
-  margin-bottom: 0.62em;
+  margin-bottom: 0.21em;
 }
 
 .section-header p {
   text-align: center;
   padding: 0;
   margin: 0;
-  font-size: 1.12em;
+  font-size: 1.42em;
   font-weight: 500;
   color: var(--primary-light-gray);
 }
