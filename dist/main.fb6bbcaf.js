@@ -194,7 +194,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../fonts/fontawesome-webfont.eot":[["fontawesome-webfont.af69b5ff.eot","node_modules/font-awesome/fonts/fontawesome-webfont.eot"],"node_modules/font-awesome/fonts/fontawesome-webfont.eot"],"./../fonts/fontawesome-webfont.woff2":[["fontawesome-webfont.b54ed0f7.woff2","node_modules/font-awesome/fonts/fontawesome-webfont.woff2"],"node_modules/font-awesome/fonts/fontawesome-webfont.woff2"],"./../fonts/fontawesome-webfont.woff":[["fontawesome-webfont.b1f459e7.woff","node_modules/font-awesome/fonts/fontawesome-webfont.woff"],"node_modules/font-awesome/fonts/fontawesome-webfont.woff"],"./../fonts/fontawesome-webfont.ttf":[["fontawesome-webfont.13bba0a5.ttf","node_modules/font-awesome/fonts/fontawesome-webfont.ttf"],"node_modules/font-awesome/fonts/fontawesome-webfont.ttf"],"./../fonts/fontawesome-webfont.svg":[["fontawesome-webfont.c0864c1b.svg","node_modules/font-awesome/fonts/fontawesome-webfont.svg"],"node_modules/font-awesome/fonts/fontawesome-webfont.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/animate.css/animate.css":[function(require,module,exports) {
+},{"./..\\fonts\\fontawesome-webfont.eot":[["fontawesome-webfont.af69b5ff.eot","node_modules/font-awesome/fonts/fontawesome-webfont.eot"],"node_modules/font-awesome/fonts/fontawesome-webfont.eot"],"./..\\fonts\\fontawesome-webfont.woff2":[["fontawesome-webfont.b54ed0f7.woff2","node_modules/font-awesome/fonts/fontawesome-webfont.woff2"],"node_modules/font-awesome/fonts/fontawesome-webfont.woff2"],"./..\\fonts\\fontawesome-webfont.woff":[["fontawesome-webfont.b1f459e7.woff","node_modules/font-awesome/fonts/fontawesome-webfont.woff"],"node_modules/font-awesome/fonts/fontawesome-webfont.woff"],"./..\\fonts\\fontawesome-webfont.ttf":[["fontawesome-webfont.13bba0a5.ttf","node_modules/font-awesome/fonts/fontawesome-webfont.ttf"],"node_modules/font-awesome/fonts/fontawesome-webfont.ttf"],"./..\\fonts\\fontawesome-webfont.svg":[["fontawesome-webfont.c0864c1b.svg","node_modules/font-awesome/fonts/fontawesome-webfont.svg"],"node_modules/font-awesome/fonts/fontawesome-webfont.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/animate.css/animate.css":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -11048,7 +11048,7 @@ exports.default = void 0;
 
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.16.1
+ * @version 1.16.0
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -11405,7 +11405,7 @@ function includeScroll(rect, element) {
 function getBordersSize(styles, axis) {
   var sideA = axis === 'x' ? 'Left' : 'Top';
   var sideB = sideA === 'Left' ? 'Right' : 'Bottom';
-  return parseFloat(styles['border' + sideA + 'Width']) + parseFloat(styles['border' + sideB + 'Width']);
+  return parseFloat(styles['border' + sideA + 'Width'], 10) + parseFloat(styles['border' + sideB + 'Width'], 10);
 }
 
 function getSize(axis, body, html, computedStyle) {
@@ -11550,8 +11550,8 @@ function getOffsetRectRelativeToArbitraryNode(children, parent) {
   var parentRect = getBoundingClientRect(parent);
   var scrollParent = getScrollParent(children);
   var styles = getStyleComputedProperty(parent);
-  var borderTopWidth = parseFloat(styles.borderTopWidth);
-  var borderLeftWidth = parseFloat(styles.borderLeftWidth); // In cases where the parent is fixed, we must ignore negative scroll in offset calc
+  var borderTopWidth = parseFloat(styles.borderTopWidth, 10);
+  var borderLeftWidth = parseFloat(styles.borderLeftWidth, 10); // In cases where the parent is fixed, we must ignore negative scroll in offset calc
 
   if (fixedPosition && isHTML) {
     parentRect.top = Math.max(parentRect.top, 0);
@@ -11571,8 +11571,8 @@ function getOffsetRectRelativeToArbitraryNode(children, parent) {
   // the box of the documentElement, in the other cases not.
 
   if (!isIE10 && isHTML) {
-    var marginTop = parseFloat(styles.marginTop);
-    var marginLeft = parseFloat(styles.marginLeft);
+    var marginTop = parseFloat(styles.marginTop, 10);
+    var marginLeft = parseFloat(styles.marginLeft, 10);
     offsets.top -= borderTopWidth - marginTop;
     offsets.bottom -= borderTopWidth - marginTop;
     offsets.left -= borderLeftWidth - marginLeft;
@@ -12512,8 +12512,8 @@ function arrow(data, options) {
   // take popper margin in account because we don't have this info available
 
   var css = getStyleComputedProperty(data.instance.popper);
-  var popperMarginSide = parseFloat(css['margin' + sideCapitalized]);
-  var popperBorderSide = parseFloat(css['border' + sideCapitalized + 'Width']);
+  var popperMarginSide = parseFloat(css['margin' + sideCapitalized], 10);
+  var popperBorderSide = parseFloat(css['border' + sideCapitalized + 'Width'], 10);
   var sideValue = center - data.offsets.popper[side] - popperMarginSide - popperBorderSide; // prevent arrowElement from being placed not contiguously to its popper
 
   sideValue = Math.max(Math.min(popper[len] - arrowElementSize, sideValue), 0);
@@ -13665,10 +13665,10 @@ exports.default = _default;
 },{}],"node_modules/bootstrap/dist/js/bootstrap.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function (obj) { return typeof obj; }; } else { _typeof = function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function (obj) { return typeof obj; }; } else { _typeof = function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 /*!
-  * Bootstrap v4.4.1 (https://getbootstrap.com/)
+  * Bootstrap v4.3.1 (https://getbootstrap.com/)
   * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -13711,35 +13711,20 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     return obj;
   }
 
-  function ownKeys(object, enumerableOnly) {
-    var keys = Object.keys(object);
-
-    if (Object.getOwnPropertySymbols) {
-      var symbols = Object.getOwnPropertySymbols(object);
-      if (enumerableOnly) symbols = symbols.filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-      });
-      keys.push.apply(keys, symbols);
-    }
-
-    return keys;
-  }
-
-  function _objectSpread2(target) {
+  function _objectSpread(target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i] != null ? arguments[i] : {};
+      var ownKeys = Object.keys(source);
 
-      if (i % 2) {
-        ownKeys(Object(source), true).forEach(function (key) {
-          _defineProperty(target, key, source[key]);
-        });
-      } else if (Object.getOwnPropertyDescriptors) {
-        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-      } else {
-        ownKeys(Object(source)).forEach(function (key) {
-          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-        });
+      if (typeof Object.getOwnPropertySymbols === 'function') {
+        ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+          return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+        }));
       }
+
+      ownKeys.forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
     }
 
     return target;
@@ -13752,7 +13737,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   }
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.4.1): util.js
+   * Bootstrap (v4.3.1): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -13903,25 +13888,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       }
 
       return Util.findShadowRoot(element.parentNode);
-    },
-    jQueryDetection: function jQueryDetection() {
-      if (typeof $ === 'undefined') {
-        throw new TypeError('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.');
-      }
-
-      var version = $.fn.jquery.split(' ')[0].split('.');
-      var minMajor = 1;
-      var ltMajor = 2;
-      var minMinor = 9;
-      var minPatch = 1;
-      var maxMajor = 4;
-
-      if (version[0] < ltMajor && version[1] < minMinor || version[0] === minMajor && version[1] === minMinor && version[2] < minPatch || version[0] >= maxMajor) {
-        throw new Error('Bootstrap\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
-      }
     }
   };
-  Util.jQueryDetection();
   setTransitionEndSupport();
   /**
    * ------------------------------------------------------------------------
@@ -13930,7 +13898,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
    */
 
   var NAME = 'alert';
-  var VERSION = '4.4.1';
+  var VERSION = '4.3.1';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -13947,14 +13915,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     ALERT: 'alert',
     FADE: 'fade',
     SHOW: 'show'
-  };
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-  var Alert = /*#__PURE__*/function () {
+  };
+
+  var Alert =
+  /*#__PURE__*/
+  function () {
     function Alert(element) {
       this._element = element;
     } // Getters
@@ -14091,7 +14062,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
   var NAME$1 = 'button';
-  var VERSION$1 = '4.4.1';
+  var VERSION$1 = '4.3.1';
   var DATA_KEY$1 = 'bs.button';
   var EVENT_KEY$1 = "." + DATA_KEY$1;
   var DATA_API_KEY$1 = '.data-api';
@@ -14103,25 +14074,25 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   };
   var Selector$1 = {
     DATA_TOGGLE_CARROT: '[data-toggle^="button"]',
-    DATA_TOGGLES: '[data-toggle="buttons"]',
-    DATA_TOGGLE: '[data-toggle="button"]',
-    DATA_TOGGLES_BUTTONS: '[data-toggle="buttons"] .btn',
+    DATA_TOGGLE: '[data-toggle="buttons"]',
     INPUT: 'input:not([type="hidden"])',
     ACTIVE: '.active',
     BUTTON: '.btn'
   };
   var Event$1 = {
     CLICK_DATA_API: "click" + EVENT_KEY$1 + DATA_API_KEY$1,
-    FOCUS_BLUR_DATA_API: "focus" + EVENT_KEY$1 + DATA_API_KEY$1 + " " + ("blur" + EVENT_KEY$1 + DATA_API_KEY$1),
-    LOAD_DATA_API: "load" + EVENT_KEY$1 + DATA_API_KEY$1
-  };
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
+    FOCUS_BLUR_DATA_API: "focus" + EVENT_KEY$1 + DATA_API_KEY$1 + " " + ("blur" + EVENT_KEY$1 + DATA_API_KEY$1)
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-  var Button = /*#__PURE__*/function () {
+  };
+
+  var Button =
+  /*#__PURE__*/
+  function () {
     function Button(element) {
       this._element = element;
     } // Getters
@@ -14132,7 +14103,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     _proto.toggle = function toggle() {
       var triggerChangeEvent = true;
       var addAriaPressed = true;
-      var rootElement = $(this._element).closest(Selector$1.DATA_TOGGLES)[0];
+      var rootElement = $(this._element).closest(Selector$1.DATA_TOGGLE)[0];
 
       if (rootElement) {
         var input = this._element.querySelector(Selector$1.INPUT);
@@ -14148,16 +14119,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
                 $(activeElement).removeClass(ClassName$1.ACTIVE);
               }
             }
-          } else if (input.type === 'checkbox') {
-            if (this._element.tagName === 'LABEL' && input.checked === this._element.classList.contains(ClassName$1.ACTIVE)) {
-              triggerChangeEvent = false;
-            }
-          } else {
-            // if it's not a radio button or checkbox don't add a pointless/invalid checked property to the input
-            triggerChangeEvent = false;
           }
 
           if (triggerChangeEvent) {
+            if (input.hasAttribute('disabled') || rootElement.hasAttribute('disabled') || input.classList.contains('disabled') || rootElement.classList.contains('disabled')) {
+              return;
+            }
+
             input.checked = !this._element.classList.contains(ClassName$1.ACTIVE);
             $(input).trigger('change');
           }
@@ -14167,14 +14135,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
       }
 
-      if (!(this._element.hasAttribute('disabled') || this._element.classList.contains('disabled'))) {
-        if (addAriaPressed) {
-          this._element.setAttribute('aria-pressed', !this._element.classList.contains(ClassName$1.ACTIVE));
-        }
+      if (addAriaPressed) {
+        this._element.setAttribute('aria-pressed', !this._element.classList.contains(ClassName$1.ACTIVE));
+      }
 
-        if (triggerChangeEvent) {
-          $(this._element).toggleClass(ClassName$1.ACTIVE);
-        }
+      if (triggerChangeEvent) {
+        $(this._element).toggleClass(ClassName$1.ACTIVE);
       }
     };
 
@@ -14216,57 +14182,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
   $(document).on(Event$1.CLICK_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
+    event.preventDefault();
     var button = event.target;
 
     if (!$(button).hasClass(ClassName$1.BUTTON)) {
-      button = $(button).closest(Selector$1.BUTTON)[0];
+      button = $(button).closest(Selector$1.BUTTON);
     }
 
-    if (!button || button.hasAttribute('disabled') || button.classList.contains('disabled')) {
-      event.preventDefault(); // work around Firefox bug #1540995
-    } else {
-      var inputBtn = button.querySelector(Selector$1.INPUT);
-
-      if (inputBtn && (inputBtn.hasAttribute('disabled') || inputBtn.classList.contains('disabled'))) {
-        event.preventDefault(); // work around Firefox bug #1540995
-
-        return;
-      }
-
-      Button._jQueryInterface.call($(button), 'toggle');
-    }
+    Button._jQueryInterface.call($(button), 'toggle');
   }).on(Event$1.FOCUS_BLUR_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
     var button = $(event.target).closest(Selector$1.BUTTON)[0];
     $(button).toggleClass(ClassName$1.FOCUS, /^focus(in)?$/.test(event.type));
-  });
-  $(window).on(Event$1.LOAD_DATA_API, function () {
-    // ensure correct active class is set to match the controls' actual values/states
-    // find all checkboxes/readio buttons inside data-toggle groups
-    var buttons = [].slice.call(document.querySelectorAll(Selector$1.DATA_TOGGLES_BUTTONS));
-
-    for (var i = 0, len = buttons.length; i < len; i++) {
-      var button = buttons[i];
-      var input = button.querySelector(Selector$1.INPUT);
-
-      if (input.checked || input.hasAttribute('checked')) {
-        button.classList.add(ClassName$1.ACTIVE);
-      } else {
-        button.classList.remove(ClassName$1.ACTIVE);
-      }
-    } // find all button toggles
-
-
-    buttons = [].slice.call(document.querySelectorAll(Selector$1.DATA_TOGGLE));
-
-    for (var _i = 0, _len = buttons.length; _i < _len; _i++) {
-      var _button = buttons[_i];
-
-      if (_button.getAttribute('aria-pressed') === 'true') {
-        _button.classList.add(ClassName$1.ACTIVE);
-      } else {
-        _button.classList.remove(ClassName$1.ACTIVE);
-      }
-    }
   });
   /**
    * ------------------------------------------------------------------------
@@ -14289,7 +14215,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
   var NAME$2 = 'carousel';
-  var VERSION$2 = '4.4.1';
+  var VERSION$2 = '4.3.1';
   var DATA_KEY$2 = 'bs.carousel';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$2 = '.data-api';
@@ -14362,14 +14288,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   var PointerType = {
     TOUCH: 'touch',
     PEN: 'pen'
-  };
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-  var Carousel = /*#__PURE__*/function () {
+  };
+
+  var Carousel =
+  /*#__PURE__*/
+  function () {
     function Carousel(element, config) {
       this._items = null;
       this._interval = null;
@@ -14484,7 +14413,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2({}, Default, {}, config);
+      config = _objectSpread({}, Default, config);
       Util.typeCheckConfig(NAME$2, config, DefaultType);
       return config;
     };
@@ -14496,8 +14425,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         return;
       }
 
-      var direction = absDeltax / this.touchDeltaX;
-      this.touchDeltaX = 0; // swipe left
+      var direction = absDeltax / this.touchDeltaX; // swipe left
 
       if (direction > 0) {
         this.prev();
@@ -14623,6 +14551,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           event.preventDefault();
           this.next();
           break;
+
+        default:
       }
     };
 
@@ -14774,10 +14704,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       return this.each(function () {
         var data = $(this).data(DATA_KEY$2);
 
-        var _config = _objectSpread2({}, Default, {}, $(this).data());
+        var _config = _objectSpread({}, Default, $(this).data());
 
         if (_typeof(config) === 'object') {
-          _config = _objectSpread2({}, _config, {}, config);
+          _config = _objectSpread({}, _config, config);
         }
 
         var action = typeof config === 'string' ? config : _config.slide;
@@ -14815,7 +14745,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         return;
       }
 
-      var config = _objectSpread2({}, $(target).data(), {}, $(this).data());
+      var config = _objectSpread({}, $(target).data(), $(this).data());
 
       var slideIndex = this.getAttribute('data-slide-to');
 
@@ -14884,7 +14814,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
   var NAME$3 = 'collapse';
-  var VERSION$3 = '4.4.1';
+  var VERSION$3 = '4.3.1';
   var DATA_KEY$3 = 'bs.collapse';
   var EVENT_KEY$3 = "." + DATA_KEY$3;
   var DATA_API_KEY$3 = '.data-api';
@@ -14917,14 +14847,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   var Selector$3 = {
     ACTIVES: '.show, .collapsing',
     DATA_TOGGLE: '[data-toggle="collapse"]'
-  };
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-  var Collapse = /*#__PURE__*/function () {
+  };
+
+  var Collapse =
+  /*#__PURE__*/
+  function () {
     function Collapse(element, config) {
       this._isTransitioning = false;
       this._element = element;
@@ -15106,7 +15039,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2({}, Default$1, {}, config);
+      config = _objectSpread({}, Default$1, config);
       config.toggle = Boolean(config.toggle); // Coerce string values
 
       Util.typeCheckConfig(NAME$3, config, DefaultType$1);
@@ -15160,7 +15093,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         var $this = $(this);
         var data = $this.data(DATA_KEY$3);
 
-        var _config = _objectSpread2({}, Default$1, {}, $this.data(), {}, _typeof(config) === 'object' && config ? config : {});
+        var _config = _objectSpread({}, Default$1, $this.data(), _typeof(config) === 'object' && config ? config : {});
 
         if (!data && _config.toggle && /show|hide/.test(config)) {
           _config.toggle = false;
@@ -15240,7 +15173,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
   var NAME$4 = 'dropdown';
-  var VERSION$4 = '4.4.1';
+  var VERSION$4 = '4.3.1';
   var DATA_KEY$4 = 'bs.dropdown';
   var EVENT_KEY$4 = "." + DATA_KEY$4;
   var DATA_API_KEY$4 = '.data-api';
@@ -15300,24 +15233,25 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     flip: true,
     boundary: 'scrollParent',
     reference: 'toggle',
-    display: 'dynamic',
-    popperConfig: null
+    display: 'dynamic'
   };
   var DefaultType$2 = {
     offset: '(number|string|function)',
     flip: 'boolean',
     boundary: '(string|element)',
     reference: '(string|element)',
-    display: 'string',
-    popperConfig: '(null|object)'
-  };
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
+    display: 'string'
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-  var Dropdown = /*#__PURE__*/function () {
+  };
+
+  var Dropdown =
+  /*#__PURE__*/
+  function () {
     function Dropdown(element, config) {
       this._element = element;
       this._popper = null;
@@ -15336,6 +15270,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         return;
       }
 
+      var parent = Dropdown._getParentFromElement(this._element);
+
       var isActive = $(this._menu).hasClass(ClassName$4.SHOW);
 
       Dropdown._clearMenus();
@@ -15344,25 +15280,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         return;
       }
 
-      this.show(true);
-    };
-
-    _proto.show = function show(usePopper) {
-      if (usePopper === void 0) {
-        usePopper = false;
-      }
-
-      if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED) || $(this._menu).hasClass(ClassName$4.SHOW)) {
-        return;
-      }
-
       var relatedTarget = {
         relatedTarget: this._element
       };
       var showEvent = $.Event(Event$4.SHOW, relatedTarget);
-
-      var parent = Dropdown._getParentFromElement(this._element);
-
       $(parent).trigger(showEvent);
 
       if (showEvent.isDefaultPrevented()) {
@@ -15370,7 +15291,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       } // Disable totally Popper.js for Dropdown in Navbar
 
 
-      if (!this._inNavbar && usePopper) {
+      if (!this._inNavbar) {
         /**
          * Check for Popper dependency
          * Popper - https://popper.js.org
@@ -15417,6 +15338,28 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.SHOWN, relatedTarget));
     };
 
+    _proto.show = function show() {
+      if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED) || $(this._menu).hasClass(ClassName$4.SHOW)) {
+        return;
+      }
+
+      var relatedTarget = {
+        relatedTarget: this._element
+      };
+      var showEvent = $.Event(Event$4.SHOW, relatedTarget);
+
+      var parent = Dropdown._getParentFromElement(this._element);
+
+      $(parent).trigger(showEvent);
+
+      if (showEvent.isDefaultPrevented()) {
+        return;
+      }
+
+      $(this._menu).toggleClass(ClassName$4.SHOW);
+      $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.SHOWN, relatedTarget));
+    };
+
     _proto.hide = function hide() {
       if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED) || !$(this._menu).hasClass(ClassName$4.SHOW)) {
         return;
@@ -15433,10 +15376,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
       if (hideEvent.isDefaultPrevented()) {
         return;
-      }
-
-      if (this._popper) {
-        this._popper.destroy();
       }
 
       $(this._menu).toggleClass(ClassName$4.SHOW);
@@ -15477,7 +15416,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     };
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2({}, this.constructor.Default, {}, $(this._element).data(), {}, config);
+      config = _objectSpread({}, this.constructor.Default, $(this._element).data(), config);
       Util.typeCheckConfig(NAME$4, config, this.constructor.DefaultType);
       return config;
     };
@@ -15526,7 +15465,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
       if (typeof this._config.offset === 'function') {
         offset.fn = function (data) {
-          data.offsets = _objectSpread2({}, data.offsets, {}, _this2._config.offset(data.offsets, _this2._element) || {});
+          data.offsets = _objectSpread({}, data.offsets, _this2._config.offset(data.offsets, _this2._element) || {});
           return data;
         };
       } else {
@@ -15547,8 +15486,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           preventOverflow: {
             boundariesElement: this._config.boundary
           }
-        }
-      }; // Disable Popper.js if we have a static display
+        } // Disable Popper.js if we have a static display
+
+      };
 
       if (this._config.display === 'static') {
         popperConfig.modifiers.applyStyle = {
@@ -15556,7 +15496,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         };
       }
 
-      return _objectSpread2({}, popperConfig, {}, this._config.popperConfig);
+      return popperConfig;
     } // Static
     ;
 
@@ -15628,11 +15568,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
 
         toggles[i].setAttribute('aria-expanded', 'false');
-
-        if (context._popper) {
-          context._popper.destroy();
-        }
-
         $(dropdownMenu).removeClass(ClassName$4.SHOW);
         $(parent).removeClass(ClassName$4.SHOW).trigger($.Event(Event$4.HIDDEN, relatedTarget));
       }
@@ -15673,10 +15608,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
       var isActive = $(parent).hasClass(ClassName$4.SHOW);
 
-      if (!isActive && event.which === ESCAPE_KEYCODE) {
-        return;
-      }
-
       if (!isActive || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
         if (event.which === ESCAPE_KEYCODE) {
           var toggle = parent.querySelector(Selector$4.DATA_TOGGLE);
@@ -15687,9 +15618,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         return;
       }
 
-      var items = [].slice.call(parent.querySelectorAll(Selector$4.VISIBLE_ITEMS)).filter(function (item) {
-        return $(item).is(':visible');
-      });
+      var items = [].slice.call(parent.querySelectorAll(Selector$4.VISIBLE_ITEMS));
 
       if (items.length === 0) {
         return;
@@ -15769,7 +15698,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
   var NAME$5 = 'modal';
-  var VERSION$5 = '4.4.1';
+  var VERSION$5 = '4.3.1';
   var DATA_KEY$5 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$5;
   var DATA_API_KEY$5 = '.data-api';
@@ -15790,7 +15719,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   };
   var Event$5 = {
     HIDE: "hide" + EVENT_KEY$5,
-    HIDE_PREVENTED: "hidePrevented" + EVENT_KEY$5,
     HIDDEN: "hidden" + EVENT_KEY$5,
     SHOW: "show" + EVENT_KEY$5,
     SHOWN: "shown" + EVENT_KEY$5,
@@ -15808,8 +15736,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     BACKDROP: 'modal-backdrop',
     OPEN: 'modal-open',
     FADE: 'fade',
-    SHOW: 'show',
-    STATIC: 'modal-static'
+    SHOW: 'show'
   };
   var Selector$5 = {
     DIALOG: '.modal-dialog',
@@ -15818,14 +15745,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     DATA_DISMISS: '[data-dismiss="modal"]',
     FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
     STICKY_CONTENT: '.sticky-top'
-  };
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-  var Modal = /*#__PURE__*/function () {
+  };
+
+  var Modal =
+  /*#__PURE__*/
+  function () {
     function Modal(element, config) {
       this._config = this._getConfig(config);
       this._element = element;
@@ -15966,40 +15896,15 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2({}, Default$3, {}, config);
+      config = _objectSpread({}, Default$3, config);
       Util.typeCheckConfig(NAME$5, config, DefaultType$3);
       return config;
     };
 
-    _proto._triggerBackdropTransition = function _triggerBackdropTransition() {
+    _proto._showElement = function _showElement(relatedTarget) {
       var _this3 = this;
 
-      if (this._config.backdrop === 'static') {
-        var hideEventPrevented = $.Event(Event$5.HIDE_PREVENTED);
-        $(this._element).trigger(hideEventPrevented);
-
-        if (hideEventPrevented.defaultPrevented) {
-          return;
-        }
-
-        this._element.classList.add(ClassName$5.STATIC);
-
-        var modalTransitionDuration = Util.getTransitionDurationFromElement(this._element);
-        $(this._element).one(Util.TRANSITION_END, function () {
-          _this3._element.classList.remove(ClassName$5.STATIC);
-        }).emulateTransitionEnd(modalTransitionDuration);
-
-        this._element.focus();
-      } else {
-        this.hide();
-      }
-    };
-
-    _proto._showElement = function _showElement(relatedTarget) {
-      var _this4 = this;
-
       var transition = $(this._element).hasClass(ClassName$5.FADE);
-      var modalBody = this._dialog ? this._dialog.querySelector(Selector$5.MODAL_BODY) : null;
 
       if (!this._element.parentNode || this._element.parentNode.nodeType !== Node.ELEMENT_NODE) {
         // Don't move modal's DOM position
@@ -16012,8 +15917,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
       this._element.setAttribute('aria-modal', true);
 
-      if ($(this._dialog).hasClass(ClassName$5.SCROLLABLE) && modalBody) {
-        modalBody.scrollTop = 0;
+      if ($(this._dialog).hasClass(ClassName$5.SCROLLABLE)) {
+        this._dialog.querySelector(Selector$5.MODAL_BODY).scrollTop = 0;
       } else {
         this._element.scrollTop = 0;
       }
@@ -16033,12 +15938,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       });
 
       var transitionComplete = function transitionComplete() {
-        if (_this4._config.focus) {
-          _this4._element.focus();
+        if (_this3._config.focus) {
+          _this3._element.focus();
         }
 
-        _this4._isTransitioning = false;
-        $(_this4._element).trigger(shownEvent);
+        _this3._isTransitioning = false;
+        $(_this3._element).trigger(shownEvent);
       };
 
       if (transition) {
@@ -16050,23 +15955,25 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     };
 
     _proto._enforceFocus = function _enforceFocus() {
-      var _this5 = this;
+      var _this4 = this;
 
       $(document).off(Event$5.FOCUSIN) // Guard against infinite focus loop
       .on(Event$5.FOCUSIN, function (event) {
-        if (document !== event.target && _this5._element !== event.target && $(_this5._element).has(event.target).length === 0) {
-          _this5._element.focus();
+        if (document !== event.target && _this4._element !== event.target && $(_this4._element).has(event.target).length === 0) {
+          _this4._element.focus();
         }
       });
     };
 
     _proto._setEscapeEvent = function _setEscapeEvent() {
-      var _this6 = this;
+      var _this5 = this;
 
       if (this._isShown && this._config.keyboard) {
         $(this._element).on(Event$5.KEYDOWN_DISMISS, function (event) {
           if (event.which === ESCAPE_KEYCODE$1) {
-            _this6._triggerBackdropTransition();
+            event.preventDefault();
+
+            _this5.hide();
           }
         });
       } else if (!this._isShown) {
@@ -16075,11 +15982,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     };
 
     _proto._setResizeEvent = function _setResizeEvent() {
-      var _this7 = this;
+      var _this6 = this;
 
       if (this._isShown) {
         $(window).on(Event$5.RESIZE, function (event) {
-          return _this7.handleUpdate(event);
+          return _this6.handleUpdate(event);
         });
       } else {
         $(window).off(Event$5.RESIZE);
@@ -16087,7 +15994,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     };
 
     _proto._hideModal = function _hideModal() {
-      var _this8 = this;
+      var _this7 = this;
 
       this._element.style.display = 'none';
 
@@ -16100,11 +16007,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       this._showBackdrop(function () {
         $(document.body).removeClass(ClassName$5.OPEN);
 
-        _this8._resetAdjustments();
+        _this7._resetAdjustments();
 
-        _this8._resetScrollbar();
+        _this7._resetScrollbar();
 
-        $(_this8._element).trigger(Event$5.HIDDEN);
+        $(_this7._element).trigger(Event$5.HIDDEN);
       });
     };
 
@@ -16116,7 +16023,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     };
 
     _proto._showBackdrop = function _showBackdrop(callback) {
-      var _this9 = this;
+      var _this8 = this;
 
       var animate = $(this._element).hasClass(ClassName$5.FADE) ? ClassName$5.FADE : '';
 
@@ -16130,8 +16037,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
         $(this._backdrop).appendTo(document.body);
         $(this._element).on(Event$5.CLICK_DISMISS, function (event) {
-          if (_this9._ignoreBackdropClick) {
-            _this9._ignoreBackdropClick = false;
+          if (_this8._ignoreBackdropClick) {
+            _this8._ignoreBackdropClick = false;
             return;
           }
 
@@ -16139,7 +16046,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
             return;
           }
 
-          _this9._triggerBackdropTransition();
+          if (_this8._config.backdrop === 'static') {
+            _this8._element.focus();
+          } else {
+            _this8.hide();
+          }
         });
 
         if (animate) {
@@ -16163,7 +16074,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         $(this._backdrop).removeClass(ClassName$5.SHOW);
 
         var callbackRemove = function callbackRemove() {
-          _this9._removeBackdrop();
+          _this8._removeBackdrop();
 
           if (callback) {
             callback();
@@ -16210,7 +16121,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     };
 
     _proto._setScrollbar = function _setScrollbar() {
-      var _this10 = this;
+      var _this9 = this;
 
       if (this._isBodyOverflowing) {
         // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
@@ -16221,13 +16132,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         $(fixedContent).each(function (index, element) {
           var actualPadding = element.style.paddingRight;
           var calculatedPadding = $(element).css('padding-right');
-          $(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this10._scrollbarWidth + "px");
+          $(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this9._scrollbarWidth + "px");
         }); // Adjust sticky content margin
 
         $(stickyContent).each(function (index, element) {
           var actualMargin = element.style.marginRight;
           var calculatedMargin = $(element).css('margin-right');
-          $(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this10._scrollbarWidth + "px");
+          $(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this9._scrollbarWidth + "px");
         }); // Adjust body padding
 
         var actualPadding = document.body.style.paddingRight;
@@ -16276,7 +16187,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       return this.each(function () {
         var data = $(this).data(DATA_KEY$5);
 
-        var _config = _objectSpread2({}, Default$3, {}, $(this).data(), {}, _typeof(config) === 'object' && config ? config : {});
+        var _config = _objectSpread({}, Default$3, $(this).data(), _typeof(config) === 'object' && config ? config : {});
 
         if (!data) {
           data = new Modal(this, _config);
@@ -16317,7 +16228,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
   $(document).on(Event$5.CLICK_DATA_API, Selector$5.DATA_TOGGLE, function (event) {
-    var _this11 = this;
+    var _this10 = this;
 
     var target;
     var selector = Util.getSelectorFromElement(this);
@@ -16326,7 +16237,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       target = document.querySelector(selector);
     }
 
-    var config = $(target).data(DATA_KEY$5) ? 'toggle' : _objectSpread2({}, $(target).data(), {}, $(this).data());
+    var config = $(target).data(DATA_KEY$5) ? 'toggle' : _objectSpread({}, $(target).data(), $(this).data());
 
     if (this.tagName === 'A' || this.tagName === 'AREA') {
       event.preventDefault();
@@ -16339,8 +16250,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       }
 
       $target.one(Event$5.HIDDEN, function () {
-        if ($(_this11).is(':visible')) {
-          _this11.focus();
+        if ($(_this10).is(':visible')) {
+          _this10.focus();
         }
       });
     });
@@ -16362,7 +16273,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   };
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.4.1): tools/sanitizer.js
+   * Bootstrap (v4.3.1): tools/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -16402,13 +16313,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     strong: [],
     u: [],
     ul: []
-  };
-  /**
-   * A pattern that recognizes a commonly useful subset of URLs that are safe.
-   *
-   * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
-   */
+    /**
+     * A pattern that recognizes a commonly useful subset of URLs that are safe.
+     *
+     * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
+     */
 
+  };
   var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi;
   /**
    * A pattern that matches safe data URLs. Only matches image, video and audio types.
@@ -16475,7 +16386,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     };
 
     for (var i = 0, len = elements.length; i < len; i++) {
-      var _ret = _loop(i);
+      var _ret = _loop(i, len);
 
       if (_ret === "continue") continue;
     }
@@ -16490,7 +16401,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
   var NAME$6 = 'tooltip';
-  var VERSION$6 = '4.4.1';
+  var VERSION$6 = '4.3.1';
   var DATA_KEY$6 = 'bs.tooltip';
   var EVENT_KEY$6 = "." + DATA_KEY$6;
   var JQUERY_NO_CONFLICT$6 = $.fn[NAME$6];
@@ -16512,8 +16423,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     boundary: '(string|element)',
     sanitize: 'boolean',
     sanitizeFn: '(null|function)',
-    whiteList: 'object',
-    popperConfig: '(null|object)'
+    whiteList: 'object'
   };
   var AttachmentMap$1 = {
     AUTO: 'auto',
@@ -16537,8 +16447,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     boundary: 'scrollParent',
     sanitize: true,
     sanitizeFn: null,
-    whiteList: DefaultWhitelist,
-    popperConfig: null
+    whiteList: DefaultWhitelist
   };
   var HoverState = {
     SHOW: 'show',
@@ -16570,15 +16479,22 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     FOCUS: 'focus',
     CLICK: 'click',
     MANUAL: 'manual'
-  };
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-  var Tooltip = /*#__PURE__*/function () {
+  };
+
+  var Tooltip =
+  /*#__PURE__*/
+  function () {
     function Tooltip(element, config) {
+      /**
+       * Check for Popper dependency
+       * Popper - https://popper.js.org
+       */
       if (typeof Popper === 'undefined') {
         throw new TypeError('Bootstrap\'s tooltips require Popper.js (https://popper.js.org/)');
       } // private
@@ -16648,7 +16564,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       clearTimeout(this._timeout);
       $.removeData(this.element, this.constructor.DATA_KEY);
       $(this.element).off(this.constructor.EVENT_KEY);
-      $(this.element).closest('.modal').off('hide.bs.modal', this._hideModalHandler);
+      $(this.element).closest('.modal').off('hide.bs.modal');
 
       if (this.tip) {
         $(this.tip).remove();
@@ -16659,7 +16575,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       this._hoverState = null;
       this._activeTrigger = null;
 
-      if (this._popper) {
+      if (this._popper !== null) {
         this._popper.destroy();
       }
 
@@ -16712,7 +16628,29 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
 
         $(this.element).trigger(this.constructor.Event.INSERTED);
-        this._popper = new Popper(this.element, tip, this._getPopperConfig(attachment));
+        this._popper = new Popper(this.element, tip, {
+          placement: attachment,
+          modifiers: {
+            offset: this._getOffset(),
+            flip: {
+              behavior: this.config.fallbackPlacement
+            },
+            arrow: {
+              element: Selector$6.ARROW
+            },
+            preventOverflow: {
+              boundariesElement: this.config.boundary
+            }
+          },
+          onCreate: function onCreate(data) {
+            if (data.originalPlacement !== data.placement) {
+              _this._handlePopperPlacementChange(data);
+            }
+          },
+          onUpdate: function onUpdate(data) {
+            return _this._handlePopperPlacementChange(data);
+          }
+        });
         $(tip).addClass(ClassName$6.SHOW); // If this is a touch-enabled device we add extra
         // empty mouseover listeners to the body's immediate children;
         // only needed because of broken event delegation on iOS
@@ -16860,43 +16798,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     } // Private
     ;
 
-    _proto._getPopperConfig = function _getPopperConfig(attachment) {
-      var _this3 = this;
-
-      var defaultBsConfig = {
-        placement: attachment,
-        modifiers: {
-          offset: this._getOffset(),
-          flip: {
-            behavior: this.config.fallbackPlacement
-          },
-          arrow: {
-            element: Selector$6.ARROW
-          },
-          preventOverflow: {
-            boundariesElement: this.config.boundary
-          }
-        },
-        onCreate: function onCreate(data) {
-          if (data.originalPlacement !== data.placement) {
-            _this3._handlePopperPlacementChange(data);
-          }
-        },
-        onUpdate: function onUpdate(data) {
-          return _this3._handlePopperPlacementChange(data);
-        }
-      };
-      return _objectSpread2({}, defaultBsConfig, {}, this.config.popperConfig);
-    };
-
     _proto._getOffset = function _getOffset() {
-      var _this4 = this;
+      var _this3 = this;
 
       var offset = {};
 
       if (typeof this.config.offset === 'function') {
         offset.fn = function (data) {
-          data.offsets = _objectSpread2({}, data.offsets, {}, _this4.config.offset(data.offsets, _this4.element) || {});
+          data.offsets = _objectSpread({}, data.offsets, _this3.config.offset(data.offsets, _this3.element) || {});
           return data;
         };
       } else {
@@ -16923,35 +16832,32 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     };
 
     _proto._setListeners = function _setListeners() {
-      var _this5 = this;
+      var _this4 = this;
 
       var triggers = this.config.trigger.split(' ');
       triggers.forEach(function (trigger) {
         if (trigger === 'click') {
-          $(_this5.element).on(_this5.constructor.Event.CLICK, _this5.config.selector, function (event) {
-            return _this5.toggle(event);
+          $(_this4.element).on(_this4.constructor.Event.CLICK, _this4.config.selector, function (event) {
+            return _this4.toggle(event);
           });
         } else if (trigger !== Trigger.MANUAL) {
-          var eventIn = trigger === Trigger.HOVER ? _this5.constructor.Event.MOUSEENTER : _this5.constructor.Event.FOCUSIN;
-          var eventOut = trigger === Trigger.HOVER ? _this5.constructor.Event.MOUSELEAVE : _this5.constructor.Event.FOCUSOUT;
-          $(_this5.element).on(eventIn, _this5.config.selector, function (event) {
-            return _this5._enter(event);
-          }).on(eventOut, _this5.config.selector, function (event) {
-            return _this5._leave(event);
+          var eventIn = trigger === Trigger.HOVER ? _this4.constructor.Event.MOUSEENTER : _this4.constructor.Event.FOCUSIN;
+          var eventOut = trigger === Trigger.HOVER ? _this4.constructor.Event.MOUSELEAVE : _this4.constructor.Event.FOCUSOUT;
+          $(_this4.element).on(eventIn, _this4.config.selector, function (event) {
+            return _this4._enter(event);
+          }).on(eventOut, _this4.config.selector, function (event) {
+            return _this4._leave(event);
           });
         }
       });
-
-      this._hideModalHandler = function () {
-        if (_this5.element) {
-          _this5.hide();
+      $(this.element).closest('.modal').on('hide.bs.modal', function () {
+        if (_this4.element) {
+          _this4.hide();
         }
-      };
-
-      $(this.element).closest('.modal').on('hide.bs.modal', this._hideModalHandler);
+      });
 
       if (this.config.selector) {
-        this.config = _objectSpread2({}, this.config, {
+        this.config = _objectSpread({}, this.config, {
           trigger: 'manual',
           selector: ''
         });
@@ -17051,7 +16957,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           delete dataAttributes[dataAttr];
         }
       });
-      config = _objectSpread2({}, this.constructor.Default, {}, dataAttributes, {}, _typeof(config) === 'object' && config ? config : {});
+      config = _objectSpread({}, this.constructor.Default, dataAttributes, _typeof(config) === 'object' && config ? config : {});
 
       if (typeof config.delay === 'number') {
         config.delay = {
@@ -17211,21 +17117,21 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
   var NAME$7 = 'popover';
-  var VERSION$7 = '4.4.1';
+  var VERSION$7 = '4.3.1';
   var DATA_KEY$7 = 'bs.popover';
   var EVENT_KEY$7 = "." + DATA_KEY$7;
   var JQUERY_NO_CONFLICT$7 = $.fn[NAME$7];
   var CLASS_PREFIX$1 = 'bs-popover';
   var BSCLS_PREFIX_REGEX$1 = new RegExp("(^|\\s)" + CLASS_PREFIX$1 + "\\S+", 'g');
 
-  var Default$5 = _objectSpread2({}, Tooltip.Default, {
+  var Default$5 = _objectSpread({}, Tooltip.Default, {
     placement: 'right',
     trigger: 'click',
     content: '',
     template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
   });
 
-  var DefaultType$5 = _objectSpread2({}, Tooltip.DefaultType, {
+  var DefaultType$5 = _objectSpread({}, Tooltip.DefaultType, {
     content: '(string|element|function)'
   });
 
@@ -17248,14 +17154,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     FOCUSOUT: "focusout" + EVENT_KEY$7,
     MOUSEENTER: "mouseenter" + EVENT_KEY$7,
     MOUSELEAVE: "mouseleave" + EVENT_KEY$7
-  };
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-  var Popover = /*#__PURE__*/function (_Tooltip) {
+  };
+
+  var Popover =
+  /*#__PURE__*/
+  function (_Tooltip) {
     _inheritsLoose(Popover, _Tooltip);
 
     function Popover() {
@@ -17394,7 +17303,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
   var NAME$8 = 'scrollspy';
-  var VERSION$8 = '4.4.1';
+  var VERSION$8 = '4.3.1';
   var DATA_KEY$8 = 'bs.scrollspy';
   var EVENT_KEY$8 = "." + DATA_KEY$8;
   var DATA_API_KEY$6 = '.data-api';
@@ -17433,14 +17342,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   var OffsetMethod = {
     OFFSET: 'offset',
     POSITION: 'position'
-  };
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-  var ScrollSpy = /*#__PURE__*/function () {
+  };
+
+  var ScrollSpy =
+  /*#__PURE__*/
+  function () {
     function ScrollSpy(element, config) {
       var _this = this;
 
@@ -17517,7 +17429,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2({}, Default$6, {}, _typeof(config) === 'object' && config ? config : {});
+      config = _objectSpread({}, Default$6, _typeof(config) === 'object' && config ? config : {});
 
       if (typeof config.target !== 'string') {
         var id = $(config.target).attr('id');
@@ -17697,7 +17609,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
   var NAME$9 = 'tab';
-  var VERSION$9 = '4.4.1';
+  var VERSION$9 = '4.3.1';
   var DATA_KEY$9 = 'bs.tab';
   var EVENT_KEY$9 = "." + DATA_KEY$9;
   var DATA_API_KEY$7 = '.data-api';
@@ -17724,14 +17636,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
     DROPDOWN_TOGGLE: '.dropdown-toggle',
     DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
-  };
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-  var Tab = /*#__PURE__*/function () {
+  };
+
+  var Tab =
+  /*#__PURE__*/
+  function () {
     function Tab(element) {
       this._element = element;
     } // Getters
@@ -17928,7 +17843,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
   var NAME$a = 'toast';
-  var VERSION$a = '4.4.1';
+  var VERSION$a = '4.3.1';
   var DATA_KEY$a = 'bs.toast';
   var EVENT_KEY$a = "." + DATA_KEY$a;
   var JQUERY_NO_CONFLICT$a = $.fn[NAME$a];
@@ -17957,14 +17872,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   };
   var Selector$a = {
     DATA_DISMISS: '[data-dismiss="toast"]'
-  };
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-  var Toast = /*#__PURE__*/function () {
+  };
+
+  var Toast =
+  /*#__PURE__*/
+  function () {
     function Toast(element, config) {
       this._element = element;
       this._config = this._getConfig(config);
@@ -17979,12 +17897,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     _proto.show = function show() {
       var _this = this;
 
-      var showEvent = $.Event(Event$a.SHOW);
-      $(this._element).trigger(showEvent);
-
-      if (showEvent.isDefaultPrevented()) {
-        return;
-      }
+      $(this._element).trigger(Event$a.SHOW);
 
       if (this._config.animation) {
         this._element.classList.add(ClassName$a.FADE);
@@ -17998,15 +17911,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         $(_this._element).trigger(Event$a.SHOWN);
 
         if (_this._config.autohide) {
-          _this._timeout = setTimeout(function () {
-            _this.hide();
-          }, _this._config.delay);
+          _this.hide();
         }
       };
 
       this._element.classList.remove(ClassName$a.HIDE);
-
-      Util.reflow(this._element);
 
       this._element.classList.add(ClassName$a.SHOWING);
 
@@ -18018,19 +17927,22 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       }
     };
 
-    _proto.hide = function hide() {
+    _proto.hide = function hide(withoutTimeout) {
+      var _this2 = this;
+
       if (!this._element.classList.contains(ClassName$a.SHOW)) {
         return;
       }
 
-      var hideEvent = $.Event(Event$a.HIDE);
-      $(this._element).trigger(hideEvent);
+      $(this._element).trigger(Event$a.HIDE);
 
-      if (hideEvent.isDefaultPrevented()) {
-        return;
+      if (withoutTimeout) {
+        this._close();
+      } else {
+        this._timeout = setTimeout(function () {
+          _this2._close();
+        }, this._config.delay);
       }
-
-      this._close();
     };
 
     _proto.dispose = function dispose() {
@@ -18049,26 +17961,26 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2({}, Default$7, {}, $(this._element).data(), {}, _typeof(config) === 'object' && config ? config : {});
+      config = _objectSpread({}, Default$7, $(this._element).data(), _typeof(config) === 'object' && config ? config : {});
       Util.typeCheckConfig(NAME$a, config, this.constructor.DefaultType);
       return config;
     };
 
     _proto._setListeners = function _setListeners() {
-      var _this2 = this;
+      var _this3 = this;
 
       $(this._element).on(Event$a.CLICK_DISMISS, Selector$a.DATA_DISMISS, function () {
-        return _this2.hide();
+        return _this3.hide(true);
       });
     };
 
     _proto._close = function _close() {
-      var _this3 = this;
+      var _this4 = this;
 
       var complete = function complete() {
-        _this3._element.classList.add(ClassName$a.HIDE);
+        _this4._element.classList.add(ClassName$a.HIDE);
 
-        $(_this3._element).trigger(Event$a.HIDDEN);
+        $(_this4._element).trigger(Event$a.HIDDEN);
       };
 
       this._element.classList.remove(ClassName$a.SHOW);
@@ -18137,7 +18049,32 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     $.fn[NAME$a] = JQUERY_NO_CONFLICT$a;
     return Toast._jQueryInterface;
   };
+  /**
+   * --------------------------------------------------------------------------
+   * Bootstrap (v4.3.1): index.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * --------------------------------------------------------------------------
+   */
 
+
+  (function () {
+    if (typeof $ === 'undefined') {
+      throw new TypeError('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.');
+    }
+
+    var version = $.fn.jquery.split(' ')[0].split('.');
+    var minMajor = 1;
+    var ltMajor = 2;
+    var minMinor = 9;
+    var minPatch = 1;
+    var maxMajor = 4;
+
+    if (version[0] < ltMajor && version[1] < minMinor || version[0] === minMajor && version[1] === minMinor && version[2] < minPatch || version[0] >= maxMajor) {
+      throw new Error('Bootstrap\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
+    }
+  })();
+
+  exports.Util = Util;
   exports.Alert = Alert;
   exports.Button = Button;
   exports.Carousel = Carousel;
@@ -18149,7 +18086,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   exports.Tab = Tab;
   exports.Toast = Toast;
   exports.Tooltip = Tooltip;
-  exports.Util = Util;
   Object.defineProperty(exports, '__esModule', {
     value: true
   });
@@ -19269,13 +19205,13 @@ $.extend( $.easing,
 },{}],"node_modules/venobox/venobox/venobox.js":[function(require,module,exports) {
 /*
  * VenoBox - jQuery Plugin
- * version: 1.8.9
+ * version: 1.8.6
  * @requires jQuery >= 1.7.0
  *
  * Examples at http://veno.es/venobox/
  * License: MIT License
  * License URI: https://github.com/nicolafranchini/VenoBox/blob/master/LICENSE
- * Copyright 2013-2020 Nicola Franchini - @nicolafranchini
+ * Copyright 2013-2019 Nicola Franchini - @nicolafranchini
  *
  */
 
@@ -19283,18 +19219,11 @@ $.extend( $.easing,
 
 (function($){
     "use strict";
-    var autoplay, bgcolor, blockleft, blocknum, blockshare, blocktitle, border, core, container, content, dest, extraCss,
+    var autoplay, bgcolor, blocknum, blocktitle, border, core, container, content, dest, extraCss,
         framewidth, frameheight, gallItems, infinigall, items, keyNavigationDisabled, margine, numeratio,
         overlayColor, overlay, title, thisgall, thenext, theprev, nextok, prevok, preloader, $preloader, navigation,
-        obj, gallIndex, startouch, vbheader, images, startY, startX, endY, endX, diff, diffX, diffY, threshold,
-        share, sharelinks, vbfooter, sharepos;
+        obj, gallIndex, startouch, vbheader, images, startY, startX, endY, endX, diff, diffX, diffY, threshold;
 
-    var pinIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" fill-rule="evenodd" clip-rule="evenodd"/></svg>';
-    var fbIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg>';
-    var twitterIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg>';
-    var linkedinIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>';
-    var downloadIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2 9h-4v-1h4v1zm0-3v1h-4v-1h4zm-2 13l-6-6h4v-3h4v3h4l-6 6z"/></svg>';
-   
     $.fn.extend({
         //plugin name - venobox
         venobox: function(options) {
@@ -19305,7 +19234,7 @@ $.extend( $.easing,
                 autoplay : false, // same as data-autoplay - thanks @codibit
                 bgcolor: '#fff',
                 border: '0',
-                closeBackground : 'transparent',
+                closeBackground : '#161617',
                 closeColor : "#d2d2d2",
                 framewidth: '',
                 frameheight: '',
@@ -19326,7 +19255,6 @@ $.extend( $.easing,
                 titleBackground: '#161617',
                 titleColor: '#d2d2d2',
                 titlePosition : 'top', // 'top' || 'bottom'
-                share: [ 'facebook', 'twitter', 'linkedin', 'pinterest', 'download' ], 
                 cb_pre_open: function(){ return true; }, // Callbacks - thanx @garyee
                 cb_post_open: function(){},
                 cb_pre_close: function(){ return true; },
@@ -19365,7 +19293,6 @@ $.extend( $.easing,
                 obj.data('infinigall', option.infinigall);
                 obj.data('overlaycolor', option.overlayColor);
                 obj.data('titleattr', option.titleattr);
-                obj.data('share', option.share);
 
                 obj.data('venobox', true);
 
@@ -19405,8 +19332,7 @@ $.extend( $.easing,
                     dest = obj.data('href') || obj.attr('href');
                     extraCss = obj.data( 'css' ) || '';
                     title = obj.attr(obj.data('titleattr')) || '';
-                    share = obj.data('share');
-                    
+
                     preloader = '<div class="vbox-preloader">';
 
                     switch (option.spinner) {
@@ -19508,11 +19434,10 @@ $.extend( $.easing,
                     preloader += '</div>';
 
                     navigation = '<a class="vbox-next">' + option.htmlNext + '</a><a class="vbox-prev">' + option.htmlPrev + '</a>';
-                    vbheader = '<div class="vbox-title"></div><div class="vbox-left"><div class="vbox-num">0/0</div></div><div class="vbox-close">' + option.htmlClose + '</div>';
-                    vbfooter = '<div class="vbox-share"></div>';
+                    vbheader = '<div class="vbox-title"></div><div class="vbox-num">0/0</div><div class="vbox-close">' + option.htmlClose + '</div>';
 
                     core = '<div class="vbox-overlay ' + extraCss + '" style="background:'+ overlayColor +'">'+
-                    preloader + '<div class="vbox-container"><div class="vbox-content"></div></div>' + vbheader + navigation + vbfooter + '</div>';
+                    preloader + '<div class="vbox-container"><div class="vbox-content"></div></div>' + vbheader + navigation + '</div>';
 
                     $('body').append(core).addClass('vbox-open');
 
@@ -19521,28 +19446,13 @@ $.extend( $.easing,
                     overlay = $('.vbox-overlay');
                     container = $('.vbox-container');
                     content = $('.vbox-content');
-                    blockleft = $('.vbox-left');
                     blocknum = $('.vbox-num');
-                    blockshare = $('.vbox-share');
                     blocktitle = $('.vbox-title');
                     $preloader = $('.vbox-preloader');
 
                     $preloader.show();
 
-                    if (option.titlePosition == 'top') {
-                        sharepos = 'bottom';
-                    } else {
-                        sharepos = 'top';
-                    }
-                    blockshare.css(sharepos, '-1px');
-                    blockshare.css({
-                      'color' : option.titleColor,
-                      'fill' : option.titleColor,
-                      'background-color' : option.titleBackground
-                    });
-
-                    blocktitle.css(option.titlePosition, '-1px',);
-
+                    blocktitle.css(option.titlePosition, '-1px');
                     blocktitle.css({
                       'color' : option.titleColor,
                       'background-color' : option.titleBackground
@@ -19553,8 +19463,8 @@ $.extend( $.easing,
                       'background-color' : option.closeBackground
                     });
 
-                    blockleft.css(option.numerationPosition, '-1px');
-                    blockleft.css({
+                    $('.vbox-num').css(option.numerationPosition, '-1px');
+                    $('.vbox-num').css({
                       'color' : option.numerationColor,
                       'background-color' : option.numerationBackground
                     });
@@ -19611,30 +19521,11 @@ $.extend( $.easing,
                     numeratio = obj.data('numeratio');
                     gallItems = obj.data('gallItems');
                     infinigall = obj.data('infinigall');
-                    share = obj.data('share');
-                    blockshare.html('');
-                    if ( obj.data('vbtype') !== 'iframe' && obj.data('vbtype') !== 'inline' && obj.data('vbtype') !== 'ajax' ) {
-                        sharelinks = { 
-                            pinterest : '<a target="_blank" href="https://pinterest.com/pin/create/button/?url='+obj.prop('href')+'&media='+obj.prop('href')+'&description='+title+'">'+pinIcon+'</a>', 
-                            facebook  : '<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u='+obj.prop('href')+'">'+fbIcon+'</a>', 
-                            twitter   : '<a target="_blank" href="https://twitter.com/intent/tweet?text='+title+'&url='+obj.prop('href')+'">'+twitterIcon+'</a>', 
-                            linkedin  : '<a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url='+obj.prop('href')+'">'+linkedinIcon+'</a>',
-                            download  : '<a target="_blank" href="'+obj.prop('href')+'">'+downloadIcon+'</a>'
-                        };
-                        $.each( share, function( key, value ) {
-                            blockshare.append(sharelinks[value]);
-                        });
-                    }
 
                     if (gallItems) {
                         items = gallItems;
                     } else {
                         items = $('.vbox-item[data-gall="' + thisgall + '"]');
-                    }
-
-                    if (items.length < 2) {
-                        infinigall = false;
-                        numeratio = false;
                     }
 
                     thenext = items.eq( items.index(obj) + 1 );
@@ -19725,30 +19616,30 @@ $.extend( $.easing,
                       opacity : 0,
                     }, 500, function(){
 
-                        overlay.css('background',overlayColor);
+                      overlay.css('background',overlayColor);
 
-                        content
-                        .removeClass('vbox-animated')
-                        .removeClass('swipe-left')
-                        .removeClass('swipe-right')
-                        .css({'margin-left': 0,'margin-right': 0});
+                      content
+                      .removeClass('vbox-animated')
+                      .removeClass('swipe-left')
+                      .removeClass('swipe-right')
+                      .css({'margin-left': 0,'margin-right': 0});
 
-                        if (destination.data('vbtype') == 'iframe') {
-                            loadIframe();
-                        } else if (destination.data('vbtype') == 'inline') {
-                            loadInline();
-                        } else if (destination.data('vbtype') == 'ajax') {
-                            loadAjax();
-                        } else if (destination.data('vbtype') == 'video') {
-                            loadVid(autoplay);
-                        } else {
-                            content.html('<img src="'+dest+'">');
-                            preloadFirst();
-                        }
-                        obj = destination;
-                        checknav();
-                        keyNavigationDisabled = false;
-                        option.cb_after_nav(obj, gallIndex, thenext, theprev);
+                      if (destination.data('vbtype') == 'iframe') {
+                        loadIframe();
+                      } else if (destination.data('vbtype') == 'inline') {
+                        loadInline();
+                      } else if (destination.data('vbtype') == 'ajax') {
+                        loadAjax();
+                      } else if (destination.data('vbtype') == 'video') {
+                        loadVid(autoplay);
+                      } else {
+                        content.html('<img src="'+dest+'">');
+                        preloadFirst();
+                      }
+                      obj = destination;
+                      checknav();
+                      keyNavigationDisabled = false;
+                      option.cb_after_nav(obj, gallIndex, thenext, theprev);
                     });
                 }
 
@@ -20028,6 +19919,7 @@ $.extend( $.easing,
                 function updateoverlay(){
 
                     blocktitle.html(title);
+
                     content.find(">:first-child").addClass('vbox-figlio').css({
                         'width': framewidth,
                         'height': frameheight,
@@ -20046,7 +19938,6 @@ $.extend( $.easing,
                     },'slow', function(){
                         $preloader.hide();
                     });
-
                     option.cb_content_loaded(obj, gallIndex, thenext, theprev);
                 }
 
@@ -23604,7 +23495,7 @@ var global = arguments[3];
 /*!
  * The buffer module from node.js, for the browser.
  *
- * @author   Feross Aboukhadijeh <http://feross.org>
+ * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
  * @license  MIT
  */
 /* eslint-disable no-proto */
@@ -25397,7 +25288,7 @@ var Buffer = require("buffer").Buffer;
 var process = require("process");
 /**
    * cloudinary-main.js
-   * Cloudinary's JavaScript library - Version 2.8.1
+   * Cloudinary's JavaScript library - Version 2.7.3
    * Copyright Cloudinary
    * see https://github.com/cloudinary/cloudinary_js
    *
@@ -25670,6 +25561,90 @@ var process = require("process");
 
         __webpack_require__.r(jquery_namespaceObject);
 
+        __webpack_require__.d(jquery_namespaceObject, "getData", function () {
+          return getData;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "setData", function () {
+          return setData;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "getAttribute", function () {
+          return getAttribute;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "setAttribute", function () {
+          return setAttribute;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "removeAttribute", function () {
+          return removeAttribute;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "setAttributes", function () {
+          return setAttributes;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "hasClass", function () {
+          return hasClass;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "addClass", function () {
+          return addClass;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "width", function () {
+          return jquery_width;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "isString", function () {
+          return isString;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "merge", function () {
+          return jquery_merge;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "compact", function () {
+          return compact;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "cloneDeep", function () {
+          return cloneDeep;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "contains", function () {
+          return contains;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "difference", function () {
+          return difference;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "functions", function () {
+          return functions;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "identity", function () {
+          return identity;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "isArray", function () {
+          return isArray;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "assign", function () {
+          return jquery_assign;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "isPlainObject", function () {
+          return isPlainObject;
+        });
+
+        __webpack_require__.d(jquery_namespaceObject, "trim", function () {
+          return trim;
+        });
+
         __webpack_require__.d(jquery_namespaceObject, "omit", function () {
           return omit;
         });
@@ -25760,90 +25735,6 @@ var process = require("process");
 
         __webpack_require__.d(jquery_namespaceObject, "isEmpty", function () {
           return isEmpty;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "getData", function () {
-          return getData;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "setData", function () {
-          return setData;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "getAttribute", function () {
-          return getAttribute;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "setAttribute", function () {
-          return setAttribute;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "removeAttribute", function () {
-          return removeAttribute;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "setAttributes", function () {
-          return setAttributes;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "hasClass", function () {
-          return hasClass;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "addClass", function () {
-          return addClass;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "width", function () {
-          return jquery_width;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "isString", function () {
-          return isString;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "merge", function () {
-          return jquery_merge;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "compact", function () {
-          return compact;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "cloneDeep", function () {
-          return cloneDeep;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "contains", function () {
-          return contains;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "difference", function () {
-          return difference;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "functions", function () {
-          return functions;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "identity", function () {
-          return identity;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "isArray", function () {
-          return isArray;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "assign", function () {
-          return jquery_assign;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "isPlainObject", function () {
-          return isPlainObject;
-        });
-
-        __webpack_require__.d(jquery_namespaceObject, "trim", function () {
-          return trim;
         });
 
         var constants_namespaceObject = {};
@@ -26011,8 +25902,6 @@ var process = require("process");
         var src_crc32 = crc32; // CONCATENATED MODULE: ./src/util/baseutil.js
 
         function _typeof(obj) {
-          "@babel/helpers - typeof";
-
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
             _typeof = function _typeof(obj) {
               return typeof obj;
@@ -26712,7 +26601,9 @@ var process = require("process");
          */
 
 
-        var Expression = /*#__PURE__*/function () {
+        var Expression =
+        /*#__PURE__*/
+        function () {
           function Expression(expressionStr) {
             _classCallCheck(this, Expression);
             /**
@@ -27104,8 +26995,6 @@ var process = require("process");
         var expression = Expression; // CONCATENATED MODULE: ./src/condition.js
 
         function condition_typeof(obj) {
-          "@babel/helpers - typeof";
-
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
             condition_typeof = function _typeof(obj) {
               return typeof obj;
@@ -27212,7 +27101,9 @@ var process = require("process");
          */
 
 
-        var Condition = /*#__PURE__*/function (_Expression) {
+        var Condition =
+        /*#__PURE__*/
+        function (_Expression) {
           _inherits(Condition, _Expression);
 
           function Condition(conditionStr) {
@@ -27321,10 +27212,6 @@ var process = require("process");
         }
 
         function _iterableToArrayLimit(arr, i) {
-          if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-            return;
-          }
-
           var _arr = [];
           var _n = true;
           var _d = false;
@@ -27389,7 +27276,9 @@ var process = require("process");
          */
 
 
-        var configuration_Configuration = /*#__PURE__*/function () {
+        var configuration_Configuration =
+        /*#__PURE__*/
+        function () {
           function Configuration(options) {
             configuration_classCallCheck(this, Configuration);
             this.configuration = options == null ? {} : cloneDeep(options);
@@ -27616,7 +27505,9 @@ var process = require("process");
           return Constructor;
         }
 
-        var layer_Layer = /*#__PURE__*/function () {
+        var layer_Layer =
+        /*#__PURE__*/
+        function () {
           /**
            * Layer
            * @constructor Layer
@@ -27727,8 +27618,6 @@ var process = require("process");
         var layer_layer = layer_Layer; // CONCATENATED MODULE: ./src/layer/textlayer.js
 
         function textlayer_typeof(obj) {
-          "@babel/helpers - typeof";
-
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
             textlayer_typeof = function _typeof(obj) {
               return typeof obj;
@@ -27811,7 +27700,9 @@ var process = require("process");
           return textlayer_setPrototypeOf(o, p);
         }
 
-        var textlayer_TextLayer = /*#__PURE__*/function (_Layer) {
+        var textlayer_TextLayer =
+        /*#__PURE__*/
+        function (_Layer) {
           textlayer_inherits(TextLayer, _Layer);
           /**
            * @constructor TextLayer
@@ -28030,8 +27921,6 @@ var process = require("process");
         var textlayer = textlayer_TextLayer; // CONCATENATED MODULE: ./src/layer/subtitleslayer.js
 
         function subtitleslayer_typeof(obj) {
-          "@babel/helpers - typeof";
-
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
             subtitleslayer_typeof = function _typeof(obj) {
               return typeof obj;
@@ -28098,7 +27987,9 @@ var process = require("process");
           return subtitleslayer_setPrototypeOf(o, p);
         }
 
-        var SubtitlesLayer = /*#__PURE__*/function (_TextLayer) {
+        var SubtitlesLayer =
+        /*#__PURE__*/
+        function (_TextLayer) {
           subtitleslayer_inherits(SubtitlesLayer, _TextLayer);
           /**
            * Represent a subtitles layer
@@ -28123,8 +28014,6 @@ var process = require("process");
         var subtitleslayer = SubtitlesLayer; // CONCATENATED MODULE: ./src/layer/fetchlayer.js
 
         function fetchlayer_typeof(obj) {
-          "@babel/helpers - typeof";
-
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
             fetchlayer_typeof = function _typeof(obj) {
               return typeof obj;
@@ -28207,7 +28096,9 @@ var process = require("process");
           return fetchlayer_setPrototypeOf(o, p);
         }
 
-        var fetchlayer_FetchLayer = /*#__PURE__*/function (_Layer) {
+        var fetchlayer_FetchLayer =
+        /*#__PURE__*/
+        function (_Layer) {
           fetchlayer_inherits(FetchLayer, _Layer);
           /**
            * @class FetchLayer
@@ -28257,8 +28148,6 @@ var process = require("process");
         var fetchlayer = fetchlayer_FetchLayer; // CONCATENATED MODULE: ./src/parameters.js
 
         function parameters_typeof(obj) {
-          "@babel/helpers - typeof";
-
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
             parameters_typeof = function _typeof(obj) {
               return typeof obj;
@@ -28376,7 +28265,9 @@ var process = require("process");
          */
 
 
-        var parameters_Param = /*#__PURE__*/function () {
+        var parameters_Param =
+        /*#__PURE__*/
+        function () {
           /**
            * Represents a single parameter.
            * @class Param
@@ -28451,11 +28342,6 @@ var process = require("process");
             value: function value() {
               return this.process(this.origValue);
             }
-          }], [{
-            key: "norm_color",
-            value: function norm_color(value) {
-              return value != null ? value.replace(/^#/, 'rgb:') : void 0;
-            }
           }, {
             key: "build_array",
             value: function build_array(arg) {
@@ -28480,6 +28366,11 @@ var process = require("process");
             * @ignore
              */
 
+          }], [{
+            key: "norm_color",
+            value: function norm_color(value) {
+              return value != null ? value.replace(/^#/, 'rgb:') : void 0;
+            }
           }, {
             key: "process_video_params",
             value: function process_video_params(param) {
@@ -28490,13 +28381,13 @@ var process = require("process");
                   video = "";
 
                   if ('codec' in param) {
-                    video = param.codec;
+                    video = param['codec'];
 
                     if ('profile' in param) {
-                      video += ":" + param.profile;
+                      video += ":" + param['profile'];
 
                       if ('level' in param) {
-                        video += ":" + param.level;
+                        video += ":" + param['level'];
                       }
                     }
                   }
@@ -28514,7 +28405,9 @@ var process = require("process");
           return Param;
         }();
 
-        var parameters_ArrayParam = /*#__PURE__*/function (_Param) {
+        var parameters_ArrayParam =
+        /*#__PURE__*/
+        function (_Param) {
           parameters_inherits(ArrayParam, _Param);
           /**
            * A parameter that represents an array.
@@ -28532,7 +28425,7 @@ var process = require("process");
             var _this;
 
             var sep = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '.';
-            var process = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : undefined;
+            var process = arguments.length > 3 ? arguments[3] : undefined;
             parameters_classCallCheck(this, ArrayParam);
             _this = parameters_possibleConstructorReturn(this, parameters_getPrototypeOf(ArrayParam).call(this, name, shortName, process));
             _this.sep = sep;
@@ -28585,7 +28478,9 @@ var process = require("process");
           return ArrayParam;
         }(parameters_Param);
 
-        var parameters_TransformationParam = /*#__PURE__*/function (_Param2) {
+        var parameters_TransformationParam =
+        /*#__PURE__*/
+        function (_Param2) {
           parameters_inherits(TransformationParam, _Param2);
           /**
            * A parameter that represents a transformation
@@ -28603,60 +28498,43 @@ var process = require("process");
 
             var shortName = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "t";
             var sep = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '.';
-            var process = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : undefined;
+            var process = arguments.length > 3 ? arguments[3] : undefined;
             parameters_classCallCheck(this, TransformationParam);
             _this3 = parameters_possibleConstructorReturn(this, parameters_getPrototypeOf(TransformationParam).call(this, name, shortName, process));
             _this3.sep = sep;
             return _this3;
           }
-          /**
-           * Generate string representations of the transformation.
-           * @returns {*} Returns either the transformation as a string, or an array of string representations.
-           */
-
 
           parameters_createClass(TransformationParam, [{
             key: "serialize",
             value: function serialize() {
               var _this4 = this;
 
-              var result = '';
-              var val = this.value();
-
-              if (isEmpty(val)) {
-                return result;
-              } // val is an array of strings so join them
-
-
-              if (baseutil_allStrings(val)) {
-                var joined = val.join(this.sep); // creates t1.t2.t3 in case multiple named transformations were configured
+              if (isEmpty(this.value())) {
+                return '';
+              } else if (baseutil_allStrings(this.value())) {
+                var joined = this.value().join(this.sep);
 
                 if (!isEmpty(joined)) {
-                  // in case options.transformation was not set with an empty string (val != ['']);
-                  result = "".concat(this.shortName, "_").concat(joined);
+                  return "".concat(this.shortName, "_").concat(joined);
+                } else {
+                  return '';
                 }
               } else {
-                // Convert val to an array of strings
-                result = val.map(function (t) {
+                return this.value().map(function (t) {
                   if (isString(t) && !isEmpty(t)) {
                     return "".concat(_this4.shortName, "_").concat(t);
-                  }
-
-                  if (isFunction(t.serialize)) {
+                  } else if (isFunction(t.serialize)) {
                     return t.serialize();
-                  }
-
-                  if (isPlainObject(t) && !isEmpty(t)) {
+                  } else if (isPlainObject(t) && !isEmpty(t)) {
                     return new src_transformation(t).serialize();
+                  } else {
+                    return undefined;
                   }
-
-                  return undefined;
                 }).filter(function (t) {
                   return t;
                 });
               }
-
-              return result;
             }
           }, {
             key: "set",
@@ -28673,13 +28551,12 @@ var process = require("process");
           return TransformationParam;
         }(parameters_Param);
 
-        var number_pattern = "([0-9]*)\\.([0-9]+)|([0-9]+)";
-        var offset_any_pattern = "(" + number_pattern + ")([%pP])?";
-
-        var RangeParam = /*#__PURE__*/function (_Param3) {
+        var RangeParam =
+        /*#__PURE__*/
+        function (_Param3) {
           parameters_inherits(RangeParam, _Param3);
           /**
-           * A parameter that represents a range
+           * A parameter that represents a range.
            * @param {string} name - The name of the parameter in snake_case
            * @param {string} shortName - The name of the serialized form of the parameter
            *                         If a value is not provided, the parameter will not be serialized.
@@ -28689,19 +28566,23 @@ var process = require("process");
            * @ignore
            */
 
-          function RangeParam(name, shortName) {
-            var process = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : RangeParam.norm_range_value;
+          function RangeParam(name, shortName, process) {
+            var _this5;
+
             parameters_classCallCheck(this, RangeParam);
-            return parameters_possibleConstructorReturn(this, parameters_getPrototypeOf(RangeParam).call(this, name, shortName, process));
+            _this5 = parameters_possibleConstructorReturn(this, parameters_getPrototypeOf(RangeParam).call(this, name, shortName, process));
+            _this5.process || (_this5.process = _this5.norm_range_value);
+            return _this5;
           }
 
           parameters_createClass(RangeParam, null, [{
             key: "norm_range_value",
             value: function norm_range_value(value) {
-              var offset = String(value).match(new RegExp('^' + offset_any_pattern + '$'));
+              var modifier, offset;
+              offset = String(value).match(new RegExp('^' + offset_any_pattern + '$'));
 
               if (offset) {
-                var modifier = offset[5] != null ? 'p' : '';
+                modifier = offset[5] != null ? 'p' : '';
                 value = (offset[1] || offset[4]) + modifier;
               }
 
@@ -28711,7 +28592,9 @@ var process = require("process");
           return RangeParam;
         }(parameters_Param);
 
-        var parameters_RawParam = /*#__PURE__*/function (_Param4) {
+        var parameters_RawParam =
+        /*#__PURE__*/
+        function (_Param4) {
           parameters_inherits(RawParam, _Param4);
 
           function RawParam(name, shortName) {
@@ -28729,7 +28612,11 @@ var process = require("process");
           return RawParam;
         }(parameters_Param);
 
-        var parameters_LayerParam = /*#__PURE__*/function (_Param5) {
+        var LAYER_KEYWORD_PARAMS = [["font_weight", "normal"], ["font_style", "normal"], ["text_decoration", "none"], ["text_align", null], ["stroke", "none"], ["letter_spacing", null], ["line_spacing", null], ["font_antialias", null], ["font_hinting", null]];
+
+        var parameters_LayerParam =
+        /*#__PURE__*/
+        function (_Param5) {
           parameters_inherits(LayerParam, _Param5);
 
           function LayerParam() {
@@ -28775,7 +28662,7 @@ var process = require("process");
 
               return result.toString();
             }
-          }], [{
+          }, {
             key: "textStyle",
             value: function textStyle(layer) {
               return new textlayer(layer).textStyleIdentifier();
@@ -28784,7 +28671,9 @@ var process = require("process");
           return LayerParam;
         }(parameters_Param);
 
-        var parameters_ExpressionParam = /*#__PURE__*/function (_Param6) {
+        var parameters_ExpressionParam =
+        /*#__PURE__*/
+        function (_Param6) {
           parameters_inherits(ExpressionParam, _Param6);
 
           function ExpressionParam() {
@@ -28803,8 +28692,6 @@ var process = require("process");
 
 
         function transformation_typeof(obj) {
-          "@babel/helpers - typeof";
-
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
             transformation_typeof = function _typeof(obj) {
               return typeof obj;
@@ -28874,10 +28761,6 @@ var process = require("process");
         }
 
         function transformation_iterableToArrayLimit(arr, i) {
-          if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-            return;
-          }
-
           var _arr = [];
           var _n = true;
           var _d = false;
@@ -28958,7 +28841,9 @@ var process = require("process");
          */
 
 
-        var transformation_TransformationBase = /*#__PURE__*/function () {
+        var transformation_TransformationBase =
+        /*#__PURE__*/
+        function () {
           /**
            * The base class for transformations.
            * Members of this class are documented as belonging to the {@link Transformation} class for convenience.
@@ -29053,7 +28938,8 @@ var process = require("process");
             /** @protected */
 
 
-            this.rawParam = function (value, name, abbr, defaultValue, process) {
+            this.rawParam = function (value, name, abbr, defaultValue) {
+              var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : identity;
               process = lastArgCallback(arguments);
               trans[name] = new parameters_RawParam(name, abbr, process).set(value);
               return this;
@@ -29061,7 +28947,8 @@ var process = require("process");
             /** @protected */
 
 
-            this.rangeParam = function (value, name, abbr, defaultValue, process) {
+            this.rangeParam = function (value, name, abbr, defaultValue) {
+              var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : identity;
               process = lastArgCallback(arguments);
               trans[name] = new RangeParam(name, abbr, process).set(value);
               return this;
@@ -29072,7 +28959,7 @@ var process = require("process");
             this.arrayParam = function (value, name, abbr) {
               var sep = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ":";
               var defaultValue = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : [];
-              var process = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : undefined;
+              var process = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : identity;
               process = lastArgCallback(arguments);
               trans[name] = new parameters_ArrayParam(name, abbr, sep, process).set(value);
               return this;
@@ -29082,8 +28969,8 @@ var process = require("process");
 
             this.transformationParam = function (value, name, abbr) {
               var sep = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ".";
-              var defaultValue = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : undefined;
-              var process = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : undefined;
+              var defaultValue = arguments.length > 4 ? arguments[4] : undefined;
+              var process = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : identity;
               process = lastArgCallback(arguments);
               trans[name] = new parameters_TransformationParam(name, abbr, sep, process).set(value);
               return this;
@@ -29240,12 +29127,12 @@ var process = require("process");
 
           transformation_createClass(TransformationBase, [{
             key: "fromOptions",
-            value: function fromOptions() {
-              var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
+            value: function fromOptions(options) {
               if (options instanceof TransformationBase) {
                 this.fromTransformation(options);
               } else {
+                options || (options = {});
+
                 if (isString(options) || isArray(options)) {
                   options = {
                     transformation: options
@@ -29403,26 +29290,35 @@ var process = require("process");
              */
 
           }, {
-            key: "toHtmlAttributes",
-
+            key: "listNames",
+            value: function listNames() {
+              return transformation_Transformation.methods;
+            }
             /**
              * Returns the attributes for an HTML tag.
              * @function Cloudinary.toHtmlAttributes
              * @return PlainObject
              */
+
+          }, {
+            key: "toHtmlAttributes",
             value: function toHtmlAttributes() {
               var _this2 = this;
 
-              var attrName, height, options, ref2, ref3, value, width;
+              var attrName, height, key, options, ref2, ref3, value, width;
               options = {};
-              Object.keys(this.otherOptions).forEach(function (key) {
-                value = _this2.otherOptions[key];
 
-                if (!contains(transformation_Transformation.PARAM_NAMES, snakeCase(key))) {
-                  attrName = /^html_/.test(key) ? key.slice(5) : key;
-                  options[attrName] = value;
+              for (key in this.otherOptions) {
+                value = this.otherOptions[key];
+
+                if (contains(transformation_Transformation.PARAM_NAMES, snakeCase(key))) {
+                  continue;
                 }
-              }); // convert all "html_key" to "key" with the same value
+
+                attrName = /^html_/.test(key) ? key.slice(5) : key;
+                options[attrName] = value;
+              } // convert all "html_key" to "key" with the same value
+
 
               this.keys().forEach(function (key) {
                 if (/^html_/.test(key)) {
@@ -29435,14 +29331,14 @@ var process = require("process");
                 height = (ref3 = this.get("height")) != null ? ref3.origValue : void 0;
 
                 if (parseFloat(width) >= 1.0) {
-                  if (options.width == null) {
-                    options.width = width;
+                  if (options['width'] == null) {
+                    options['width'] = width;
                   }
                 }
 
                 if (parseFloat(height) >= 1.0) {
-                  if (options.height == null) {
-                    options.height = height;
+                  if (options['height'] == null) {
+                    options['height'] = height;
                   }
                 }
               }
@@ -29450,8 +29346,10 @@ var process = require("process");
               return options;
             }
           }, {
-            key: "toHtml",
-
+            key: "isValidParamName",
+            value: function isValidParamName(name) {
+              return transformation_Transformation.methods.indexOf(camelCase(name)) >= 0;
+            }
             /**
              * Delegate to the parent (up the call chain) to produce HTML
              * @function Transformation#toHtml
@@ -29464,6 +29362,9 @@ var process = require("process");
              * tag.transformation().crop("fit").width(300).toHtml()
              * // <img src="http://res.cloudinary.com/demo/image/upload/c_fit,w_300/sample">
              */
+
+          }, {
+            key: "toHtml",
             value: function toHtml() {
               var ref;
               return (ref = this.getParent()) != null ? typeof ref.toHtml === "function" ? ref.toHtml() : void 0 : void 0;
@@ -29478,20 +29379,11 @@ var process = require("process");
             value: function clone() {
               return new this.constructor(this.toOptions(true));
             }
-          }], [{
-            key: "listNames",
-            value: function listNames() {
-              return transformation_Transformation.methods;
-            }
-          }, {
-            key: "isValidParamName",
-            value: function isValidParamName(name) {
-              return transformation_Transformation.methods.indexOf(camelCase(name)) >= 0;
-            }
           }]);
           return TransformationBase;
         }();
 
+        ;
         var VAR_NAME_RE = /^\$[a-zA-Z0-9]+$/;
         transformation_TransformationBase.prototype.trans_separator = '/';
         transformation_TransformationBase.prototype.param_separator = ',';
@@ -29527,14 +29419,11 @@ var process = require("process");
           }
         }
 
-        function processCustomFunction(_ref) {
-          var function_type = _ref.function_type,
-              source = _ref.source;
-
-          if (function_type === 'remote') {
-            return [function_type, btoa(source)].join(":");
-          } else if (function_type === 'wasm') {
-            return [function_type, source].join(":");
+        function processCustomFunction(value) {
+          if (value.function_type === "remote") {
+            return [value.function_type, btoa(value.source)].join(":");
+          } else if (value.function_type === "wasm") {
+            return [value.function_type, value.source].join(":");
           }
         }
         /**
@@ -29558,7 +29447,9 @@ var process = require("process");
          */
 
 
-        var transformation_Transformation = /*#__PURE__*/function (_TransformationBase) {
+        var transformation_Transformation =
+        /*#__PURE__*/
+        function (_TransformationBase) {
           transformation_inherits(Transformation, _TransformationBase);
           /**
            * Represents a single transformation.
@@ -29570,9 +29461,9 @@ var process = require("process");
            * // or
            *
            * t = new cloudinary.Transformation( {angle: 20, crop: "scale", width: "auto"});
-           * @see <a href="https://cloudinary.com/documentation/image_transformation_reference"
+           * @see <a href="https://cloudinary.com/documentation/image_transformation_reference" 
            *  target="_blank">Available image transformations</a>
-           * @see <a href="https://cloudinary.com/documentation/video_transformation_reference"
+           * @see <a href="https://cloudinary.com/documentation/video_transformation_reference" 
            *  target="_blank">Available video transformations</a>
            */
 
@@ -29837,12 +29728,12 @@ var process = require("process");
             value: function offset(value) {
               var end_o, start_o;
 
-              var _ref2 = isFunction(value != null ? value.split : void 0) ? value.split('..') : isArray(value) ? value : [null, null];
+              var _ref = isFunction(value != null ? value.split : void 0) ? value.split('..') : isArray(value) ? value : [null, null];
 
-              var _ref3 = transformation_slicedToArray(_ref2, 2);
+              var _ref2 = transformation_slicedToArray(_ref, 2);
 
-              start_o = _ref3[0];
-              end_o = _ref3[1];
+              start_o = _ref2[0];
+              end_o = _ref2[1];
 
               if (start_o != null) {
                 this.startOffset(start_o);
@@ -30049,7 +29940,9 @@ var process = require("process");
          */
 
 
-        var htmltag_HtmlTag = /*#__PURE__*/function () {
+        var htmltag_HtmlTag =
+        /*#__PURE__*/
+        function () {
           function HtmlTag(name, publicId, options) {
             htmltag_classCallCheck(this, HtmlTag);
             var transformation;
@@ -30424,51 +30317,27 @@ var process = require("process");
          */
         // CONCATENATED MODULE: ./src/url.js
 
-        /**
-         * Adds protocol, host, pathname prefixes to given string
-         * @param str
-         * @returns {string}
-         */
+        function absolutize(url) {
+          var prefix;
 
-        function makeUrl(str) {
-          var prefix = document.location.protocol + '//' + document.location.host;
+          if (!url.match(/^https?:\//)) {
+            prefix = document.location.protocol + '//' + document.location.host;
 
-          if (str[0] === '?') {
-            prefix += document.location.pathname;
-          } else if (str[0] !== '/') {
-            prefix += document.location.pathname.replace(/\/[^\/]*$/, '/');
+            if (url[0] === '?') {
+              prefix += document.location.pathname;
+            } else if (url[0] !== '/') {
+              prefix += document.location.pathname.replace(/\/[^\/]*$/, '/');
+            }
+
+            url = prefix + url;
           }
 
-          return prefix + str;
-        }
-        /**
-         * Check is given string is a url
-         * @param str
-         * @returns {boolean}
-         */
-
-
-        function isUrl(str) {
-          return str ? !!str.match(/^https?:\//) : false;
+          return url;
         } // Produce a number between 1 and 5 to be used for cdn sub domains designation
 
 
         function cdnSubdomainNumber(publicId) {
           return src_crc32(publicId) % 5 + 1;
-        }
-        /**
-         * Removes signature from options and returns the signature
-         * Makes sure signature is empty or of this format: s--signature--
-         * @param {object} options
-         * @returns {string} the formatted signature
-         */
-
-
-        function handleSignature(options) {
-          var signature = options.signature;
-          var isFormatted = !signature || signature.startsWith('s--') && signature.endsWith('--');
-          delete options.signature;
-          return isFormatted ? signature : "s--".concat(signature, "--");
         }
         /**
          * Create the URL prefix for Cloudinary resources.
@@ -30492,10 +30361,10 @@ var process = require("process");
          *  to "https://".
          * @returns {string} the URL prefix for the resource.
          * @private
-         */
+        */
 
 
-        function handlePrefix(publicId, options) {
+        function cloudinaryUrlPrefix(publicId, options) {
           if (options.cloud_name && options.cloud_name[0] === '/') {
             return '/res' + options.cloud_name;
           } // defaults
@@ -30543,32 +30412,33 @@ var process = require("process");
         }
         /**
          * Return the resource type and action type based on the given configuration
-         * @function Cloudinary#handleResourceType
-         * @param {Object|string} resource_type
+         * @function Cloudinary#finalizeResourceType
+         * @param {Object|string} resourceType
          * @param {string} [type='upload']
-         * @param {string} [url_suffix]
-         * @param {boolean} [use_root_path]
+         * @param {string} [urlSuffix]
+         * @param {boolean} [useRootPath]
          * @param {boolean} [shorten]
          * @returns {string} resource_type/type
          * @ignore
          */
 
 
-        function handleResourceType(_ref) {
-          var _ref$resource_type = _ref.resource_type,
-              resource_type = _ref$resource_type === void 0 ? "image" : _ref$resource_type,
-              _ref$type = _ref.type,
-              type = _ref$type === void 0 ? "upload" : _ref$type,
-              url_suffix = _ref.url_suffix,
-              use_root_path = _ref.use_root_path,
-              shorten = _ref.shorten;
-          var options,
-              resourceType = resource_type;
+        function finalizeResourceType() {
+          var resourceType = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "image";
+          var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "upload";
+          var urlSuffix = arguments.length > 2 ? arguments[2] : undefined;
+          var useRootPath = arguments.length > 3 ? arguments[3] : undefined;
+          var shorten = arguments.length > 4 ? arguments[4] : undefined;
+          var options;
+          resourceType = resourceType == null ? "image" : resourceType;
+          type = type == null ? "upload" : type;
 
           if (isPlainObject(resourceType)) {
             options = resourceType;
             resourceType = options.resource_type;
             type = options.type;
+            urlSuffix = options.url_suffix;
+            useRootPath = options.use_root_path;
             shorten = options.shorten;
           }
 
@@ -30576,7 +30446,7 @@ var process = require("process");
             type = 'upload';
           }
 
-          if (url_suffix != null) {
+          if (urlSuffix != null) {
             resourceType = SEO_TYPES["".concat(resourceType, "/").concat(type)];
             type = null;
 
@@ -30585,7 +30455,7 @@ var process = require("process");
             }
           }
 
-          if (use_root_path) {
+          if (useRootPath) {
             if (resourceType === 'image' && type === 'upload' || resourceType === "images") {
               resourceType = null;
               type = null;
@@ -30602,35 +30472,81 @@ var process = require("process");
           return [resourceType, type].join("/");
         }
         /**
-         * Encode publicId
-         * @param publicId
-         * @returns {string} encoded publicId
+         * Generates a URL for any asset in your Media library.
+         * @function url
+         * @ignore
+         * @param {string} publicId - The public ID of the media asset.
+         * @param {Object} [options={}] - The {@link Transformation} parameters to include in the URL.
+         * @param {object} [config={}] - URL configuration parameters
+         * @param {type} [options.type='upload'] - The asset's storage type.
+         *  For details on all fetch types, see
+         * <a href="https://cloudinary.com/documentation/image_transformations#fetching_images_from_remote_locations"
+         *  target="_blank">Fetch types</a>. 
+         * @param {Object} [options.resource_type='image'] - The type of asset. <p>Possible values:<br/> 
+         *  - `image`<br/>
+         *  - `video`<br/>
+         *  - `raw` 
+         * @return {string} The media asset URL.
+         * @see <a href="https://cloudinary.com/documentation/image_transformation_reference" target="_blank">
+         *  Available image transformations</a>
+         * @see <a href="https://cloudinary.com/documentation/video_transformation_reference" target="_blank">
+         *  Available video transformations</a>   
          */
 
 
-        function encodePublicId(publicId) {
-          return encodeURIComponent(publicId).replace(/%3A/g, ':').replace(/%2F/g, '/');
-        }
-        /**
-         * Encode and format publicId
-         * @param publicId
-         * @param options
-         * @returns {string} publicId
-         */
+        function url_url(publicId) {
+          var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+          var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+          var error, prefix, ref, resourceTypeAndType, transformation, transformationString, url, version;
+
+          if (!publicId) {
+            return publicId;
+          }
+
+          if (options instanceof src_transformation) {
+            options = options.toOptions();
+          }
+
+          options = defaults({}, options, config, DEFAULT_IMAGE_PARAMS);
+
+          if (options.type === 'fetch') {
+            options.fetch_format = options.fetch_format || options.format;
+            publicId = absolutize(publicId);
+          }
+
+          transformation = new src_transformation(options);
+          transformationString = transformation.serialize();
+
+          if (!options.cloud_name) {
+            throw 'Unknown cloud_name';
+          } // if publicId has a '/' and doesn't begin with v<number> and doesn't start with http[s]:/ and version is empty and force_version is truthy or undefined
 
 
-        function formatPublicId(publicId, options) {
-          if (isUrl(publicId)) {
-            publicId = encodePublicId(publicId);
+          if ((options.force_version || typeof options.force_version === 'undefined') && publicId.search('/') >= 0 && !publicId.match(/^v[0-9]+/) && !publicId.match(/^https?:\//) && !((ref = options.version) != null ? ref.toString() : void 0)) {
+            options.version = 1;
+          }
+
+          if (publicId.match(/^https?:/)) {
+            if (options.type === 'upload' || options.type === 'asset') {
+              url = publicId;
+            } else {
+              publicId = encodeURIComponent(publicId).replace(/%3A/g, ':').replace(/%2F/g, '/');
+            }
           } else {
             try {
               // Make sure publicId is URI encoded.
               publicId = decodeURIComponent(publicId);
-            } catch (error) {}
+            } catch (error1) {
+              error = error1;
+            }
 
-            publicId = encodePublicId(publicId);
+            publicId = encodeURIComponent(publicId).replace(/%3A/g, ':').replace(/%2F/g, '/');
 
             if (options.url_suffix) {
+              if (options.url_suffix.match(/[\.\/]/)) {
+                throw 'url_suffix should not include . or /';
+              }
+
               publicId = publicId + '/' + options.url_suffix;
             }
 
@@ -30643,157 +30559,10 @@ var process = require("process");
             }
           }
 
-          return publicId;
-        }
-        /**
-         * Get any error with url options
-         * @param options
-         * @returns {string} if error, otherwise return undefined
-         */
-
-
-        function validate(options) {
-          var cloud_name = options.cloud_name,
-              url_suffix = options.url_suffix;
-
-          if (!cloud_name) {
-            return 'Unknown cloud_name';
-          }
-
-          if (url_suffix && url_suffix.match(/[\.\/]/)) {
-            return 'url_suffix should not include . or /';
-          }
-        }
-        /**
-         * Get version part of the url
-         * @param publicId
-         * @param options
-         * @returns {string}
-         */
-
-
-        function handleVersion(publicId, options) {
-          // force_version param means to make sure there is a version in the url (Default is true)
-          var isForceVersion = options.force_version || typeof options.force_version === 'undefined'; // Is version included in publicId or in options, or publicId is a url (doesn't need version)
-
-          var isVersionExist = publicId.indexOf('/') < 0 || publicId.match(/^v[0-9]+/) || isUrl(publicId) || options.version;
-
-          if (isForceVersion && !isVersionExist) {
-            options.version = 1;
-          }
-
-          return options.version ? "v".concat(options.version) : '';
-        }
-        /**
-         * Get final transformation component for url string
-         * @param options
-         * @returns {string}
-         */
-
-
-        function handleTransformation(options) {
-          return new src_transformation(options).serialize();
-        }
-        /**
-         * If type is 'fetch', update publicId to be a url
-         * @param publicId
-         * @param type
-         * @returns {string}
-         */
-
-
-        function preparePublicId(publicId, _ref2) {
-          var type = _ref2.type;
-          return !isUrl(publicId) && type === 'fetch' ? makeUrl(publicId) : publicId;
-        }
-        /**
-         * Generate url string
-         * @param publicId
-         * @param options
-         * @returns {string} final url
-         */
-
-
-        function urlString(publicId, options) {
-          if (isUrl(publicId) && (options.type === 'upload' || options.type === 'asset')) {
-            return publicId;
-          }
-
-          var version = handleVersion(publicId, options);
-          var transformationString = handleTransformation(options);
-          var prefix = handlePrefix(publicId, options);
-          var signature = handleSignature(options);
-          var resourceType = handleResourceType(options);
-          publicId = formatPublicId(publicId, options);
-          return compact([prefix, resourceType, signature, transformationString, version, publicId]).join('/').replace(/([^:])\/+/g, '$1/') // replace '///' with '//'
-          .replace(' ', '%20');
-        }
-        /**
-         * Merge options and config with defaults
-         * update options fetch_format according to 'type' param
-         * @param options
-         * @param config
-         * @returns {*} updated options
-         */
-
-
-        function prepareOptions(options, config) {
-          if (options instanceof src_transformation) {
-            options = options.toOptions();
-          }
-
-          options = defaults({}, options, config, DEFAULT_IMAGE_PARAMS);
-
-          if (options.type === 'fetch') {
-            options.fetch_format = options.fetch_format || options.format;
-          }
-
-          return options;
-        }
-        /**
-         * Generates a URL for any asset in your Media library.
-         * @function url
-         * @ignore
-         * @param {string} publicId - The public ID of the media asset.
-         * @param {Object} [options={}] - The {@link Transformation} parameters to include in the URL.
-         * @param {object} [config={}] - URL configuration parameters
-         * @param {type} [options.type='upload'] - The asset's storage type.
-         *  For details on all fetch types, see
-         * <a href="https://cloudinary.com/documentation/image_transformations#fetching_images_from_remote_locations"
-         *  target="_blank">Fetch types</a>.
-         * @param {Object} [options.resource_type='image'] - The type of asset. <p>Possible values:<br/>
-         *  - `image`<br/>
-         *  - `video`<br/>
-         *  - `raw`
-         * @param {signature} [options.signature='s--12345678--'] - The signature component of a
-         *  signed delivery URL of the format: /s--SIGNATURE--/.
-         *  For details on signatures, see
-         * <a href="https://cloudinary.com/documentation/signatures" target="_blank">Signatures</a>.
-         * @return {string} The media asset URL.
-         * @see <a href="https://cloudinary.com/documentation/image_transformation_reference" target="_blank">
-         *  Available image transformations</a>
-         * @see <a href="https://cloudinary.com/documentation/video_transformation_reference" target="_blank">
-         *  Available video transformations</a>
-         */
-
-
-        function url_url(publicId) {
-          var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-          var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-          if (!publicId) {
-            return publicId;
-          }
-
-          options = prepareOptions(options, config);
-          publicId = preparePublicId(publicId, options);
-          var error = validate(options);
-
-          if (error) {
-            throw error;
-          }
-
-          return urlString(publicId, options);
+          prefix = cloudinaryUrlPrefix(publicId, options);
+          resourceTypeAndType = finalizeResourceType(options.resource_type, options.type, options.url_suffix, options.use_root_path, options.shorten);
+          version = options.version ? 'v' + options.version : '';
+          return url || compact([prefix, resourceTypeAndType, transformationString, version, publicId]).join('/').replace(/([^:])\/+/g, '$1/');
         }
 
         ; // CONCATENATED MODULE: ./src/util/generateBreakpoints.js
@@ -30807,10 +30576,6 @@ var process = require("process");
         }
 
         function generateBreakpoints_iterableToArrayLimit(arr, i) {
-          if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-            return;
-          }
-
           var _arr = [];
           var _n = true;
           var _d = false;
@@ -31056,8 +30821,6 @@ var process = require("process");
         var srcsetUrl = scaledUrl; // CONCATENATED MODULE: ./src/tags/imagetag.js
 
         function imagetag_typeof(obj) {
-          "@babel/helpers - typeof";
-
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
             imagetag_typeof = function _typeof(obj) {
               return typeof obj;
@@ -31182,7 +30945,9 @@ var process = require("process");
          */
 
 
-        var imagetag_ImageTag = /*#__PURE__*/function (_HtmlTag) {
+        var imagetag_ImageTag =
+        /*#__PURE__*/
+        function (_HtmlTag) {
           imagetag_inherits(ImageTag, _HtmlTag);
 
           function ImageTag(publicId) {
@@ -31240,8 +31005,6 @@ var process = require("process");
         var imagetag = imagetag_ImageTag; // CONCATENATED MODULE: ./src/tags/sourcetag.js
 
         function sourcetag_typeof(obj) {
-          "@babel/helpers - typeof";
-
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
             sourcetag_typeof = function _typeof(obj) {
               return typeof obj;
@@ -31366,7 +31129,9 @@ var process = require("process");
          */
 
 
-        var sourcetag_SourceTag = /*#__PURE__*/function (_HtmlTag) {
+        var sourcetag_SourceTag =
+        /*#__PURE__*/
+        function (_HtmlTag) {
           sourcetag_inherits(SourceTag, _HtmlTag);
 
           function SourceTag(publicId) {
@@ -31412,8 +31177,6 @@ var process = require("process");
         var sourcetag = sourcetag_SourceTag; // CONCATENATED MODULE: ./src/tags/picturetag.js
 
         function picturetag_typeof(obj) {
-          "@babel/helpers - typeof";
-
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
             picturetag_typeof = function _typeof(obj) {
               return typeof obj;
@@ -31525,7 +31288,9 @@ var process = require("process");
           return picturetag_setPrototypeOf(o, p);
         }
 
-        var picturetag_PictureTag = /*#__PURE__*/function (_HtmlTag) {
+        var picturetag_PictureTag =
+        /*#__PURE__*/
+        function (_HtmlTag) {
           picturetag_inherits(PictureTag, _HtmlTag);
 
           function PictureTag(publicId) {
@@ -31593,8 +31358,6 @@ var process = require("process");
         var picturetag = picturetag_PictureTag; // CONCATENATED MODULE: ./src/tags/videotag.js
 
         function videotag_typeof(obj) {
-          "@babel/helpers - typeof";
-
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
             videotag_typeof = function _typeof(obj) {
               return typeof obj;
@@ -31725,7 +31488,9 @@ var process = require("process");
          * @param {Object} [options]
          */
 
-        var videotag_VideoTag = /*#__PURE__*/function (_HtmlTag) {
+        var videotag_VideoTag =
+        /*#__PURE__*/
+        function (_HtmlTag) {
           videotag_inherits(VideoTag, _HtmlTag);
 
           function VideoTag(publicId) {
@@ -31890,8 +31655,6 @@ var process = require("process");
         var videotag = videotag_VideoTag; // CONCATENATED MODULE: ./src/tags/clienthintsmetatag.js
 
         function clienthintsmetatag_typeof(obj) {
-          "@babel/helpers - typeof";
-
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
             clienthintsmetatag_typeof = function _typeof(obj) {
               return typeof obj;
@@ -31992,7 +31755,9 @@ var process = require("process");
          */
 
 
-        var clienthintsmetatag_ClientHintsMetaTag = /*#__PURE__*/function (_HtmlTag) {
+        var clienthintsmetatag_ClientHintsMetaTag =
+        /*#__PURE__*/
+        function (_HtmlTag) {
           clienthintsmetatag_inherits(ClientHintsMetaTag, _HtmlTag);
 
           function ClientHintsMetaTag(options) {
@@ -32017,48 +31782,7 @@ var process = require("process");
         ;
         /* harmony default export */
 
-        var clienthintsmetatag = clienthintsmetatag_ClientHintsMetaTag; // CONCATENATED MODULE: ./src/util/parse/normalizeToArray.js
-
-        function _toConsumableArray(arr) {
-          return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
-        }
-
-        function _nonIterableSpread() {
-          throw new TypeError("Invalid attempt to spread non-iterable instance");
-        }
-
-        function _iterableToArray(iter) {
-          if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
-        }
-
-        function _arrayWithoutHoles(arr) {
-          if (Array.isArray(arr)) {
-            for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-              arr2[i] = arr[i];
-            }
-
-            return arr2;
-          }
-        }
-        /**
-         * @desc normalize elements, support a single element, array or nodelist, always outputs array
-         * @param elements<HTMLElement[]>
-         * @returns {[]}
-         */
-
-
-        function normalizeToArray(elements) {
-          if (isArray(elements)) {
-            return elements;
-          } else if (elements.constructor.name === "NodeList") {
-            return _toConsumableArray(elements); // ensure an array is always returned, even if nodelist
-          } else if (isString(elements)) {
-            return Array.prototype.slice.call(document.querySelectorAll(elements), 0);
-          } else {
-            return [elements];
-          }
-        } // CONCATENATED MODULE: ./src/cloudinary.js
-
+        var clienthintsmetatag = clienthintsmetatag_ClientHintsMetaTag; // CONCATENATED MODULE: ./src/cloudinary.js
 
         function cloudinary_classCallCheck(instance, Constructor) {
           if (!(instance instanceof Constructor)) {
@@ -32142,7 +31866,9 @@ var process = require("process");
           return imageWidth;
         };
 
-        var cloudinary_Cloudinary = /*#__PURE__*/function () {
+        var cloudinary_Cloudinary =
+        /*#__PURE__*/
+        function () {
           /**
            * Creates a new Cloudinary instance.
            * @class Cloudinary
@@ -32785,7 +32511,23 @@ var process = require("process");
               }
 
               var responsive = options.responsive != null ? options.responsive : this.config('responsive');
-              elements = normalizeToArray(elements);
+
+              elements = function () {
+                switch (false) {
+                  case !isArray(elements):
+                    return elements;
+
+                  case elements.constructor.name !== "NodeList":
+                    return elements;
+
+                  case !isString(elements):
+                    return Array.prototype.slice.call(document.querySelectorAll(elements), 0);
+
+                  default:
+                    return [elements];
+                }
+              }();
+
               var responsiveClass;
 
               if (this.responsiveConfig && this.responsiveConfig.responsive_class != null) {
@@ -32838,47 +32580,13 @@ var process = require("process");
                       }
                     }
 
-                    if (options.loading === 'lazy' && !_this2.isNativeLazyLoadSupported() && _this2.isLazyLoadSupported() && !elements[0].getAttribute('src')) {
-                      _this2.setImgOnLazyLoad(elements, options);
-                    } else if (setUrl) {
+                    if (setUrl) {
                       setAttribute(tag, 'src', dataSrc);
-                      elements[0].setAttribute('width', elements[0].getAttribute('data-width'));
                     }
                   }
                 }
               });
               return this;
-            }
-            /**
-             * Sets width when not using native lazy load
-             * @param img
-             * @param options
-             */
-
-          }, {
-            key: "setImgOnLazyLoad",
-            value: function setImgOnLazyLoad(img, options) {
-              img[0].setAttribute('width', img[0].getAttribute('data-width'));
-            }
-            /**
-             * Returns true if Intersection Observer API is supported
-             * @returns {boolean}
-             */
-
-          }, {
-            key: "isLazyLoadSupported",
-            value: function isLazyLoadSupported() {
-              return window && 'IntersectionObserver' in window;
-            }
-            /**
-             * Returns true if using Chrome
-             * @returns {boolean}
-             */
-
-          }, {
-            key: "isNativeLazyLoadSupported",
-            value: function isNativeLazyLoadSupported() {
-              return 'loading' in HTMLImageElement.prototype;
             }
             /**
              * Returns a {@link Transformation} object, initialized with the specified options, for chaining purposes.
@@ -32938,8 +32646,6 @@ var process = require("process");
         var util_firstNotNull = firstNotNull; // CONCATENATED MODULE: ./src/cloudinaryjquery.js
 
         function cloudinaryjquery_typeof(obj) {
-          "@babel/helpers - typeof";
-
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
             cloudinaryjquery_typeof = function _typeof(obj) {
               return typeof obj;
@@ -33034,7 +32740,9 @@ var process = require("process");
          * @extends Cloudinary
          */
 
-        var cloudinaryjquery_CloudinaryJQuery = /*#__PURE__*/function (_Cloudinary) {
+        var cloudinaryjquery_CloudinaryJQuery =
+        /*#__PURE__*/
+        function (_Cloudinary) {
           cloudinaryjquery_inherits(CloudinaryJQuery, _Cloudinary);
 
           function CloudinaryJQuery(options) {
@@ -33607,7 +33315,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51755" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53208" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
