@@ -194,7 +194,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\fonts\\fontawesome-webfont.eot":[["fontawesome-webfont.af69b5ff.eot","node_modules/font-awesome/fonts/fontawesome-webfont.eot"],"node_modules/font-awesome/fonts/fontawesome-webfont.eot"],"./..\\fonts\\fontawesome-webfont.woff2":[["fontawesome-webfont.b54ed0f7.woff2","node_modules/font-awesome/fonts/fontawesome-webfont.woff2"],"node_modules/font-awesome/fonts/fontawesome-webfont.woff2"],"./..\\fonts\\fontawesome-webfont.woff":[["fontawesome-webfont.b1f459e7.woff","node_modules/font-awesome/fonts/fontawesome-webfont.woff"],"node_modules/font-awesome/fonts/fontawesome-webfont.woff"],"./..\\fonts\\fontawesome-webfont.ttf":[["fontawesome-webfont.13bba0a5.ttf","node_modules/font-awesome/fonts/fontawesome-webfont.ttf"],"node_modules/font-awesome/fonts/fontawesome-webfont.ttf"],"./..\\fonts\\fontawesome-webfont.svg":[["fontawesome-webfont.c0864c1b.svg","node_modules/font-awesome/fonts/fontawesome-webfont.svg"],"node_modules/font-awesome/fonts/fontawesome-webfont.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/animate.css/animate.css":[function(require,module,exports) {
+},{"./../fonts/fontawesome-webfont.eot":[["fontawesome-webfont.af69b5ff.eot","node_modules/font-awesome/fonts/fontawesome-webfont.eot"],"node_modules/font-awesome/fonts/fontawesome-webfont.eot"],"./../fonts/fontawesome-webfont.woff2":[["fontawesome-webfont.b54ed0f7.woff2","node_modules/font-awesome/fonts/fontawesome-webfont.woff2"],"node_modules/font-awesome/fonts/fontawesome-webfont.woff2"],"./../fonts/fontawesome-webfont.woff":[["fontawesome-webfont.b1f459e7.woff","node_modules/font-awesome/fonts/fontawesome-webfont.woff"],"node_modules/font-awesome/fonts/fontawesome-webfont.woff"],"./../fonts/fontawesome-webfont.ttf":[["fontawesome-webfont.13bba0a5.ttf","node_modules/font-awesome/fonts/fontawesome-webfont.ttf"],"node_modules/font-awesome/fonts/fontawesome-webfont.ttf"],"./../fonts/fontawesome-webfont.svg":[["fontawesome-webfont.c0864c1b.svg","node_modules/font-awesome/fonts/fontawesome-webfont.svg"],"node_modules/font-awesome/fonts/fontawesome-webfont.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/animate.css/animate.css":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -33315,7 +33315,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53208" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56031" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
